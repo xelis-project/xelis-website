@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Helios Bold";
-  src: url("/assets/HelioxExtC_Bold.otf");
+  src: url("/assets/HeliosExtC_Bold.otf");
 }
 * {
   font-family: "Jura", sans-serif;
@@ -120,13 +120,24 @@ header .bg.bgbr {
 
 nav {
   margin: 2rem 28rem 0 28rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: 2.2rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.23);
 }
 nav ul {
   display: flex;
   gap: 4rem;
   list-style: none;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+nav ul li:first-child a {
+  display: flex;
+  align-items: center;
+}
+nav ul li:first-child a img {
+  margin-bottom: -10px;
 }
 nav ul li a {
   display: inline-block;
@@ -141,7 +152,7 @@ nav ul li:first-child {
   text-align: left;
 }
 nav ul li:last-child {
-  text-align: right;
+  justify-content: flex-end;
 }
 
 #resume {
@@ -167,10 +178,13 @@ nav ul li:last-child {
   margin-top: 3rem;
   padding: 1rem 4.5rem;
   font-size: 1.5rem;
-  font-family: "Helios Bold";
   color: #fff;
   border-radius: 50px;
   background: black;
+}
+#github span {
+  margin-bottom: -3px;
+  font-family: "Helios Bold";
 }
 #github img {
   margin-right: 0.5rem;

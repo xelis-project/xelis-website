@@ -7,7 +7,7 @@ $bold: 700;
 
 @font-face {
   font-family: "Helios Bold";
-  src: url("/assets/HelioxExtC_Bold.otf");
+  src: url("/assets/HeliosExtC_Bold.otf");
 }
 
 * {
@@ -135,13 +135,23 @@ header {
 
 nav {
   margin: 2rem $spacing-body 0 $spacing-body;
-  padding-bottom: $spacing-medium;
+  padding-bottom: 2.2rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.23);
   ul {
     display: flex;
     gap: 4rem;
     list-style: none;
-
+    li {
+      display: flex;
+      align-items: center;
+    }
+    li:first-child a {
+      display: flex;
+      align-items: center;
+      img {
+        margin-bottom: -10px; // Hacky
+      }
+    }
     li a {
       display: inline-block;
       font-size: 1.6rem;
@@ -155,7 +165,7 @@ nav {
       text-align: left;
     }
     li:last-child {
-      text-align: right;
+      justify-content: flex-end;
     }
   }
 }
@@ -183,10 +193,13 @@ nav {
   margin-top: 3rem;
   padding: 1rem 4.5rem;
   font-size: 1.5rem;
-  font-family: "Helios Bold";
   color: $white;
   border-radius: 50px;
   background: black;
+  span {
+    margin-bottom: -3px; // This font has a strange position in line, not centered
+    font-family: "Helios Bold";
+  }
   img {
     margin-right: 0.5rem;
   }
