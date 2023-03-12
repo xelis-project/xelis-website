@@ -1,0 +1,659 @@
+$border-color: rgba(255, 255, 255, 0.23);
+$ascent-color: #02FFCF;
+$white: #fff;
+$spacing-medium: 1.4rem;
+$spacing-body: 28rem;
+$bold: 700;
+
+@font-face {
+  font-family: "Helios Bold";
+  src: url("/assets/HelioxExtC_Bold.otf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+}
+
+html {
+  font-size: 62.5%; // = 10px
+  scroll-behavior: smooth;
+  background: #000;
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  font-size: 2rem;
+  color: $white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.main-bgbd {
+  z-index: -1;
+  border-radius: 0 !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: black;
+  background-image: url("/assets/Noise.png");
+  opacity: 3%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.list {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  list-style: "- ";
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.text-regular {
+  font-size: 1.6rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: $ascent-color;
+    cursor: pointer;
+  }
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+
+  &.bgbd {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  &.bgf {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  position: relative;
+  .bg {
+    &.bgl {
+      width: calc(1521px / 1920px) * 100vw;
+      height: calc(1521px / 900px) * 100vh;
+      left: calc(-235px / 1920px) * 100vw;
+      top: calc(-310px / 900px) * 100vh;
+      background: rgba(0, 139, 170, 0.14);
+    }
+    &.bgc {
+      width: calc(539px / 1920px) * 100vw;
+      height: calc(539px / 900px) * 100vh;
+      left: calc(904px / 1920px) * 100vw;
+      top: calc(238px / 900px) * 100vh;
+
+      background: #00AA81;
+      filter: blur(calc(245px / 1920px) * 100vw);
+    }
+    &.bgt {
+      width: calc(1752px / 1920px) * 100vw;
+      height: calc(593px / 900px) * 100vh;
+      left: calc(348px / 1920px) * 100vw;
+      top: calc(-177px / 900px) * 100vh;
+      background: rgba(0, 170, 150, 0.8);
+      filter: blur(calc(245px / 1920px) * 100vw);
+    }
+    &.bgbr {
+      width: calc(1103px / 1920px) * 100vw;
+      height: calc(1103px / 900px) * 100vh;
+      left: calc(1253px / 1920px) * 100vw;
+      top: calc(417px / 900px) * 100vh;
+
+      background: rgba(5, 124, 132, 0.7);
+      filter: blur(calc(230px / 1920px) * 100vw);
+    }
+  }
+}
+
+nav {
+  padding-bottom: $spacing-medium;
+  border-bottom: 2px solid $border-color;
+  margin: 2rem $spacing-body 0 $spacing-body;
+  ul {
+    list-style: none;
+    display: flex;
+    display: flex;
+    gap: 4rem;
+
+    li a {
+      color: $white;
+      font-weight: $bold;
+      font-size: 1.6rem;
+    }
+    li:first-child, li:last-child {
+      flex: 1;
+    }
+    li:first-child {
+      text-align: left;
+    }
+    li:last-child {
+      text-align: right;
+    }
+  }
+
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $spacing-body calc($spacing-body * 1.33);
+  h1 {
+    font-family: "Helios Bold";
+    font-size: 10rem;
+    margin: 0;
+  }
+  p {
+    margin: 2.2rem 10% 0 10%;
+    text-align: center;
+  }
+}
+
+#github {
+  font-family: "Helios Bold";
+  border-radius: 50px;
+  padding: 1rem 4.5rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  color: $white;
+  background: black;
+  border: 0;
+  img {
+    margin-right: 0.5rem;
+  }
+  display: flex;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0;
+    z-index: -10;
+    background-image: url("/assets/CircuitHaut.svg");
+    background-position: 100% -91rem;
+    background-repeat: no-repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100rem;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-image: url("/assets/CircuitBas.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+h2 {
+  font-family: "Helios Bold";
+  width: 100%;
+  border-bottom: 2px solid $white;
+  padding-bottom: 2.5rem;
+  font-size: 5rem;
+}
+
+#objectives {
+  >:last-child {
+    display: flex;
+    margin-bottom: $spacing-body;
+    gap: 6rem;
+    > div {
+      flex: 1;
+    }
+    ol li + li {
+      margin-top: 1rem;
+    }
+  }
+}
+
+h3 {
+  color: $ascent-color;
+  font-family: "Helios Bold";
+  text-transform: uppercase;
+}
+
+#network, #client_protocol {
+  // background: black;
+  position: relative;
+  overflow: hidden;
+  padding: 11rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  .angle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $ascent-color;
+    &.tl {
+      top: 0;
+      left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    &.tr {
+      top: 0;
+      right: 0;
+      border-left: 0;
+      border-bottom: 0;
+    }
+    &.bl {
+      bottom: 0;
+      left: 0;
+      border-top: 0;
+      border-right: 0;
+    }
+    &.br {
+      bottom: 0;
+      right: 0;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+}
+
+#network {
+  margin-bottom: $spacing-body;
+  .bgbl {
+    width: 815px;
+    height: 815px;
+    left: -458px;
+    top: 84px;
+
+    background: rgba(2, 255, 207, 0.6);
+    filter: blur(225px);
+  }
+  .bgtr {
+    width: calc(1696px / 1280px) * 100%;
+    height: calc(685.4px / 469px) * 100%;
+    left: calc(301.19px / 1280px) * 100%;
+    top: calc(-704px / 469px) * 100%;
+
+    background: rgba(2, 255, 207, 0.1);
+    filter: blur(165px);
+    transform: rotate(29.74deg);
+  }
+  h2 {
+    width: 30%;
+    font-size: 5rem;
+  }
+  ul {
+    list-style: none;
+    li + li {
+      margin-top: 1rem;
+    }
+  }
+  li span {
+    color: $ascent-color;
+  }
+  .angle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $ascent-color;
+    &.tl {
+      top: 0;
+      left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    &.tr {
+      top: 0;
+      right: 0;
+      border-left: 0;
+      border-bottom: 0;
+    }
+    &.bl {
+      bottom: 0;
+      left: 0;
+      border-top: 0;
+      border-right: 0;
+    }
+    &.br {
+      bottom: 0;
+      right: 0;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+}
+
+#roadmap {
+  margin-bottom: $spacing-body;
+  h2 {
+    text-align: center;
+    border: 0;
+  }
+}
+
+#timeline {
+  display: flex;
+  flex-direction: column;
+  > div {
+    flex: 1;
+  }
+
+  .top, .circles, .bottom {
+    display: flex;
+    > div {
+      padding: 1rem;
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .top, .bottom {
+    font-size: 1.5rem;
+    > div > div:first-child {
+      color: $ascent-color;
+    }
+  }
+
+  .circles {
+    > div {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background: #00342A;
+        top: 50%;
+        z-index: -1;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+      &.active {
+        &:before, &:after {
+          background: $ascent-color;
+        }
+        .circle {
+          background: #004C3E;
+          border: 2px solid $ascent-color;
+        }
+      }
+    }
+
+    .circle {
+      border-radius: 50%;
+      border: 2px solid #00342A;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      background: #001915;
+    }
+  }
+
+  .item {
+    position: relative;
+  }
+}
+#blockdag {
+  margin-bottom: $spacing-body;
+  .title {
+    border-bottom: 2px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-bottom: 2.5rem;
+  }
+  h2 {
+    border: 0;
+    width: unset;
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    display: flex;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    .block {
+      width: calc(50% - 3rem);
+      display: flex;
+      padding-bottom: 3rem;
+      margin: 0 1.5rem 3rem 1.5rem;
+      border-bottom: 1px solid $border-color;
+      &:nth-last-child(1), &:nth-last-child(2) {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+    .number {
+      color: $ascent-color;
+      width: 3rem;
+      margin-right: 1rem;
+    }
+    .text {
+      max-width: calc(100% - 4rem);
+    }
+  }
+}
+
+#client_protocol {
+  margin-bottom: $spacing-body;
+  .bgtl {
+    width: calc(963px / 1280px) * 100%;
+    height: calc(786px / 674px) * 100%;
+    left: calc(-400px / 1280px) * 100%;
+    top: calc(-400px / 674px) * 100%;
+    filter: blur(165px);
+    background: rgba(2, 255, 207, 0.2);
+    transform: rotate(122.43deg);
+  }
+  .bgbr {
+    width: calc(548px / 1280px) * 100%;
+    height: calc(548px / 674px) * 100%;
+    left: calc(826px / 1280px) * 100%;
+    top: calc(201px / 674px) * 100%;
+    background: rgba(2, 255, 207, 0.6);
+    filter: blur(225px);
+  }
+}
+
+#socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: calc($spacing-body / 2);
+  h2 {
+    border: 0;
+    width: unset;
+    padding: 0;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    > div {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      + div {
+        margin-top: 1rem;
+      }
+    }
+  }
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #02FFCF;
+  backdrop-filter: blur(22px);
+  padding: 15rem $spacing-body 8rem $spacing-body;
+  font-size: 1.5rem;
+
+  img {
+    width: 230px;
+  }
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid $border-color;
+    > div:last-child {
+      flex: 1;
+      max-width: 50%;
+    }
+  }
+
+  p {
+    font-weight: 100;
+    opacity: 0.5;
+    font-size: 1.5rem;
+    margin: 4rem 0;
+  }
+
+  .menu {
+    > div {
+      margin-bottom: 2rem;
+    }
+    a + a {
+      margin-left: 3rem;
+    }
+  }
+
+  .copyright {
+    opacity: 0.5;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 5rem 0;
+  }
+}
+
+// Blurs are strange on retina screen like my macbook pro 2019
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .main-bgbd {
+    opacity: 7% !important;
+  }
+  header {
+    .bgl {
+      background: rgba(0, 139, 170, 0.2) !important;
+    }
+    .bgc {
+      width: calc(539px / 1920px) * 150vw !important;
+      height: calc(539px / 900px) * 150vh !important;
+      left: calc(904px / 1920px) * 150vh !important;
+      top: calc(238px / 900px) * 50vh !important;
+      opacity: 0.5;
+    }
+
+    .bgbr {
+      width: calc(1103px / 1920px) * 150vw !important;
+      height: calc(1103px / 900px) * 180vh !important;
+      left: calc(1253px / 1920px) * 90vw !important;
+      top: calc(417px / 900px) * 30vh !important;
+      opacity: 0.8;
+    }
+
+    .bgt {
+      width: calc(1752px / 1920px) * 150vw !important;
+      height: calc(593px / 900px) * 100vh !important;
+      left: calc(348px / 1920px) * 50vw !important;
+      top: calc(-177px / 900px) * 150vh !important;
+      opacity: 0.8;
+    }
+    // .bgc, .bgt, .bgbr {
+    //   filter: blur(460px) !important;
+    // }
+  }
+}
+
+main {
+  padding: 10% 20%;
+}
+
+@media screen and (max-width: 1920px) {
+  main {
+    padding: 7% 16.6%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  main {
+    padding: 5% 10%;
+  }
+  body {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main {
+    padding: 4rem 8%;
+  }
+  body {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    padding: 2rem 4rem;
+  }
+  body {
+    font-size: 1.4rem;
+  }
+}
