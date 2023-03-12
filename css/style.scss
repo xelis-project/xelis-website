@@ -11,8 +11,8 @@ $bold: 700;
 }
 
 * {
-  box-sizing: border-box;
   font-family: "Jura", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,8 +22,8 @@ html {
 }
 
 body {
-  font-family: "Jura", sans-serif;
   font-size: 2rem;
+  font-family: "Jura", sans-serif;
   color: $white;
 }
 
@@ -32,13 +32,12 @@ section:not(:last-child) {
 }
 
 #noise_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
-  position: absolute;
-  position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
   background: black;
   background-image: url("/assets/Noise.png");
   opacity: 3%;
@@ -71,19 +70,19 @@ a {
   border-radius: 50%;  // Most background colors are ellipse
 
   &.bgbd {
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 0;
     background: rgba(0, 0, 0, 1);
   }
 
   &.bgf {
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 0;
 
     background: rgba(0, 0, 0, 0.4);
@@ -91,42 +90,41 @@ a {
 }
 
 header {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
-
-  position: relative;
   .bg {
     &.bgl {
+      top: calc(-310px / 900px) * 100vh;
+      left: calc(-235px / 1920px) * 100vw;
       width: calc(1521px / 1920px) * 100vw;
       height: calc(1521px / 900px) * 100vh;
-      left: calc(-235px / 1920px) * 100vw;
-      top: calc(-310px / 900px) * 100vh;
       background: rgba(0, 139, 170, 0.14);
     }
     &.bgc {
+      top: calc(238px / 900px) * 100vh;
+      left: calc(904px / 1920px) * 100vw;
       width: calc(539px / 1920px) * 100vw;
       height: calc(539px / 900px) * 100vh;
-      left: calc(904px / 1920px) * 100vw;
-      top: calc(238px / 900px) * 100vh;
 
       background: #00AA81;
       filter: blur(calc(245px / 1920px) * 100vw);
     }
     &.bgt {
+      top: calc(-177px / 900px) * 100vh;
+      left: calc(348px / 1920px) * 100vw;
       width: calc(1752px / 1920px) * 100vw;
       height: calc(593px / 900px) * 100vh;
-      left: calc(348px / 1920px) * 100vw;
-      top: calc(-177px / 900px) * 100vh;
       background: rgba(0, 170, 150, 0.8);
       filter: blur(calc(245px / 1920px) * 100vw);
     }
     &.bgbr {
+      top: calc(417px / 900px) * 100vh;
+      left: calc(1253px / 1920px) * 100vw;
       width: calc(1103px / 1920px) * 100vw;
       height: calc(1103px / 900px) * 100vh;
-      left: calc(1253px / 1920px) * 100vw;
-      top: calc(417px / 900px) * 100vh;
 
       background: rgba(5, 124, 132, 0.7);
       filter: blur(calc(230px / 1920px) * 100vw);
@@ -135,19 +133,19 @@ header {
 }
 
 nav {
+  margin: 2rem $spacing-body 0 $spacing-body;
   padding-bottom: $spacing-medium;
   border-bottom: 2px solid rgba(255, 255, 255, 0.23);
-  margin: 2rem $spacing-body 0 $spacing-body;
   ul {
-    list-style: none;
     display: flex;
     gap: 4rem;
+    list-style: none;
 
     li a {
-      color: $white;
-      font-weight: $bold;
-      font-size: 1.6rem;
       display: inline-block;
+      font-size: 1.6rem;
+      font-weight: $bold;
+      color: $white;
     }
     li:first-child, li:last-child {
       flex: 1;
@@ -167,9 +165,9 @@ nav {
   align-items: center;
   margin: $spacing-body calc($spacing-body * 1.33);
   h1 {
-    font-family: "Helios Bold";
-    font-size: 10rem;
     margin: 0;
+    font-size: 10rem;
+    font-family: "Helios Bold";
   }
   p {
     margin: 2.2rem 10% 0 10%;
@@ -178,19 +176,19 @@ nav {
 }
 
 #github {
-  font-family: "Helios Bold";
-  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
   padding: 1rem 4.5rem;
   font-size: 1.5rem;
-  margin-top: 3rem;
+  font-family: "Helios Bold";
   color: $white;
+  border-radius: 50px;
   background: black;
   img {
     margin-right: 0.5rem;
   }
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main {
@@ -198,37 +196,37 @@ main {
   display: flex;
   flex-direction: column;
   &::before, &::after {
-    content: "";
     position: absolute;
-    width: 100%;
     z-index: -1;
+    width: 100%;
+    content: "";
     background-repeat: no-repeat;
   }
   &::before {
-    height: 100%;
     top: 0;
     right: 0;
+    height: 100%;
     background-image: url("/assets/CircuitHaut.svg");
     background-position: 100% -110rem;
   }
   &::after {
-    height: 100rem;
     bottom: 0;
     left: 0;
+    height: 100rem;
     background-image: url("/assets/CircuitBas.svg");
   }
 }
 
 h2 {
-  font-family: "Helios Bold";
   font-size: 5rem;
+  font-family: "Helios Bold";
 }
 
 #objectives {
   h2 {
+    padding-bottom: 2.5rem;
     width: 100%;
     border-bottom: 2px solid $white;
-    padding-bottom: 2.5rem;
   }
   > div {
     display: flex;
@@ -243,26 +241,26 @@ h2 {
 }
 
 h3 {
-  color: $ascent-color;
   font-family: "Helios Bold";
+  color: $ascent-color;
   text-transform: uppercase;
 }
 
 #network, #client_protocol {
   position: relative;
   overflow: hidden;
-  padding: 11rem;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  padding: 11rem;
 
   h2 {
     width: 30%;
   }
   .angle {
     position: absolute;
-    height: 30px;
     width: 30px;
+    height: 30px;
     border: 1px solid $ascent-color;
     &.tl {
       top: 0;
@@ -283,8 +281,8 @@ h3 {
       border-right: 0;
     }
     &.br {
-      bottom: 0;
       right: 0;
+      bottom: 0;
       border-top: 0;
       border-left: 0;
     }
@@ -293,10 +291,10 @@ h3 {
 
 #network {
   .bgbl {
+    top: 84px;
+    left: -458px;
     width: 815px;
     height: 815px;
-    left: -458px;
-    top: 84px;
 
     background: rgba(2, 255, 207, 0.6);
     filter: blur(225px);
@@ -304,10 +302,10 @@ h3 {
   .bgtr {
     $network-width: 1280px;
     $network-height: 469px;
+    top: calc(-504px / $network-height) * 100%;
+    left: calc(201.19px / $network-width) * 100%;
     width: calc(1696px / $network-width) * 100%;
     height: calc(685.4px / $network-height) * 100%;
-    left: calc(201.19px / $network-width) * 100%;
-    top: calc(-504px / $network-height) * 100%;
 
     background: rgba(2, 255, 207, 0.1);
     filter: blur(165px);
@@ -334,8 +332,8 @@ h3 {
   .top, .circles, .bottom {
     display: flex;
     > div {
-      padding: 1rem;
       flex: 1;
+      padding: 1rem;
       text-align: center;
     }
   }
@@ -349,18 +347,18 @@ h3 {
 
   .circles {
     > div {
+      position: relative;
       display: flex;
       justify-content: center;
-      position: relative;
       &:before, &:after {
-        content: "";
         position: absolute;
+        top: 50%;
+        z-index: -1;
         width: 50%;
         height: 2px;
+        content: "";
         background: $dark-ascent-color;
-        top: 50%;
         transform: translateY(-50%);
-        z-index: -1;
       }
       &:before {
         left: 0;
@@ -373,18 +371,18 @@ h3 {
           background: $ascent-color;
         }
         .circle {
-          background: #004C3E;
           border: 2px solid $ascent-color;
+          background: #004C3E;
         }
       }
     }
 
     .circle {
-      border-radius: 50%;
-      border: 2px solid $dark-ascent-color;
+      position: relative;
       width: 20px;
       height: 20px;
-      position: relative;
+      border: 2px solid $dark-ascent-color;
+      border-radius: 50%;
       background: #001915;
     }
   }
@@ -392,12 +390,12 @@ h3 {
 
 #blockdag {
   .title {
-    border-bottom: 2px solid $white;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 4rem;
     padding-bottom: 2.5rem;
+    border-bottom: 2px solid $white;
   }
   h2 {
     margin: 0;
@@ -407,21 +405,21 @@ h3 {
     margin-top: 4rem;
     flex-wrap: wrap;
     li.item {
-      width: calc(50% - 3rem);
       display: flex;
-      padding-bottom: 3rem;
       margin: 0 1.5rem 3rem 1.5rem;
+      padding-bottom: 3rem;
+      width: calc(50% - 3rem);
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       &:nth-last-child(1), &:nth-last-child(2) {
-        border-bottom: 0;
-        padding-bottom: 0;
         margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
       }
     }
     .number {
-      color: $ascent-color;
-      width: 3rem;
       margin-right: 1rem;
+      width: 3rem;
+      color: $ascent-color;
     }
     .text {
       max-width: calc(100% - 4rem);
@@ -433,19 +431,19 @@ h3 {
   $client-width: 1280px;
   $client-height: 674px;
   .bgtl {
+    top: calc(-400px / $client-height) * 100%;
+    left: calc(-400px / $client-width) * 100%;
     width: calc(963px / $client-width) * 100%;
     height: calc(786px / $client-height) * 100%;
-    left: calc(-400px / $client-width) * 100%;
-    top: calc(-400px / $client-height) * 100%;
     filter: blur(165px);
     background: rgba(2, 255, 207, 0.2);
     transform: rotate(122.43deg);
   }
   .bgbr {
+    top: calc(201px / $client-height) * 100%;
+    left: calc(826px / $client-width) * 100%;
     width: calc(548px / $client-width) * 100%;
     height: calc(548px / $client-height) * 100%;
-    left: calc(826px / $client-width) * 100%;
-    top: calc(201px / $client-height) * 100%;
     background: rgba(2, 255, 207, 0.6);
     filter: blur(225px);
   }
@@ -457,15 +455,15 @@ h3 {
   align-items: center;
   gap: 3rem;
   > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     > div {
-      width: 100%;
       display: flex;
       justify-content: space-around;
+      width: 100%;
       + div {
         margin-top: 1rem;
       }
@@ -478,11 +476,11 @@ h3 {
 }
 
 footer {
+  padding: 15rem $spacing-body;
+  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.08);
   border-top: 1px solid #02FFCF;
   backdrop-filter: blur(22px);
-  padding: 15rem $spacing-body;
-  font-size: 1.5rem;
 
   img {
     width: 230px;
@@ -491,8 +489,8 @@ footer {
   > div:first-child {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 4rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     > div:last-child {
       flex: 1;
       max-width: 50%;
@@ -500,9 +498,9 @@ footer {
   }
 
   p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.5rem;
     margin-top: 4rem;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   .bottom-menu {
@@ -515,11 +513,11 @@ footer {
   }
 
   .copyright {
-    opacity: 0.5;
-    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    font-size: 1.5rem;
+    opacity: 0.5;
   }
 }
 
@@ -536,26 +534,26 @@ footer {
       background: rgba(0, 139, 170, 0.2) !important;
     }
     .bgc {
+      top: calc(238px / 900px) * 50vh !important;
+      left: calc(904px / 1920px) * 150vh !important;
       width: calc(539px / 1920px) * 150vw !important;
       height: calc(539px / 900px) * 150vh !important;
-      left: calc(904px / 1920px) * 150vh !important;
-      top: calc(238px / 900px) * 50vh !important;
       opacity: 0.5;
     }
 
     .bgbr {
+      top: calc(417px / 900px) * 30vh !important;
+      left: calc(1253px / 1920px) * 90vw !important;
       width: calc(1103px / 1920px) * 150vw !important;
       height: calc(1103px / 900px) * 180vh !important;
-      left: calc(1253px / 1920px) * 90vw !important;
-      top: calc(417px / 900px) * 30vh !important;
       opacity: 0.8;
     }
 
     .bgt {
+      top: calc(-177px / 900px) * 150vh !important;
+      left: calc(348px / 1920px) * 50vw !important;
       width: calc(1752px / 1920px) * 150vw !important;
       height: calc(593px / 900px) * 100vh !important;
-      left: calc(348px / 1920px) * 50vw !important;
-      top: calc(-177px / 900px) * 150vh !important;
       opacity: 0.8;
     }
   }
