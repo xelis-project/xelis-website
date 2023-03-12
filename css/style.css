@@ -17,13 +17,15 @@ body {
   font-family: "Jura", sans-serif;
   font-size: 2rem;
   color: #fff;
-  margin: 0;
-  overflow-x: hidden;
 }
 
-.main-bgbd {
+section:not(:last-child) {
+  margin-bottom: 28rem;
+}
+
+#noise_effect {
   z-index: -1;
-  border-radius: 0 !important;
+  position: absolute;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -38,18 +40,12 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-.list {
-  margin-left: 2rem;
-  margin-top: 1rem;
+ul.list {
+  margin: 2rem 0 0 1rem;
   list-style: "- ";
 }
-.list li + li {
+ul.list li + li {
   margin-top: 1rem;
-}
-
-.text-regular {
-  font-size: 1.6rem;
 }
 
 a {
@@ -130,13 +126,13 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  display: flex;
   gap: 4rem;
 }
 nav ul li a {
   color: #fff;
   font-weight: 700;
   font-size: 1.6rem;
+  display: inline-block;
 }
 nav ul li:first-child, nav ul li:last-child {
   flex: 1;
@@ -146,11 +142,6 @@ nav ul li:first-child {
 }
 nav ul li:last-child {
   text-align: right;
-}
-nav img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #resume {
@@ -177,9 +168,9 @@ nav img {
   margin-top: 3rem;
   color: #fff;
   background: black;
-  border: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #github img {
   margin-right: 0.5rem;
@@ -190,47 +181,45 @@ main {
   display: flex;
   flex-direction: column;
 }
-main::before {
+main::before, main::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0%;
-  right: 0;
-  z-index: -10;
-  background-image: url("/assets/CircuitHaut.svg");
-  background-position: 100% -91rem;
+  z-index: -1;
   background-repeat: no-repeat;
 }
+main::before {
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-image: url("/assets/CircuitHaut.svg");
+  background-position: 100% -110rem;
+}
 main::after {
-  content: "";
-  position: absolute;
-  width: 100%;
   height: 100rem;
   bottom: 0;
-  right: 0;
-  z-index: -10;
+  left: 0;
   background-image: url("/assets/CircuitBas.svg");
-  background-repeat: no-repeat;
 }
 
 h2 {
   font-family: "Helios Bold";
-  width: 100%;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 2.5rem;
   font-size: 5rem;
 }
 
-#objectives > :last-child {
+#objectives h2 {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2.5rem;
+}
+#objectives > div {
   display: flex;
-  margin-bottom: 28rem;
   gap: 6rem;
 }
-#objectives > :last-child > div {
+#objectives > div > div {
   flex: 1;
 }
-#objectives > :last-child ol li + li {
+#objectives > div ol li + li {
   margin-top: 1rem;
 }
 
@@ -247,6 +236,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+}
+#network h2, #client_protocol h2 {
+  width: 30%;
 }
 #network .angle, #client_protocol .angle {
   position: absolute;
@@ -279,9 +271,6 @@ h3 {
   border-left: 0;
 }
 
-#network {
-  margin-bottom: 28rem;
-}
 #network .bgbl {
   width: 815px;
   height: 815px;
@@ -293,15 +282,11 @@ h3 {
 #network .bgtr {
   width: 132.5%;
   height: 146.1407249467%;
-  left: 23.53046875%;
-  top: -150.1066098081%;
+  left: 15.71796875%;
+  top: -107.4626865672%;
   background: rgba(2, 255, 207, 0.1);
   filter: blur(165px);
   transform: rotate(29.74deg);
-}
-#network h2 {
-  width: 30%;
-  font-size: 5rem;
 }
 #network ul {
   list-style: none;
@@ -312,52 +297,11 @@ h3 {
 #network li span {
   color: #02FFCF;
 }
-#network .angle {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  border: 1px solid #02FFCF;
-}
-#network .angle.tl {
-  top: 0;
-  left: 0;
-  border-right: 0;
-  border-bottom: 0;
-}
-#network .angle.tr {
-  top: 0;
-  right: 0;
-  border-left: 0;
-  border-bottom: 0;
-}
-#network .angle.bl {
-  bottom: 0;
-  left: 0;
-  border-top: 0;
-  border-right: 0;
-}
-#network .angle.br {
-  bottom: 0;
-  right: 0;
-  border-top: 0;
-  border-left: 0;
-}
 
-#roadmap {
-  margin-bottom: 28rem;
-}
 #roadmap h2 {
   text-align: center;
-  border: 0;
 }
 
-#timeline {
-  display: flex;
-  flex-direction: column;
-}
-#timeline > div {
-  flex: 1;
-}
 #timeline .top, #timeline .circles, #timeline .bottom {
   display: flex;
 }
@@ -384,6 +328,7 @@ h3 {
   height: 2px;
   background: #00342A;
   top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
 }
 #timeline .circles > div:before {
@@ -407,13 +352,7 @@ h3 {
   position: relative;
   background: #001915;
 }
-#timeline .item {
-  position: relative;
-}
 
-#blockdag {
-  margin-bottom: 28rem;
-}
 #blockdag .title {
   border-bottom: 2px solid #fff;
   display: flex;
@@ -423,40 +362,34 @@ h3 {
   padding-bottom: 2.5rem;
 }
 #blockdag h2 {
-  border: 0;
-  width: unset;
   margin: 0;
-  padding: 0;
 }
-#blockdag .content {
+#blockdag ul.content {
   display: flex;
   margin-top: 4rem;
   flex-wrap: wrap;
 }
-#blockdag .content .block {
+#blockdag ul.content li.item {
   width: calc(50% - 3rem);
   display: flex;
   padding-bottom: 3rem;
   margin: 0 1.5rem 3rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-#blockdag .content .block:nth-last-child(1), #blockdag .content .block:nth-last-child(2) {
+#blockdag ul.content li.item:nth-last-child(1), #blockdag ul.content li.item:nth-last-child(2) {
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-#blockdag .content .number {
+#blockdag ul.content .number {
   color: #02FFCF;
   width: 3rem;
   margin-right: 1rem;
 }
-#blockdag .content .text {
+#blockdag ul.content .text {
   max-width: calc(100% - 4rem);
 }
 
-#client_protocol {
-  margin-bottom: 28rem;
-}
 #client_protocol .bgtl {
   width: 75.234375%;
   height: 116.6172106825%;
@@ -480,12 +413,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 14rem;
-}
-#socials h2 {
-  border: 0;
-  width: unset;
-  padding: 0;
 }
 #socials > div {
   display: flex;
@@ -512,7 +439,7 @@ footer {
   border-top: 1px solid #02FFCF;
   -webkit-backdrop-filter: blur(22px);
           backdrop-filter: blur(22px);
-  padding: 15rem 28rem 8rem 28rem;
+  padding: 15rem 28rem;
   font-size: 1.5rem;
 }
 footer img {
@@ -521,23 +448,22 @@ footer img {
 footer > div:first-child {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 3rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.23);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 4rem;
 }
 footer > div:first-child > div:last-child {
   flex: 1;
   max-width: 50%;
 }
 footer p {
-  font-weight: 100;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 1.5rem;
-  margin: 4rem 0;
+  margin-top: 4rem;
 }
-footer .menu > div {
+footer .bottom-menu > div {
   margin-bottom: 2rem;
 }
-footer .menu a + a {
+footer .bottom-menu a + a {
   margin-left: 3rem;
 }
 footer .copyright {
@@ -545,11 +471,11 @@ footer .copyright {
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0 5rem 0;
+  margin-top: 2rem;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .main-bgbd {
+  .noise_effect {
     opacity: 7% !important;
   }
   header .bgl {
@@ -583,12 +509,12 @@ main {
 
 @media screen and (max-width: 1920px) {
   main {
-    padding: 7% 16.6%;
+    padding: 10% 16.6%;
   }
 }
 @media screen and (max-width: 1600px) {
   main {
-    padding: 5% 10%;
+    padding: 7% 10%;
   }
   body {
     font-size: 1.8rem;

@@ -19,8 +19,8 @@
   </head>
 
   <body>
+    <div id="noise_effect"></div>
 
-    <div class="bg main-bgbd"></div>
     <header> <!-- ================= HEADER ================= -->
       <nav>
         <ul>
@@ -55,10 +55,14 @@
         <p>
           BlockDAG, homomorphic encryption and Smart Contracts, join the technological revolution.
         </p>
-        <button id="github">
+        <a
+          id="github"
+          target="_blank"
+          href="https://github.com/xelis-project/xelis-blockchain"
+        >
           <img src="/assets/github.svg" />
           <span>GitHub</span>
-        </button>
+        </a>
       </div>
       <div class="bg bgl"></div>
       <div class="bg bgc"></div>
@@ -182,40 +186,40 @@
             simultaneously. More details below.
           </span>
         </div>
-        <div class="content">
-          <div class="block">
+        <ul class="content">
+          <li class="item">
             <div class="number">
               1.
             </div>
             <div class="text">
               Reduce rate of orphans blocks when miners find a block at the same time.
             </div>
-          </div>
-          <div class="block">
+          </li>
+          <li class="item">
             <div class="number">
               2.
             </div>
             <div class="text">
               Height is not unique anymore and can have multiple blocks.
             </div>
-          </div>
-          <div class="block">
+          </li>
+          <li class="item">
             <div class="number">
               3.
             </div>
             <div class="text">
               Topo Height (topological height) is the new and unique height for a block which is ordered by the DAG.
             </div>
-          </div>
-          <div class="block">
+          </li>
+          <li class="item">
             <div class="number">
               4.
             </div>
             <div class="text">
               Stable height is the last height in which the order of the DAG cannot changes.
             </div>
-          </div>
-          <div class="block">
+          </li>
+          <li class="item">
             <div class="number">
               5.
             </div>
@@ -236,8 +240,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="block">
+          </li>
+          <li class="item">
             <div class="number">
               6.
             </div>
@@ -249,8 +253,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
       <section id="client_protocol"> <!-- ================= CLIENT PROTOCOL ================= -->
@@ -312,7 +316,7 @@
           <img src="/assets/logo.svg" />
         </div>
         <div>
-          <div class="menu">
+          <div class="bottom-menu">
             <div>
               <a href="#objectives">About</a>
               <a href="#network">Network</a>
@@ -373,7 +377,5 @@
         </div>
       </div>
     </footer>
-
   </body>
-
 </html>

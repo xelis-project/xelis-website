@@ -1,5 +1,5 @@
-$border-color: rgba(255, 255, 255, 0.23);
 $ascent-color: #02FFCF;
+$dark-ascent-color: #00342A;
 $white: #fff;
 $spacing-medium: 1.4rem;
 $spacing-body: 28rem;
@@ -25,13 +25,15 @@ body {
   font-family: "Jura", sans-serif;
   font-size: 2rem;
   color: $white;
-  margin: 0;
-  overflow-x: hidden;
 }
 
-.main-bgbd {
+section:not(:last-child) {
+  margin-bottom: $spacing-body;
+}
+
+#noise_effect {
   z-index: -1;
-  border-radius: 0 !important;
+  position: absolute;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,18 +47,13 @@ body {
 ul {
   margin: 0;
   padding: 0;
-}
-.list {
-  margin-left: 2rem;
-  margin-top: 1rem;
-  list-style: "- ";
-  li + li {
-    margin-top: 1rem;
+  &.list {
+    margin: 2rem 0 0 1rem;
+    list-style: "- ";
+    li + li {
+      margin-top: 1rem;
+    }
   }
-}
-
-.text-regular {
-  font-size: 1.6rem;
 }
 
 a {
@@ -71,7 +68,7 @@ a {
 .bg {
   position: absolute;
   z-index: -1;
-  border-radius: 50%;
+  border-radius: 50%;  // Most background colors are ellipse
 
   &.bgbd {
     width: 100%;
@@ -139,11 +136,10 @@ header {
 
 nav {
   padding-bottom: $spacing-medium;
-  border-bottom: 2px solid $border-color;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.23);
   margin: 2rem $spacing-body 0 $spacing-body;
   ul {
     list-style: none;
-    display: flex;
     display: flex;
     gap: 4rem;
 
@@ -151,6 +147,7 @@ nav {
       color: $white;
       font-weight: $bold;
       font-size: 1.6rem;
+      display: inline-block;
     }
     li:first-child, li:last-child {
       flex: 1;
@@ -161,12 +158,6 @@ nav {
     li:last-child {
       text-align: right;
     }
-  }
-
-  img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -194,55 +185,53 @@ nav {
   margin-top: 3rem;
   color: $white;
   background: black;
-  border: 0;
   img {
     margin-right: 0.5rem;
   }
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 main {
   position: relative;
   display: flex;
   flex-direction: column;
-  &::before {
+  &::before, &::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0%;
-    right: 0;
-    z-index: -10;
-    background-image: url("/assets/CircuitHaut.svg");
-    background-position: 100% -91rem;
+    z-index: -1;
     background-repeat: no-repeat;
   }
+  &::before {
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("/assets/CircuitHaut.svg");
+    background-position: 100% -110rem;
+  }
   &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
     height: 100rem;
     bottom: 0;
-    right: 0;
-    z-index: -10;
+    left: 0;
     background-image: url("/assets/CircuitBas.svg");
-    background-repeat: no-repeat;
   }
 }
 
 h2 {
   font-family: "Helios Bold";
-  width: 100%;
-  border-bottom: 2px solid $white;
-  padding-bottom: 2.5rem;
   font-size: 5rem;
 }
 
 #objectives {
-  >:last-child {
+  h2 {
+    width: 100%;
+    border-bottom: 2px solid $white;
+    padding-bottom: 2.5rem;
+  }
+  > div {
     display: flex;
-    margin-bottom: $spacing-body;
     gap: 6rem;
     > div {
       flex: 1;
@@ -260,13 +249,16 @@ h3 {
 }
 
 #network, #client_protocol {
-  // background: black;
   position: relative;
   overflow: hidden;
   padding: 11rem;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+
+  h2 {
+    width: 30%;
+  }
   .angle {
     position: absolute;
     height: 30px;
@@ -300,7 +292,6 @@ h3 {
 }
 
 #network {
-  margin-bottom: $spacing-body;
   .bgbl {
     width: 815px;
     height: 815px;
@@ -311,18 +302,16 @@ h3 {
     filter: blur(225px);
   }
   .bgtr {
-    width: calc(1696px / 1280px) * 100%;
-    height: calc(685.4px / 469px) * 100%;
-    left: calc(301.19px / 1280px) * 100%;
-    top: calc(-704px / 469px) * 100%;
+    $network-width: 1280px;
+    $network-height: 469px;
+    width: calc(1696px / $network-width) * 100%;
+    height: calc(685.4px / $network-height) * 100%;
+    left: calc(201.19px / $network-width) * 100%;
+    top: calc(-504px / $network-height) * 100%;
 
     background: rgba(2, 255, 207, 0.1);
     filter: blur(165px);
     transform: rotate(29.74deg);
-  }
-  h2 {
-    width: 30%;
-    font-size: 5rem;
   }
   ul {
     list-style: none;
@@ -333,53 +322,15 @@ h3 {
   li span {
     color: $ascent-color;
   }
-  .angle {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    border: 1px solid $ascent-color;
-    &.tl {
-      top: 0;
-      left: 0;
-      border-right: 0;
-      border-bottom: 0;
-    }
-    &.tr {
-      top: 0;
-      right: 0;
-      border-left: 0;
-      border-bottom: 0;
-    }
-    &.bl {
-      bottom: 0;
-      left: 0;
-      border-top: 0;
-      border-right: 0;
-    }
-    &.br {
-      bottom: 0;
-      right: 0;
-      border-top: 0;
-      border-left: 0;
-    }
-  }
 }
 
 #roadmap {
-  margin-bottom: $spacing-body;
   h2 {
     text-align: center;
-    border: 0;
   }
 }
 
 #timeline {
-  display: flex;
-  flex-direction: column;
-  > div {
-    flex: 1;
-  }
-
   .top, .circles, .bottom {
     display: flex;
     > div {
@@ -406,8 +357,9 @@ h3 {
         position: absolute;
         width: 50%;
         height: 2px;
-        background: #00342A;
+        background: $dark-ascent-color;
         top: 50%;
+        transform: translateY(-50%);
         z-index: -1;
       }
       &:before {
@@ -429,20 +381,16 @@ h3 {
 
     .circle {
       border-radius: 50%;
-      border: 2px solid #00342A;
+      border: 2px solid $dark-ascent-color;
       width: 20px;
       height: 20px;
       position: relative;
       background: #001915;
     }
   }
-
-  .item {
-    position: relative;
-  }
 }
+
 #blockdag {
-  margin-bottom: $spacing-body;
   .title {
     border-bottom: 2px solid $white;
     display: flex;
@@ -452,21 +400,18 @@ h3 {
     padding-bottom: 2.5rem;
   }
   h2 {
-    border: 0;
-    width: unset;
     margin: 0;
-    padding: 0;
   }
-  .content {
+  ul.content {
     display: flex;
     margin-top: 4rem;
     flex-wrap: wrap;
-    .block {
+    li.item {
       width: calc(50% - 3rem);
       display: flex;
       padding-bottom: 3rem;
       margin: 0 1.5rem 3rem 1.5rem;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       &:nth-last-child(1), &:nth-last-child(2) {
         border-bottom: 0;
         padding-bottom: 0;
@@ -485,37 +430,32 @@ h3 {
 }
 
 #client_protocol {
-  margin-bottom: $spacing-body;
+  $client-width: 1280px;
+  $client-height: 674px;
   .bgtl {
-    width: calc(963px / 1280px) * 100%;
-    height: calc(786px / 674px) * 100%;
-    left: calc(-400px / 1280px) * 100%;
-    top: calc(-400px / 674px) * 100%;
+    width: calc(963px / $client-width) * 100%;
+    height: calc(786px / $client-height) * 100%;
+    left: calc(-400px / $client-width) * 100%;
+    top: calc(-400px / $client-height) * 100%;
     filter: blur(165px);
     background: rgba(2, 255, 207, 0.2);
     transform: rotate(122.43deg);
   }
   .bgbr {
-    width: calc(548px / 1280px) * 100%;
-    height: calc(548px / 674px) * 100%;
-    left: calc(826px / 1280px) * 100%;
-    top: calc(201px / 674px) * 100%;
+    width: calc(548px / $client-width) * 100%;
+    height: calc(548px / $client-height) * 100%;
+    left: calc(826px / $client-width) * 100%;
+    top: calc(201px / $client-height) * 100%;
     background: rgba(2, 255, 207, 0.6);
     filter: blur(225px);
   }
 }
 
-#socials {
+#socials { // TODO: review
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  margin-bottom: calc($spacing-body / 2);
-  h2 {
-    border: 0;
-    width: unset;
-    padding: 0;
-  }
   > div {
     display: flex;
     align-items: center;
@@ -541,7 +481,7 @@ footer {
   background: rgba(0, 0, 0, 0.08);
   border-top: 1px solid #02FFCF;
   backdrop-filter: blur(22px);
-  padding: 15rem $spacing-body 8rem $spacing-body;
+  padding: 15rem $spacing-body;
   font-size: 1.5rem;
 
   img {
@@ -551,8 +491,8 @@ footer {
   > div:first-child {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 3rem;
-    border-bottom: 2px solid $border-color;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4rem;
     > div:last-child {
       flex: 1;
       max-width: 50%;
@@ -560,13 +500,12 @@ footer {
   }
 
   p {
-    font-weight: 100;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 1.5rem;
-    margin: 4rem 0;
+    margin-top: 4rem;
   }
 
-  .menu {
+  .bottom-menu {
     > div {
       margin-bottom: 2rem;
     }
@@ -580,15 +519,16 @@ footer {
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0 5rem 0;
+    margin-top: 2rem;
   }
 }
 
-// Blurs are strange on retina screen like my macbook pro 2019
+// Blurs are strange on retina screen
+// Numbers are "random" but the result is pretty great on my macbook pro 2019
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-  .main-bgbd {
+  .noise_effect {
     opacity: 7% !important;
   }
   header {
@@ -618,24 +558,22 @@ footer {
       top: calc(-177px / 900px) * 150vh !important;
       opacity: 0.8;
     }
-    // .bgc, .bgt, .bgbr {
-    //   filter: blur(460px) !important;
-    // }
   }
 }
 
+// Responsive isn't on the figma sketch, there is a try:
 main {
   padding: 10% 20%;
 }
 
 @media screen and (max-width: 1920px) {
   main {
-    padding: 7% 16.6%;
+    padding: 10% 16.6%;
   }
 }
 @media screen and (max-width: 1600px) {
   main {
-    padding: 5% 10%;
+    padding: 7% 10%;
   }
   body {
     font-size: 1.8rem;
