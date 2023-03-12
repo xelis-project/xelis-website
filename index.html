@@ -97,25 +97,27 @@
         </div>
       </section>
 
-      <section id="network"> <!-- ================= NETWORK ================= -->
-        <div class="angle tl"></div>
-        <div class="angle tr"></div>
-        <div class="angle bl"></div>
-        <div class="angle br"></div>
-        <div class="bg bgbd"></div>
-        <div class="bg bgbl"></div>
-        <div class="bg bgtr"></div>
-        <div class="bg bgf"></div>
-        <h2>Network</h2>
-        <ul>
-          <li>Coin Name: <span>XEL</span></li>
-          <li>Average Block Time: <span>15 seconds</span></li>
-          <li>Maximum Block Size: <span>1.25 MB</span></li>
-          <li>Block Reward: <span>up to ~ 8.7 XEL</span></li>
-          <li>Maximum Supply: <span>18.4 millions</span></li>
-          <li>Minimum Transaction Fees: <span>0.01 XEL per KB</span></li>
-          <li>Block Dev Fee: <span>5%</span></li>
-        </ul>
+      <section id="network_container"> <!-- ================= NETWORK ================= -->
+        <div id="network">
+          <div class="angle tl"></div>
+          <div class="angle tr"></div>
+          <div class="angle bl"></div>
+          <div class="angle br"></div>
+          <div class="bg bgbd"></div>
+          <div class="bg bgbl"></div>
+          <div class="bg bgtr"></div>
+          <div class="bg bgf"></div>
+          <h2>Network</h2>
+          <ul>
+            <li>Coin Name: <span>XEL</span></li>
+            <li>Average Block Time: <span>15 seconds</span></li>
+            <li>Maximum Block Size: <span>1.25 MB</span></li>
+            <li>Block Reward: <span>up to ~ 8.7 XEL</span></li>
+            <li>Maximum Supply: <span>18.4 millions</span></li>
+            <li>Minimum Transaction Fees: <span>0.01 XEL per KB</span></li>
+            <li>Block Dev Fee: <span>5%</span></li>
+          </ul>
+        </div>
       </section>
 
       <section id="roadmap"> <!-- ================= ROADMAP ================= -->
@@ -257,37 +259,39 @@
         </ul>
       </section>
 
-      <section id="client_protocol"> <!-- ================= CLIENT PROTOCOL ================= -->
-        <div class="angle tl"></div>
-        <div class="angle tr"></div>
-        <div class="angle bl"></div>
-        <div class="angle br"></div>
-        <div class="bg bgbd"></div>
-        <div class="bg bgtl"></div>
-        <div class="bg bgbr"></div>
-        <div class="bg bgf"></div>
-        <h2>Client<br />Protocol</h2>
-        <div>
-          <p>
-            XELIS integrate along with BlockDAG a way to accept multiple times the same TX and only execute it one time.
-            Instead of excluding the whole block because we have a collision with another blockDAG branch for a TX, we
-            just don't execute the TX and keep its hash.
-          </p>
-          <p>
-            The same TX can be contained in multiple blocks only if:
-            <ul class="list">
-              <li>TX is not executed in stable height.</li>
-              <li>TX is not included in block Tips (previous blocks).</li>
-            </ul>
-          </p>
-          <p>
-            During the generation of the DAG order (linking unique topoheight to a block hash),
-            the first block being ordered will execute the TX first.
-          </p>
-          <p>
-            This feature allows to accept others branch tips even if transactions are the same and prevent
-            more orphans blocks when branches are merged.
-          </p>
+      <section id="client_protocol_container"> <!-- ================= CLIENT PROTOCOL ================= -->
+        <div id="client_protocol">
+          <div class="angle tl"></div>
+          <div class="angle tr"></div>
+          <div class="angle bl"></div>
+          <div class="angle br"></div>
+          <div class="bg bgbd"></div>
+          <div class="bg bgtl"></div>
+          <div class="bg bgbr"></div>
+          <div class="bg bgf"></div>
+          <h2>Client<br />Protocol</h2>
+          <div>
+            <p>
+              XELIS integrate along with BlockDAG a way to accept multiple times the same TX and only execute it one time.
+              Instead of excluding the whole block because we have a collision with another blockDAG branch for a TX, we
+              just don't execute the TX and keep its hash.
+            </p>
+            <p>
+              The same TX can be contained in multiple blocks only if:
+              <ul class="list">
+                <li>TX is not executed in stable height.</li>
+                <li>TX is not included in block Tips (previous blocks).</li>
+              </ul>
+            </p>
+            <p>
+              During the generation of the DAG order (linking unique topoheight to a block hash),
+              the first block being ordered will execute the TX first.
+            </p>
+            <p>
+              This feature allows to accept others branch tips even if transactions are the same and prevent
+              more orphans blocks when branches are merged.
+            </p>
+          </div>
         </div>
       </section>
 

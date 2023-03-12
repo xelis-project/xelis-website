@@ -290,6 +290,22 @@ h3 {
   }
 }
 
+#network_container {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -25%;
+    left: -10%;
+    width: calc(1231.23px / 1920px) * 100vw;
+    height: 724.17px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 170, 150, 0.2);
+    filter: blur(95px);
+    transform: rotate(20.59deg);
+  }
+}
+
 #network {
   .bgbl {
     top: 84px;
@@ -428,6 +444,22 @@ h3 {
   }
 }
 
+#client_protocol_container {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -100%;
+    right: -50%;
+    width: calc(1546.96px / 1920px) * 100vw;
+    height: 1042.44px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 170, 150, 0.2);
+    filter: blur(300px);
+    transform: rotate(42.19deg);
+  }
+}
+
 #client_protocol {
   $client-width: 1280px;
   $client-height: 674px;
@@ -490,13 +522,13 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
     content: "";
     background: url("/assets/CircuitBas.svg");
     background-position: 0rem -94.5rem;
     filter: blur(12px);
-    z-index: -1;
   }
 
   img {
