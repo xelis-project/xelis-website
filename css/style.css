@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "Helios";
+  src: url("/assets/HeliosExtC_Regular.otf");
+}
+@font-face {
   font-family: "Helios Bold";
   src: url("/assets/HeliosExtC_Bold.otf");
 }
@@ -34,6 +38,30 @@ section:not(:last-child) {
   background: black;
   background-image: url("/assets/Noise.png");
   opacity: 3%;
+}
+
+#logo a, #bottom_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+#logo a > div, #bottom_logo > div {
+  margin-bottom: -4px;
+  margin-left: 0.5rem;
+  font-family: "Helios";
+}
+#logo a img, #bottom_logo img {
+  width: 22px;
+  height: 22px;
+}
+
+#bottom_logo {
+  font-size: 5rem;
+}
+#bottom_logo img {
+  width: 50px;
+  height: 50px;
 }
 
 ul {
@@ -132,13 +160,6 @@ nav ul li {
   display: flex;
   align-items: center;
 }
-nav ul li:first-child a {
-  display: flex;
-  align-items: center;
-}
-nav ul li:first-child a img {
-  margin-bottom: -10px;
-}
 nav ul li a {
   display: inline-block;
   font-size: 1.6rem;
@@ -159,7 +180,8 @@ nav ul li:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 28rem 37.24rem;
+  margin: auto;
+  width: 50%;
 }
 #resume h1 {
   margin: 0;
@@ -332,6 +354,10 @@ h3 {
   text-align: center;
 }
 
+#timeline {
+  display: flex;
+  flex-direction: column;
+}
 #timeline .top, #timeline .circles, #timeline .bottom {
   display: flex;
 }
@@ -436,6 +462,9 @@ h3 {
   transform: rotate(42.19deg);
 }
 
+#client_protocol > div {
+  text-align: justify;
+}
 #client_protocol .bgtl {
   top: -59.3471810089%;
   left: -31.25%;
@@ -522,10 +551,11 @@ footer p {
   color: rgba(255, 255, 255, 0.5);
 }
 footer .bottom-menu > div {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 2rem;
-}
-footer .bottom-menu a + a {
-  margin-left: 3rem;
+  text-align: center;
+  flex-wrap: wrap;
 }
 footer .copyright {
   display: flex;
@@ -572,10 +602,18 @@ main {
   main {
     padding: 10% 16.6%;
   }
+  nav {
+    margin-right: 16.6%;
+    margin-left: 16.6%;
+  }
 }
 @media screen and (max-width: 1600px) {
   main {
     padding: 7% 10%;
+  }
+  nav {
+    margin-right: 10%;
+    margin-left: 10%;
   }
   body {
     font-size: 1.8rem;
@@ -585,15 +623,156 @@ main {
   main {
     padding: 4rem 8%;
   }
+  nav {
+    margin-right: 8%;
+    margin-left: 8%;
+  }
   body {
     font-size: 1.6rem;
+  }
+  #resume {
+    width: 75%;
   }
 }
 @media screen and (max-width: 900px) {
   main {
     padding: 2rem 4rem;
   }
+  nav {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
   body {
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 748px) {
+  nav ul {
+    justify-content: space-between;
+    gap: 0;
+  }
+  nav ul li:first-child, nav ul li:last-child {
+    flex: 0;
+  }
+  #resume {
+    width: 90%;
+  }
+  #resume p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #resume h1 {
+    font-size: 8rem;
+  }
+  main::before {
+    background-size: 100% 100%;
+    background-position: 100% -263rem;
+  }
+  main::after {
+    background-size: 100% 100%;
+    background-position: 0 42rem;
+  }
+  section {
+    margin-bottom: 19.6rem !important;
+  }
+  #objectives > div {
+    flex-direction: column;
+  }
+  #timeline {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+  #timeline .top > div, #timeline .circles > div, #timeline .bottom > div {
+    min-width: 28%;
+  }
+  #network, #client_protocol {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem;
+  }
+  #network h2, #client_protocol h2 {
+    margin: 0;
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+  }
+  #network ul {
+    text-align: center;
+  }
+  #client_protocol {
+    padding: 3rem;
+  }
+  #blockdag .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #blockdag .title span {
+    text-align: justify;
+  }
+  #blockdag ul.content li.item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  #blockdag ul.content li.item:nth-last-child(2) {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  #socials {
+    flex-direction: column;
+  }
+  #socials > div {
+    width: 100%;
+  }
+  #socials a {
+    font-size: 1.6rem;
+  }
+  #bottom_logo {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+  #bottom_logo img {
+    width: 20px;
+    height: 20px;
+  }
+  footer {
+    padding: 4rem;
+  }
+  footer::before {
+    background-position: 0rem -26rem;
+    background-size: 100% 100%;
+  }
+  footer > div:first-child {
+    flex-direction: column;
+  }
+  footer > div:first-child > div:last-child {
+    max-width: 100%;
+  }
+  footer p {
+    text-align: justify;
+  }
+  footer .copyright {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    margin: 0;
+    padding: 1rem;
+    border-width: 1px;
+  }
+  nav ul li a {
+    font-size: 1.4rem;
+  }
+  #logo a div {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav ul li a {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
