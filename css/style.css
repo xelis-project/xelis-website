@@ -3,8 +3,8 @@
   src: url("/assets/HelioxExtC_Bold.otf");
 }
 * {
-  box-sizing: border-box;
   font-family: "Jura", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,8 +14,9 @@ html {
 }
 
 body {
-  font-family: "Jura", sans-serif;
+  position: relative;
   font-size: 2rem;
+  font-family: "Jura", sans-serif;
   color: #fff;
 }
 
@@ -24,13 +25,12 @@ section:not(:last-child) {
 }
 
 #noise_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
-  position: absolute;
-  position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
   background: black;
   background-image: url("/assets/Noise.png");
   opacity: 3%;
@@ -63,76 +63,76 @@ a:hover {
   border-radius: 50%;
 }
 .bg.bgbd {
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 0;
   background: rgb(0, 0, 0);
 }
 .bg.bgf {
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 0;
   background: rgba(0, 0, 0, 0.4);
 }
 
 header {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
-  position: relative;
 }
 header .bg.bgl {
+  top: -34.4444444444vh;
+  left: -12.2395833333vw;
   width: 79.21875vw;
   height: 169vh;
-  left: -12.2395833333vw;
-  top: -34.4444444444vh;
   background: rgba(0, 139, 170, 0.14);
 }
 header .bg.bgc {
+  top: 26.4444444444vh;
+  left: 47.0833333333vw;
   width: 28.0729166667vw;
   height: 59.8888888889vh;
-  left: 47.0833333333vw;
-  top: 26.4444444444vh;
   background: #00AA81;
   filter: blur(12.7604166667vw);
 }
 header .bg.bgt {
+  top: -19.6666666667vh;
+  left: 18.125vw;
   width: 91.25vw;
   height: 65.8888888889vh;
-  left: 18.125vw;
-  top: -19.6666666667vh;
   background: rgba(0, 170, 150, 0.8);
   filter: blur(12.7604166667vw);
 }
 header .bg.bgbr {
+  top: 46.3333333333vh;
+  left: 65.2604166667vw;
   width: 57.4479166667vw;
   height: 122.5555555556vh;
-  left: 65.2604166667vw;
-  top: 46.3333333333vh;
   background: rgba(5, 124, 132, 0.7);
   filter: blur(11.9791666667vw);
 }
 
 nav {
+  margin: 2rem 28rem 0 28rem;
   padding-bottom: 1.4rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.23);
-  margin: 2rem 28rem 0 28rem;
 }
 nav ul {
-  list-style: none;
   display: flex;
   gap: 4rem;
+  list-style: none;
 }
 nav ul li a {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.6rem;
   display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
 }
 nav ul li:first-child, nav ul li:last-child {
   flex: 1;
@@ -151,9 +151,9 @@ nav ul li:last-child {
   margin: 28rem 37.24rem;
 }
 #resume h1 {
-  font-family: "Helios Bold";
-  font-size: 10rem;
   margin: 0;
+  font-size: 10rem;
+  font-family: "Helios Bold";
 }
 #resume p {
   margin: 2.2rem 10% 0 10%;
@@ -161,16 +161,16 @@ nav ul li:last-child {
 }
 
 #github {
-  font-family: "Helios Bold";
-  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
   padding: 1rem 4.5rem;
   font-size: 1.5rem;
-  margin-top: 3rem;
+  font-family: "Helios Bold";
   color: #fff;
+  border-radius: 50px;
   background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 #github img {
   margin-right: 0.5rem;
@@ -182,35 +182,35 @@ main {
   flex-direction: column;
 }
 main::before, main::after {
-  content: "";
   position: absolute;
+  z-index: -2;
   width: 100%;
-  z-index: -1;
+  content: "";
   background-repeat: no-repeat;
 }
 main::before {
-  height: 100%;
   top: 0;
   right: 0;
+  height: 100%;
   background-image: url("/assets/CircuitHaut.svg");
   background-position: 100% -110rem;
 }
 main::after {
-  height: 100rem;
   bottom: 0;
   left: 0;
+  height: 100rem;
   background-image: url("/assets/CircuitBas.svg");
 }
 
 h2 {
-  font-family: "Helios Bold";
   font-size: 5rem;
+  font-family: "Helios Bold";
 }
 
 #objectives h2 {
+  padding-bottom: 2.5rem;
   width: 100%;
   border-bottom: 2px solid #fff;
-  padding-bottom: 2.5rem;
 }
 #objectives > div {
   display: flex;
@@ -224,26 +224,26 @@ h2 {
 }
 
 h3 {
-  color: #02FFCF;
   font-family: "Helios Bold";
+  color: #02FFCF;
   text-transform: uppercase;
 }
 
 #network, #client_protocol {
   position: relative;
   overflow: hidden;
-  padding: 11rem;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  padding: 11rem;
 }
 #network h2, #client_protocol h2 {
   width: 30%;
 }
 #network .angle, #client_protocol .angle {
   position: absolute;
-  height: 30px;
   width: 30px;
+  height: 30px;
   border: 1px solid #02FFCF;
 }
 #network .angle.tl, #client_protocol .angle.tl {
@@ -265,25 +265,25 @@ h3 {
   border-right: 0;
 }
 #network .angle.br, #client_protocol .angle.br {
-  bottom: 0;
   right: 0;
+  bottom: 0;
   border-top: 0;
   border-left: 0;
 }
 
 #network .bgbl {
+  top: 84px;
+  left: -458px;
   width: 815px;
   height: 815px;
-  left: -458px;
-  top: 84px;
   background: rgba(2, 255, 207, 0.6);
   filter: blur(225px);
 }
 #network .bgtr {
+  top: -107.4626865672%;
+  left: 15.71796875%;
   width: 132.5%;
   height: 146.1407249467%;
-  left: 15.71796875%;
-  top: -107.4626865672%;
   background: rgba(2, 255, 207, 0.1);
   filter: blur(165px);
   transform: rotate(29.74deg);
@@ -306,8 +306,8 @@ h3 {
   display: flex;
 }
 #timeline .top > div, #timeline .circles > div, #timeline .bottom > div {
-  padding: 1rem;
   flex: 1;
+  padding: 1rem;
   text-align: center;
 }
 #timeline .top, #timeline .bottom {
@@ -317,19 +317,19 @@ h3 {
   color: #02FFCF;
 }
 #timeline .circles > div {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 #timeline .circles > div:before, #timeline .circles > div:after {
-  content: "";
   position: absolute;
+  top: 50%;
+  z-index: -1;
   width: 50%;
   height: 2px;
+  content: "";
   background: #00342A;
-  top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
 }
 #timeline .circles > div:before {
   left: 0;
@@ -341,25 +341,25 @@ h3 {
   background: #02FFCF;
 }
 #timeline .circles > div.active .circle {
-  background: #004C3E;
   border: 2px solid #02FFCF;
+  background: #004C3E;
 }
 #timeline .circles .circle {
-  border-radius: 50%;
-  border: 2px solid #00342A;
+  position: relative;
   width: 20px;
   height: 20px;
-  position: relative;
+  border: 2px solid #00342A;
+  border-radius: 50%;
   background: #001915;
 }
 
 #blockdag .title {
-  border-bottom: 2px solid #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 4rem;
   padding-bottom: 2.5rem;
+  border-bottom: 2px solid #fff;
 }
 #blockdag h2 {
   margin: 0;
@@ -370,40 +370,40 @@ h3 {
   flex-wrap: wrap;
 }
 #blockdag ul.content li.item {
-  width: calc(50% - 3rem);
   display: flex;
-  padding-bottom: 3rem;
   margin: 0 1.5rem 3rem 1.5rem;
+  padding-bottom: 3rem;
+  width: calc(50% - 3rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 #blockdag ul.content li.item:nth-last-child(1), #blockdag ul.content li.item:nth-last-child(2) {
-  border-bottom: 0;
-  padding-bottom: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 #blockdag ul.content .number {
-  color: #02FFCF;
-  width: 3rem;
   margin-right: 1rem;
+  width: 3rem;
+  color: #02FFCF;
 }
 #blockdag ul.content .text {
   max-width: calc(100% - 4rem);
 }
 
 #client_protocol .bgtl {
+  top: -59.3471810089%;
+  left: -31.25%;
   width: 75.234375%;
   height: 116.6172106825%;
-  left: -31.25%;
-  top: -59.3471810089%;
   filter: blur(165px);
   background: rgba(2, 255, 207, 0.2);
   transform: rotate(122.43deg);
 }
 #client_protocol .bgbr {
+  top: 29.821958457%;
+  left: 64.53125%;
   width: 42.8125%;
   height: 81.3056379822%;
-  left: 64.53125%;
-  top: 29.821958457%;
   background: rgba(2, 255, 207, 0.6);
   filter: blur(225px);
 }
@@ -415,16 +415,16 @@ h3 {
   gap: 3rem;
 }
 #socials > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #socials > div > div {
-  width: 100%;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 #socials > div > div + div {
   margin-top: 1rem;
@@ -435,12 +435,12 @@ h3 {
 }
 
 footer {
+  padding: 15rem 28rem;
+  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.08);
   border-top: 1px solid #02FFCF;
   -webkit-backdrop-filter: blur(22px);
           backdrop-filter: blur(22px);
-  padding: 15rem 28rem;
-  font-size: 1.5rem;
 }
 footer img {
   width: 230px;
@@ -448,17 +448,17 @@ footer img {
 footer > div:first-child {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 4rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 footer > div:first-child > div:last-child {
   flex: 1;
   max-width: 50%;
 }
 footer p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
   margin-top: 4rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 footer .bottom-menu > div {
   margin-bottom: 2rem;
@@ -467,39 +467,39 @@ footer .bottom-menu a + a {
   margin-left: 3rem;
 }
 footer .copyright {
-  opacity: 0.5;
-  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  font-size: 1.5rem;
+  opacity: 0.5;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .noise_effect {
+  #noise_effect {
     opacity: 7% !important;
   }
   header .bgl {
     background: rgba(0, 139, 170, 0.2) !important;
   }
   header .bgc {
+    top: 13.2222222222vh !important;
+    left: 70.625vh !important;
     width: 42.109375vw !important;
     height: 89.8333333333vh !important;
-    left: 70.625vh !important;
-    top: 13.2222222222vh !important;
     opacity: 0.5;
   }
   header .bgbr {
+    top: 13.9vh !important;
+    left: 58.734375vw !important;
     width: 86.171875vw !important;
     height: 220.6vh !important;
-    left: 58.734375vw !important;
-    top: 13.9vh !important;
     opacity: 0.8;
   }
   header .bgt {
+    top: -29.5vh !important;
+    left: 9.0625vw !important;
     width: 136.875vw !important;
     height: 65.8888888889vh !important;
-    left: 9.0625vw !important;
-    top: -29.5vh !important;
     opacity: 0.8;
   }
 }
