@@ -759,11 +759,13 @@ main {
   #network h2, #client_protocol h2 {
     margin: 0;
     width: 100%;
-    font-size: 4rem;
     text-align: center;
   }
   #network ul {
     text-align: center;
+  }
+  #network li span {
+    display: block;
   }
   #client_protocol {
     padding: 3rem;
@@ -846,6 +848,9 @@ main {
   }
 }
 @media screen and (max-width: 450px) {
+  h2 {
+    font-size: 2.5rem;
+  }
   nav ul li a {
     font-size: 1.2rem;
   }
