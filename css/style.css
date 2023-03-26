@@ -14,15 +14,19 @@
 html {
   background: #000;
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
-  position: relative;
   font-family: "Jura", sans-serif;
   font-size: 2rem;
   color: #fff;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section:not(:last-child) {
@@ -30,17 +34,56 @@ section:not(:last-child) {
 }
 
 #noise_effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  z-index: 2;
   opacity: 3%;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200vh;
   background: black;
   background-image: url("/assets/Noise.png");
+  animation: bg-animation 1s infinite;
+  pointer-events: none;
 }
 
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
 #logo a, #bottom_logo {
   display: flex;
   justify-content: center;
@@ -63,6 +106,10 @@ section:not(:last-child) {
 #bottom_logo img {
   width: 50px;
   height: 50px;
+}
+
+ol {
+  padding: 0 1.5rem;
 }
 
 ul {
@@ -110,10 +157,12 @@ a:hover {
 
 header {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background: black;
 }
 header .bg.bgl {
   top: -34.4444444444vh;
@@ -246,7 +295,6 @@ nav ul li:last-child {
 
 main {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -320,6 +368,7 @@ h3 {
 
 #network, #client_protocol {
   position: relative;
+  z-index: 10;
   overflow: hidden;
   display: flex;
   gap: 5rem;
@@ -368,6 +417,7 @@ h3 {
   position: absolute;
   top: -25%;
   left: -10%;
+  z-index: -1;
   width: 64.1265625vw;
   height: 724.17px;
   background: rgba(0, 170, 150, 0.2);
@@ -470,6 +520,10 @@ h3 {
   padding-bottom: 2.5rem;
   border-bottom: 2px solid #fff;
 }
+#blockdag .title span {
+  font-size: 2rem;
+  font-weight: bold;
+}
 #blockdag h2 {
   margin: 0;
 }
@@ -477,12 +531,14 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 4rem;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
 }
 #blockdag ul.content li.item {
   display: flex;
-  margin: 0 1.5rem 3rem 1.5rem;
+  margin-bottom: 3rem;
   padding-bottom: 3rem;
-  width: calc(50% - 3rem);
+  width: calc(50% - 2rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 #blockdag ul.content li.item:nth-last-child(1), #blockdag ul.content li.item:nth-last-child(2) {
@@ -516,9 +572,6 @@ h3 {
   border-radius: 50%;
 }
 
-#client_protocol > div {
-  text-align: justify;
-}
 #client_protocol .bgtl {
   top: -59.3471810089%;
   left: -31.25%;
@@ -625,9 +678,89 @@ footer .copyright {
   margin-top: 2rem;
 }
 
+#burger_menu {
+  display: none;
+}
+
+#burger_menu button {
+  position: relative;
+  width: 3rem;
+  height: 0.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#burger_menu button:before,
+#burger_menu button:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 1px;
+  background-color: white;
+  transition: transform 0.3s ease-out;
+}
+
+#burger_menu button:before {
+  top: 0;
+  width: 2.3rem;
+}
+
+#burger_menu button:after {
+  bottom: 0;
+  width: 3.2rem;
+}
+
+.menu-open main, .menu-open footer {
+  display: none;
+}
+.menu-open #mobile_menu {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+.menu-open header .bg.bgl {
+  background-image: url("/assets/menu.png") !important;
+}
+.menu-open #burger_menu button:before {
+  width: 2.3rem;
+  transform: translateY(4px) translateX(0px) rotate(45deg);
+}
+.menu-open #burger_menu button:after {
+  width: 2.3rem;
+  transform: translateY(-3px) translateX(0px) rotate(-45deg);
+}
+.menu-open #resume {
+  display: none;
+}
+
+#mobile_menu {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#mobile_menu ul {
+  list-style: none;
+}
+#mobile_menu ul li {
+  font-size: 3rem;
+  text-align: center;
+}
+#mobile_menu ul li + li {
+  margin-top: 1.5rem;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #noise_effect {
-    opacity: 7% !important;
+    opacity: 5% !important;
   }
   header .bgl {
     background: rgba(0, 139, 170, 0.2) !important;
@@ -656,6 +789,10 @@ footer .copyright {
 }
 main {
   padding: 10% 20%;
+}
+
+.safari .bgc, .safari .bgt, .safari .bgbr, .safari #network_container::before, .safari .bgbl, .safari .bgtr, .safari .bgf {
+  filter: blur(9rem) !important;
 }
 
 @media screen and (max-width: 1920px) {
@@ -696,7 +833,7 @@ main {
 }
 @media screen and (max-width: 900px) {
   main {
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
   nav {
     margin-right: 4rem;
@@ -710,12 +847,34 @@ main {
   h2 {
     font-size: 3.5rem;
   }
-  nav ul {
-    gap: 0;
-    justify-content: space-between;
+  header .bg {
+    display: none;
   }
-  nav ul li:first-child, nav ul li:last-child {
-    flex: 0;
+  header .bg.bgl {
+    top: 0;
+    left: 0;
+    z-index: -2 !important;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/main.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0;
+  }
+  #logo a {
+    font-size: 1.5rem;
+  }
+  nav {
+    margin: 2rem 2rem 0 2rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  nav ul li:not(#logo, #burger_menu) {
+    display: none;
+  }
+  #burger_menu {
+    display: flex;
   }
   #resume {
     width: 90%;
@@ -736,7 +895,7 @@ main {
   }
   main::after {
     background-position: 0 42rem;
-    background-size: 100% 100%;
+    background-size: 130% 100%;
   }
   section {
     margin-bottom: 19.6rem !important;
@@ -752,9 +911,9 @@ main {
     min-width: 28%;
   }
   #network, #client_protocol {
-    gap: 4rem;
+    gap: 2rem;
     flex-direction: column;
-    padding: 5rem;
+    padding: 6rem 5rem;
   }
   #network h2, #client_protocol h2 {
     margin: 0;
@@ -768,7 +927,14 @@ main {
     display: block;
   }
   #client_protocol {
-    padding: 3rem;
+    padding: 6rem 4rem;
+  }
+  #client_protocol_container::before {
+    top: -50%;
+    right: -10%;
+    width: 50vw;
+    height: 100vw;
+    filter: blur(100px);
   }
   #blockdag .title {
     gap: 1rem;
@@ -776,7 +942,7 @@ main {
     align-items: flex-start;
   }
   #blockdag .title span {
-    text-align: justify;
+    font-size: 1.6rem;
   }
   #blockdag ul.content li.item {
     margin-bottom: 1.5rem;
@@ -806,11 +972,11 @@ main {
     height: 20px;
   }
   footer {
-    padding: 4rem;
+    padding: 5rem 4rem;
   }
   footer::before {
     background-position: 0rem -26rem;
-    background-size: 100% 100%;
+    background-size: 130% 100%;
   }
   footer > div:first-child {
     flex-direction: column;
@@ -820,31 +986,29 @@ main {
   }
   footer .bottom-menu > div {
     gap: 1rem;
+    flex-direction: row;
     justify-content: center;
+  }
+  footer .bottom-menu > div:last-child {
+    flex-direction: row-reverse;
+  }
+  footer .bottom-menu > div:last-child a {
+    width: 41%;
+    width: calc(50% - 0.5rem);
+  }
+  footer .bottom-menu > div:last-child a:nth-child(2n) {
+    text-align: right;
   }
   footer .bottom-menu > div a {
     width: unset;
   }
   footer p {
-    text-align: justify;
+    text-align: center;
   }
   footer .copyright {
     gap: 1rem;
     flex-direction: column;
     text-align: center;
-  }
-}
-@media screen and (max-width: 600px) {
-  nav {
-    margin: 0;
-    padding: 1rem;
-    border-width: 1px;
-  }
-  nav ul li a {
-    font-size: 1.4rem;
-  }
-  #logo a div {
-    display: none;
   }
 }
 @media screen and (max-width: 450px) {

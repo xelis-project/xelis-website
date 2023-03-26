@@ -22,15 +22,19 @@ $bold: 700;
 html {
   background: #000;
   font-size: 62.5%; // = 10px
-  scroll-behavior: smooth;
 }
 
 body {
-  position: relative;
   font-family: "Jura", sans-serif;
   font-size: 2rem;
   color: $white;
+}
+
+html, body { // For safari
+  position: relative;
+  height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section:not(:last-child) {
@@ -38,15 +42,64 @@ section:not(:last-child) {
 }
 
 #noise_effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  z-index: 2;
   opacity: 3%;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200vh;
   background: black;
   background-image: url("/assets/Noise.png");
+  animation: bg-animation 1s infinite;
+  pointer-events: none;
+}
+@keyframes bg-animation {
+  0% {
+      transform: translate(0,0)
+  }
+
+  10% {
+      transform: translate(-5%,-5%)
+  }
+
+  20% {
+      transform: translate(-10%,5%)
+  }
+
+  30% {
+      transform: translate(5%,-10%)
+  }
+
+  40% {
+      transform: translate(-5%,15%)
+  }
+
+  50% {
+      transform: translate(-10%,5%)
+  }
+
+  60% {
+      transform: translate(15%,0)
+  }
+
+  70% {
+      transform: translate(0,10%)
+  }
+
+  80% {
+      transform: translate(-15%,0)
+  }
+
+  90% {
+      transform: translate(10%,5%)
+  }
+
+  100% {
+      transform: translate(5%,0)
+  }
 }
 
 #logo a, #bottom_logo {
@@ -71,6 +124,10 @@ section:not(:last-child) {
     width: 50px;
     height: 50px;
   }
+}
+
+ol {
+  padding: 0 1.5rem;
 }
 
 ul {
@@ -121,10 +178,12 @@ a {
 
 header {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background: black;
   .bg {
     &.bgl {
       top: calc(-310px / 900px) * 100vh;
@@ -247,7 +306,6 @@ nav {
 
 main {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   svg.top {
@@ -324,6 +382,7 @@ h3 {
 
 #network, #client_protocol {
   position: relative;
+  z-index: 10;
   overflow: hidden;
   display: flex;
   gap: 5rem;
@@ -372,6 +431,7 @@ h3 {
     position: absolute;
     top: -25%;
     left: -10%;
+    z-index: -1;
     width: calc(1231.23px / 1920px) * 100vw;
     height: 724.17px;
     background: rgba(0, 170, 150, 0.2);
@@ -490,6 +550,10 @@ h3 {
     align-items: center;
     padding-bottom: 2.5rem;
     border-bottom: 2px solid $white;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
   }
   h2 {
     margin: 0;
@@ -498,11 +562,12 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
+    column-gap: 4rem;
     li.item {
       display: flex;
-      margin: 0 1.5rem 3rem 1.5rem;
+      margin-bottom: 3rem;
       padding-bottom: 3rem;
-      width: calc(50% - 3rem);
+      width: calc(50% - 2rem);
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       &:nth-last-child(1), &:nth-last-child(2) {
         margin-bottom: 0;
@@ -541,9 +606,6 @@ h3 {
 #client_protocol {
   $client-width: 1280px;
   $client-height: 674px;
-  > div {
-    text-align: justify;
-  }
   .bgtl {
     top: calc(-400px / $client-height) * 100%;
     left: calc(-400px / $client-width) * 100%;
@@ -659,13 +721,100 @@ footer {
   }
 }
 
+// ============ MENU =======
+
+#burger_menu {
+  display: none;
+}
+
+#burger_menu button {
+  position: relative;
+  width: 3rem;
+  height: 0.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#burger_menu button:before,
+#burger_menu button:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 1px;
+  background-color: white;
+  transition: transform 0.3s ease-out;
+}
+
+#burger_menu button:before {
+  top: 0;
+  width: 2.3rem;
+}
+
+#burger_menu button:after {
+  bottom: 0;
+  width: 3.2rem;
+}
+
+.menu-open {
+  main, footer {
+    display: none;
+  }
+  #mobile_menu {
+    top: 50%;
+    left: 50%;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+  header .bg.bgl {
+    background-image: url("/assets/menu.png") !important;
+  }
+  #burger_menu button:before {
+    width: 2.3rem;
+    transform: translateY(4px) translateX(0px) rotate(45deg);
+  }
+
+  #burger_menu button:after {
+    width: 2.3rem;
+    transform: translateY(-3px) translateX(0px) rotate(-45deg);
+  }
+  #resume {
+    display: none;
+  }
+}
+
+#mobile_menu {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: visibility 0s, opacity 0.5s linear;
+  ul {
+    list-style: none;
+    li {
+      font-size: 3rem;
+      text-align: center;
+      & + li {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+// ==============
+
 // Blurs are strange on retina screen
 // Numbers are "random" but the result is pretty great on my macbook pro 2019
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
   #noise_effect {
-    opacity: 7% !important;
+    opacity: 5% !important;
   }
   header {
     .bgl {
@@ -700,6 +849,12 @@ footer {
 // Responsive isn't on the figma sketch, there is a try:
 main {
   padding: 10% 20%;
+}
+
+.safari {
+  .bgc, .bgt, .bgbr, #network_container::before, .bgbl, .bgtr, .bgf {
+    filter: blur(9rem) !important;
+  }
 }
 
 @media screen and (max-width: 1920px) {
@@ -740,7 +895,7 @@ main {
 }
 @media screen and (max-width: 900px) {
   main {
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
   nav {
     margin-right: 4rem;
@@ -755,15 +910,44 @@ main {
   h2 {
     font-size: 3.5rem;
   }
-  nav {
-    ul {
-      gap: 0;
-      justify-content: space-between;
-      li:first-child, li:last-child {
-        flex: 0;
+
+  header {
+    .bg {
+      display: none;
+      &.bgl {
+        top: 0;
+        left: 0;
+        z-index: -2 !important;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("/assets/main.png") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        border-radius: 0;
       }
     }
   }
+
+  #logo a {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    margin: 2rem 2rem 0 2rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+    ul {
+      li:not(#logo, #burger_menu) {
+        display: none;
+      }
+    }
+  }
+
+  #burger_menu {
+    display: flex;
+  }
+
   #resume {
     width: 90%;
     p {
@@ -784,7 +968,7 @@ main {
     }
     &::after {
       background-position: 0 42rem;
-      background-size: 100% 100%;
+      background-size: 130% 100%;
     }
   }
   section {
@@ -805,9 +989,9 @@ main {
     }
   }
   #network, #client_protocol {
-    gap: 4rem;
+    gap: 2rem;
     flex-direction: column;
-    padding: 5rem;
+    padding: 6rem 5rem;
     h2 {
       margin: 0;
       width: 100%;
@@ -823,15 +1007,26 @@ main {
     }
   }
   #client_protocol {
-    padding: 3rem;
+    padding: 6rem 4rem;
   }
+
+  #client_protocol_container {
+    &::before {
+      top: -50%;
+      right: -10%;
+      width: 50vw;
+      height: 100vw;
+      filter: blur(100px);
+    }
+  }
+
   #blockdag {
     .title {
       gap: 1rem;
       flex-direction: column;
       align-items: flex-start;
       span {
-        text-align: justify;
+        font-size: 1.6rem;
       }
     }
     ul.content li.item {
@@ -867,9 +1062,9 @@ main {
   footer {
     &::before {
       background-position: 0rem -26rem;
-      background-size: 100% 100%;
+      background-size: 130% 100%;
     }
-    padding: 4rem;
+    padding: 5rem 4rem;
     > div:first-child {
       flex-direction: column;
       > div:last-child {
@@ -880,7 +1075,18 @@ main {
     .bottom-menu {
       > div {
         gap: 1rem;
+        flex-direction: row;
         justify-content: center;
+        &:last-child {
+          flex-direction: row-reverse;
+          a {
+            width: 41%;
+            width: calc(50% - 0.5rem);
+            &:nth-child(2n) {
+              text-align: right;
+            }
+          }
+        }
         a {
           width: unset;
         }
@@ -888,7 +1094,7 @@ main {
     }
 
     p {
-      text-align: justify;
+      text-align: center;
     }
 
     .copyright {
@@ -896,20 +1102,6 @@ main {
       flex-direction: column;
       text-align: center;
     }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  nav {
-    margin: 0;
-    padding: 1rem;
-    border-width: 1px;
-    ul li a {
-      font-size: 1.4rem;
-    }
-  }
-  #logo a div {
-    display: none;
   }
 }
 

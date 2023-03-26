@@ -18,13 +18,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preload" as="image" href="/assets/main.png" />
+  <link rel="preload" as="image" href="/assets/menu.png" />
 </head>
 
 <body>
   <div id="noise_effect"></div>
-  <div style="padding: .5em; text-align:center;">
-    This page is a work in progress. The information does not reflect final version.
-  </div>
   <header> <!-- ================= HEADER ================= -->
     <nav>
       <ul>
@@ -53,9 +53,36 @@
             Documentation
           </a>
         </li>
+        <li id="burger_menu">
+          <button></button>
+        </li>
       </ul>
     </nav>
+    <div id="mobile_menu">
+      <ul>
+        <li>
+          <a href="#objectives">About</a>
+        </li>
+        <li>
+          <a href="#network">Network</a>
+        </li>
+        <li>
+          <a href="#roadmap">Roadmap</a>
+        </li>
+        <li>
+          <a href="#socials">Socials</a>
+        </li>
+        <li>
+          <a href="https://docs.xelis.io/" target="_blank">
+            Documentation
+          </a>
+        </li>
+      </ul>
+    </div>
     <div id="resume">
+      <div style="margin-bottom: 2rem;padding: .5em; text-align:center;">
+        This page is a work in progress. The information does not reflect final version.
+      </div>
       <h1>XELIS</h1>
       <p>
         Developed in Rust for guaranteed memory security, XELIS is an innovative decentralized cryptocurrency
@@ -1241,7 +1268,20 @@
     </div>
   </footer>
   <script>
+    function detectSafari() {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isSafari = userAgent.includes("safari") && !userAgent.includes("chrome") && !userAgent.includes("android");
+      const isIos = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+      return isSafari || isIos;
+    }
+
     const isMobile = window.matchMedia("(max-width: 748px)").matches;
+    const isSafari = detectSafari();
+
+    if(isSafari) {
+      document.body.classList.add("safari");
+    }
 
     // Animates the top position of an element with the given class while scrolling
     function animateTop(classe) {
@@ -1263,7 +1303,7 @@
       };
 
       // Add a scroll event listener to update the top position
-      window.addEventListener("scroll", updateTopPosition);
+      document.body.addEventListener("scroll", updateTopPosition);
     }
 
     // Animates the blur effect on an element with the given class while scrolling
@@ -1295,7 +1335,7 @@
       window.addEventListener("scroll", updateBlur);
     }
 
-    if (!isMobile) {
+    if (!isMobile && !isSafari) {
       // Apply animations
       animateBlur(".bgl");
       animateTop(".bgc");
@@ -1344,12 +1384,12 @@
           // Animate each path element
           paths.forEach(animatePath);
           // Remove the scroll event listener once the element is in the viewport
-          window.removeEventListener("scroll", handler);
+          document.body.removeEventListener("scroll", handler);
         }
       };
 
       // Add the scroll event listener
-      window.addEventListener("scroll", handler);
+      document.body.addEventListener("scroll", handler);
     }
 
     if(!isMobile) {
@@ -1358,13 +1398,25 @@
     }
 
     // Animated blocks
-    document.addEventListener("scroll", () => {
+    document.body.addEventListener("scroll", () => {
       const elements = document.querySelectorAll(".is-animated");
       [...elements].forEach((el) => {
         if (isInViewport(el)) {
           el.classList.add("active");
         }
       });
+    });
+
+
+    // MENU
+    document.querySelector("#burger_menu button").addEventListener("click", () => {
+      document.body.classList.toggle("menu-open");
+    });
+
+    document.querySelectorAll("#mobile_menu a").forEach((a) => {
+      a.addEventListener("click", () => {
+        document.body.classList.toggle("menu-open");
+      })
     });
   </script>
 </body>
