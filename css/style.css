@@ -45,7 +45,7 @@ section:not(:last-child) {
   height: 200vh;
   background: black;
   background-image: url("/assets/Noise.png");
-  animation: bg-animation 1s infinite;
+  animation: bg-animation 0.2s infinite;
   pointer-events: none;
 }
 
@@ -459,28 +459,40 @@ h3 {
 
 #timeline {
   display: flex;
-  flex-direction: column;
 }
-#timeline .top, #timeline .circles, #timeline .bottom {
+#timeline > div {
   display: flex;
-}
-#timeline .top > div, #timeline .circles > div, #timeline .bottom > div {
+  flex-direction: column;
   flex: 1;
-  padding: 1rem;
+}
+#timeline > div > div {
   text-align: center;
 }
-#timeline .top, #timeline .bottom {
-  font-size: 1.5rem;
+#timeline > div .top {
+  height: 6rem;
 }
-#timeline .top > div > div:first-child, #timeline .bottom > div > div:first-child {
+#timeline > div .bottom {
+  height: 10rem;
+}
+#timeline > div .top > :first-child, #timeline > div .bottom > :first-child {
   color: #02FFCF;
 }
-#timeline .circles > div {
+#timeline > div .circle {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 3rem;
 }
-#timeline .circles > div:before, #timeline .circles > div:after {
+#timeline > div .circle > div {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #001915;
+  border: 2px solid #00342A;
+  border-radius: 50%;
+}
+#timeline > div .circle:before, #timeline > div .circle:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -490,26 +502,18 @@ h3 {
   background: #00342A;
   transform: translateY(-50%);
 }
-#timeline .circles > div:before {
+#timeline > div .circle:before {
   left: 0;
 }
-#timeline .circles > div:after {
+#timeline > div .circle:after {
   right: 0;
 }
-#timeline .circles > div.done:before, #timeline .circles > div.done:after {
+#timeline > div.done .circle:before, #timeline > div.done .circle:after {
   background: #02FFCF;
 }
-#timeline .circles > div.done .circle {
+#timeline > div.done .circle > div {
   background: #004C3E;
   border: 2px solid #02FFCF;
-}
-#timeline .circles .circle {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background: #001915;
-  border: 2px solid #00342A;
-  border-radius: 50%;
 }
 
 #blockdag .title {
@@ -904,11 +908,45 @@ main {
     flex-direction: column;
   }
   #timeline {
-    max-width: 100%;
-    overflow-x: scroll;
+    position: relative;
+    flex-direction: column;
   }
-  #timeline .top > div, #timeline .circles > div, #timeline .bottom > div {
-    min-width: 28%;
+  #timeline > div {
+    flex-direction: row;
+    align-items: center;
+  }
+  #timeline div.top, #timeline div.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  #timeline div .circle {
+    margin: 0 4rem;
+    height: 10rem;
+  }
+  #timeline div .circle:before, #timeline div .circle:after {
+    left: 50%;
+    z-index: -1;
+    width: 2px;
+    height: 50%;
+    background: #00342A;
+    transform: translateX(-50%);
+  }
+  #timeline div .circle:before {
+    top: 0;
+  }
+  #timeline div .circle:after {
+    bottom: 25%;
+  }
+  #timeline .bgbr {
+    right: -25%;
+    bottom: -25%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 170, 150, 0.2);
+    transform: rotate(45deg);
+    filter: blur(100px);
   }
   #network, #client_protocol {
     gap: 2rem;
@@ -928,6 +966,9 @@ main {
   }
   #client_protocol {
     padding: 6rem 4rem;
+  }
+  #client_protocol .bgtl, #client_protocol .bgbr {
+    filter: blur(100px);
   }
   #client_protocol_container::before {
     top: -50%;

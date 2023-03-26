@@ -53,7 +53,7 @@ section:not(:last-child) {
   height: 200vh;
   background: black;
   background-image: url("/assets/Noise.png");
-  animation: bg-animation 1s infinite;
+  animation: bg-animation 0.2s infinite;
   pointer-events: none;
 }
 @keyframes bg-animation {
@@ -482,28 +482,32 @@ h3 {
 
 #timeline {
   display: flex;
-  flex-direction: column;
-  .top, .circles, .bottom {
+  > div {
     display: flex;
+    flex-direction: column;
+    flex: 1;
     > div {
-      flex: 1;
-      padding: 1rem;
       text-align: center;
     }
-  }
-
-  .top, .bottom {
-    font-size: 1.5rem;
-    > div > div:first-child {
+    .top { height: 6rem; }
+    .bottom { height: 10rem; }
+    .top > :first-child, .bottom > :first-child {
       color: $ascent-color;
     }
-  }
-
-  .circles {
-    > div {
+    .circle {
       position: relative;
       display: flex;
       justify-content: center;
+      align-items: center;
+      height: 3rem;
+      > div {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: #001915;
+        border: 2px solid $dark-ascent-color;
+        border-radius: 50%;
+      }
       &:before, &:after {
         content: "";
         position: absolute;
@@ -520,24 +524,15 @@ h3 {
       &:after {
         right: 0;
       }
-      &.done {
-        &:before, &:after {
-          background: $ascent-color;
-        }
-        .circle {
-          background: #004C3E;
-          border: 2px solid $ascent-color;
-        }
-      }
     }
-
-    .circle {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      background: #001915;
-      border: 2px solid $dark-ascent-color;
-      border-radius: 50%;
+    &.done {
+      .circle:before, .circle:after {
+        background: $ascent-color;
+      }
+      .circle > div {
+        background: #004C3E;
+        border: 2px solid $ascent-color;
+      }
     }
   }
 }
@@ -980,12 +975,46 @@ main {
     }
   }
   #timeline {
-    max-width: 100%;
-    overflow-x: scroll;
-    .top, .circles, .bottom {
-      > div {
-        min-width: 28%;
+    position: relative;
+    flex-direction: column;
+    > div {
+      flex-direction: row;
+      align-items: center;
+    }
+    div.top, div.bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+    div .circle {
+      margin: 0 4rem;
+      height: 10rem;
+      &:before, &:after {
+        left: 50%;
+        z-index: -1;
+        width: 2px;
+        height: 50%;
+        background: #00342A;
+        transform: translateX(-50%);
       }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 25%;
+      }
+    }
+
+    .bgbr {
+      right: -25%;
+      bottom: -25%;
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0, 170, 150, 0.2);
+      transform: rotate(45deg);
+      filter: blur(100px);
     }
   }
   #network, #client_protocol {
@@ -1008,6 +1037,9 @@ main {
   }
   #client_protocol {
     padding: 6rem 4rem;
+    .bgtl, .bgbr {
+      filter: blur(100px);
+    }
   }
 
   #client_protocol_container {
