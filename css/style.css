@@ -216,7 +216,7 @@ nav ul li a {
   font-weight: 700;
   color: #fff;
 }
-nav ul li:first-child, nav ul li:last-child {
+nav ul li:first-child, nav ul li:nth-child(5) {
   flex: 1;
 }
 nav ul li:first-child {
@@ -798,6 +798,9 @@ main {
 .safari .bgc, .safari .bgt, .safari .bgbr, .safari #network_container::before, .safari .bgbl, .safari .bgtr, .safari .bgf {
   filter: blur(9rem) !important;
 }
+.safari #noise_effect {
+  animation: none;
+}
 
 @media screen and (max-width: 1920px) {
   main {
@@ -848,6 +851,9 @@ main {
   }
 }
 @media screen and (max-width: 748px) {
+  #noise_effect {
+    animation: none;
+  }
   h2 {
     font-size: 3.5rem;
   }
@@ -1050,6 +1056,23 @@ main {
     gap: 1rem;
     flex-direction: column;
     text-align: center;
+  }
+  .safari .bgc, .safari .bgt, .safari .bgbr, .safari #network_container::before, .safari .bgbl, .safari .bgtr, .safari .bgf {
+    filter: blur(3rem) !important;
+  }
+  .safari #network_container .bgbl {
+    top: 3.5rem;
+    left: -35rem;
+    background: rgba(2, 255, 207, 0.4);
+    filter: blur(6rem) !important;
+  }
+  .safari #client_protocol .bgbr {
+    left: 55%;
+    filter: blur(7.5rem) !important;
+  }
+  .safari #client_protocol .bgtl {
+    top: -60%;
+    filter: blur(4rem) !important;
   }
 }
 @media screen and (max-width: 450px) {

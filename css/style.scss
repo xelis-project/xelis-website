@@ -239,7 +239,7 @@ nav {
       font-weight: $bold;
       color: $white;
     }
-    li:first-child, li:last-child {
+    li:first-child, li:nth-child(5) {
       flex: 1;
     }
     li:first-child {
@@ -850,6 +850,9 @@ main {
   .bgc, .bgt, .bgbr, #network_container::before, .bgbl, .bgtr, .bgf {
     filter: blur(9rem) !important;
   }
+  #noise_effect {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 1920px) {
@@ -902,6 +905,10 @@ main {
 }
 
 @media screen and (max-width: 748px) {
+  #noise_effect {
+    animation: none;
+  }
+
   h2 {
     font-size: 3.5rem;
   }
@@ -1133,6 +1140,29 @@ main {
       gap: 1rem;
       flex-direction: column;
       text-align: center;
+    }
+  }
+
+  .safari {
+    .bgc, .bgt, .bgbr, #network_container::before, .bgbl, .bgtr, .bgf {
+      filter: blur(3rem) !important;
+    }
+    #network_container .bgbl {
+      top: 3.5rem;
+      left: -35rem;
+      background: rgba(2, 255, 207, 0.4);
+
+      filter: blur(6rem) !important;
+    }
+    #client_protocol {
+      .bgbr {
+        left: 55%;
+        filter: blur(7.5rem) !important;
+      }
+      .bgtl {
+        top: -60%;
+        filter: blur(4rem) !important;
+      }
     }
   }
 }
