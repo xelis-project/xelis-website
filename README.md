@@ -2,7 +2,7 @@
 
 Officiel website for [XELIS Blockchain](https://github.com/xelis-project/xelis-blockchain).
 
-Designed by exactly.digital & integrated by [HectoFR](https://github.com/HectoFR)
+Designed by [exactly.digital](https://exactly.digital) & integrated by [HectoFR](https://github.com/HectoFR)
 
 # SCSS
 
