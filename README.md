@@ -1,10 +1,24 @@
-# XELIS Website
+# xelis
 
-Officiel website for [XELIS Blockchain](https://github.com/xelis-project/xelis-blockchain).
+## Project setup
+```
+npm install
+```
 
-Designed by [exactly.digital](https://exactly.digital) & integrated by [HectoFR](https://github.com/HectoFR)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-# SCSS
+### Compiles and minifies for production
+```
+npm run build
+```
 
-I used this VSCode extension to compile the scss to css:
-[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
