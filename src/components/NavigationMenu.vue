@@ -160,15 +160,13 @@ export default {
   #hero {
     display: none;
   }
-  // #mobile_menu {
-  //   background-image: url("@/assets/menu.png") !important;
-  // }
-  #burger_menu button:before {
+
+  #burger_menu button span:before {
     width: 2.3rem;
     transform: translateY(4px) translateX(0px) rotate(45deg);
   }
 
-  #burger_menu button:after {
+  #burger_menu button span:after {
     width: 2.3rem;
     transform: translateY(-3px) translateX(0px) rotate(-45deg);
   }
