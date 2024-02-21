@@ -1,4 +1,8 @@
-# xelis
+# XELIS Website
+
+Source code of the XELIS website available at https://xelis.io
+
+Made using framework VueJS.
 
 ## Project setup
 ```
