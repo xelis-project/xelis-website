@@ -12,10 +12,11 @@
         <h2>Client<br />Protocol</h2>
         <div>
           <p>
-            XELIS integrate along with BlockDAG a way to accept multiple times the same TX and only execute it one time.
-            Instead of excluding the whole block because we have a collision with another blockDAG branch for a TX, we
-            just don't execute the TX and keep its hash.
+            XELIS integrates, along with BlockDAG, a method to accept multiple occurrences of the same transaction (TX) and execute it only once.
+            Instead of excluding the entire block due to a collision with another BlockDAG branch for a TX,
+            we simply refrain from executing the TX and retain its hash.
           </p>
+          <br/>
           <p>
             The same TX can be contained in multiple blocks only if:
           <ul class="list">
@@ -23,10 +24,12 @@
             <li>TX is not included in block Tips (previous blocks).</li>
           </ul>
           </p>
+          <br/>
           <p>
             During the generation of the DAG order (linking unique topoheight to a block hash),
             the first block being ordered will execute the TX first.
           </p>
+          <br/>
           <p>
             This feature allows to accept others branch tips even if transactions are the same and prevent
             more orphans blocks when branches are merged.
