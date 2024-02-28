@@ -50,7 +50,7 @@
             4.
           </div>
           <div class="text">
-            Stable height is the last height in which the order of the DAG cannot changes.
+            Stable height is the last height in which the order of the DAG cannot change.
           </div>
         </li>
         <li
@@ -64,16 +64,15 @@
             Different types of blocks:
             <ul class="list">
               <li>
-                Sync: Is in stable height and its the only block at its height (or only ordered block at its
-                height and don't have lower cumulative difficulty than previous blocks).
+                Sync: It is at a stable height and is the only block at its height 
+                (or the only ordered block at this height and doesn't have a lower cumulative difficulty than previous blocks).
               </li>
               <li>
-                Side: its height is less than or equal to height of past 8 topographical blocks.
-                Its block rewards are lowered to 30%.
+                Side: Its height is less than or equal to the height of the past 8 topographical blocks.
+                Its block rewards are reduced to 30%.
               </li>
               <li>
-                Orphaned: this block was not ordered in the DAG and has no topoheight
-                (it's transactions are not executed)
+                Orphaned: This block was not ordered in the DAG and has no topographical height (it's transactions are not executed).
               </li>
             </ul>
           </div>

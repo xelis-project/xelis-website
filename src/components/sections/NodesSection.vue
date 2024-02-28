@@ -3,7 +3,7 @@
         <h2>Nodes</h2>
         <div id="nodes">
             <p>
-                Support and secure the network by running your own node. This improve your privacy and the decentralization of the network.
+                Support and secure the network by running your own node. This improves your privacy and the decentralization of the network.
                 <br />
                 No technical knowlegde is needed, download the software and run it !
             </p>
