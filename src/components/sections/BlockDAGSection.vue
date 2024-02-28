@@ -3,8 +3,8 @@
       <div class="title">
         <h2>BlockDAG</h2>
         <span>
-          XELIS implements BlockDAG which is a more complex structure that allows multiple blocks to exist
-          simultaneously. More details below.
+          Provide scalability by using a DAG structure instead of a linear blockchain.
+          Up to several chains in parallel, each block can have multiple parents.
         </span>
       </div>
       <ul class="content">
@@ -16,7 +16,8 @@
             1.
           </div>
           <div class="text">
-            Reduce rate of orphans blocks when miners find a block at the same time.
+            Reduce the rate of orphan's blocks when miners find a block at the same time.
+            Instead of choosing one block, both blocks are included in the DAG. 
           </div>
         </li>
         <li
@@ -60,7 +61,7 @@
             5.
           </div>
           <div class="text">
-            Differents types of blocks:
+            Different types of blocks:
             <ul class="list">
               <li>
                 Sync: Is in stable height and its the only block at its height (or only ordered block at its
@@ -72,7 +73,7 @@
               </li>
               <li>
                 Orphaned: this block was not ordered in the DAG and has no topoheight
-                (its transactions are not executed)
+                (it's transactions are not executed)
               </li>
             </ul>
           </div>
@@ -88,7 +89,7 @@
             Up to 3 previous blocks (called TIPS)
             <ul class="list">
               <li>
-                Circulating Supply is re-calculated each time the block is re-ordered because its based on DAG order.
+                Circulating Supply is re-calculated each time the block is reordered because it is based on DAG order.
               </li>
             </ul>
           </div>

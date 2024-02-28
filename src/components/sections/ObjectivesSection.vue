@@ -8,11 +8,11 @@
           :class="{'fade': !preRendered,}"
           class="is-animated"
         >
-          <h3>The main objectives:</h3>
+          <h3>Main Objectives:</h3>
           <ol>
             <li>Provide privacy on transactions / balances.</li>
-            <li>Provide Smart Contracts support.</li>
-            <li>Secure and fast.</li>
+            <li>Enable Smart Contracts.</li>
+            <li>Scalable blockchain for daily usage.</li>
             <li>Easy to integrate for developers.</li>
           </ol>
         </div>
@@ -20,9 +20,9 @@
           :class="{'fade': !preRendered,}"
           class="is-animated"
         >
-          <h3>Others objectives:</h3>
+          <h3>Other Objectives:</h3>
           <ol>
-            <li>Provide custom assets identical to the native XEL.</li>
+            <li>Issue custom assets identical to the native XEL.</li>
             <li>POW algorithm designed as CPU / GPU friendly.</li>
             <li>Decentralization.</li>
             <li>Simple to use.</li>

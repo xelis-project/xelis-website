@@ -20,8 +20,8 @@
           <p>
             The same TX can be contained in multiple blocks only if:
           <ul class="list">
-            <li>TX is not executed in stable height.</li>
-            <li>TX is not included in block Tips (previous blocks).</li>
+            <li>TX must not be executed at a stable height.</li>
+            <li>TX is not already included in the same chain branch (previous blocks).</li>
           </ul>
           </p>
           <br/>
@@ -31,7 +31,7 @@
           </p>
           <br/>
           <p>
-            This feature allows to accept others branch tips even if transactions are the same and prevent
+            This feature allows the acceptance of other branch tips even if transactions are the same and prevent
             more orphans blocks when branches are merged.
           </p>
         </div>

@@ -36,7 +36,7 @@
     </div>
     <div class="copyright">
       <div>
-        © 2023 Copyright
+        © 2024 Copyright
       </div>
       <div>
         Website designed by

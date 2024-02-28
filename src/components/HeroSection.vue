@@ -1,16 +1,15 @@
 <template>
     <div id="hero">
         <p>
-            Developed in Rust for guaranteed memory security
+            A new era of cryptocurrency is here.
         </p>
         <p id="resume">
-            <span>XELIS</span> is an innovative decentralized cryptocurrency built from scratch to preserve your privacy
-            when spending.
+            <span>XELIS</span> is an innovative cryptocurrency built from scratch to preserve privacy and developed in Rust for guaranteed memory security.
         </p>
         <div class="hero-button">
-            <p>
-                BlockDAG, homomorphic encryption and Smart Contracts, join the technological revolution.
-            </p>
+            <h4>
+                BlockDAG + Homomorphic Encryption +  Smart Contracts - join the technological revolution.
+            </h4>
             <a
                 class="button"
                 href="https://github.com/xelis-project/xelis-blockchain"
