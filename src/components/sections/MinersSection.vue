@@ -7,7 +7,9 @@
             <p>
                 Miner software is used to generate new blocks on the XELIS network and secure it using the
                 Proof-of-Work (PoW) consensus.
-                <br />Each block found and accepted by the network gives a reward
+            </p>
+            <p>
+                Each block found and accepted by the network gives a reward
                 (called "Coinbase") to the miner address in exchange of its work.
             </p>
             <a
@@ -62,6 +64,9 @@ export default {
         top: -75vh;
         left: -30vh;
         width: 100%;
+    }
+    .button {
+        margin-top: 2rem;
     }
 }
 
