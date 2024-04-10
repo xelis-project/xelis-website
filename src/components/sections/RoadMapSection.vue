@@ -56,7 +56,7 @@
             </div>
             <div
                 :class="{fade: !preRendered,}"
-                class="is-animated"
+                class="done is-animated"
             >
                 <div class="top">
                     <div>Q1 2024</div>
@@ -76,7 +76,7 @@
                     <div></div>
                 </div>
                 <div class="bottom">
-                    <div>???</div>
+                    <div>April 20, 2024</div>
                     <div>Mainnet launch</div>
                 </div>
             </div>
