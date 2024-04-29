@@ -69,7 +69,7 @@
             </div>
             <div
                 :class="{fade: !preRendered,}"
-                class="is-animated"
+                class="done is-animated"
             >
                 <div class="top"></div>
                 <div class="circle">
