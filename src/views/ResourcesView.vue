@@ -16,7 +16,7 @@
 import NavigationMenu from "@/components/NavigationMenu.vue";
 import WalletsSection from "@/components/sections/WalletsSection.vue";
 import NodesSection from "@/components/sections/NodesSection.vue";
-import ExchangeSection from "@/components/sections/ExchangeSection.vue";
+import ExchangeSection from "@/components/sections/exchanges_section/ExchangesSection.vue";
 import MinersSection from "@/components/sections/MinersSection.vue";
 
 export default {

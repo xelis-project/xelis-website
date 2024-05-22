@@ -7,14 +7,42 @@
           <div class="angle br"></div>
 
           <div class="exchanges-header">
-            <h2>Exchanges</h2>
+            <h2>Exchanges (4)</h2>
           </div>
           <div class="exchanges-content">
-            Coming Soon...
+            <ExchangeBox 
+              name="TradeOgre" link="https://tradeogre.com/exchange/XEL-USDT"
+              logo_img="https://docs.xelis.io/exchanges/tradeogre_logo.png" 
+              market_img="https://docs.xelis.io/exchanges/tradeogre.png" 
+            />
+            <ExchangeBox 
+              name="Exbitron" link="https://exbitron.com/trade?market=XEL-USDT"
+              logo_img="https://docs.xelis.io/exchanges/exbitron_logo.png" 
+              market_img="https://docs.xelis.io/exchanges/exbitron.png" 
+            />
+            <ExchangeBox 
+              name="SeavenSeas" link="https://www.sevenseas.exchange/market/XEL-USDT"
+              logo_img="https://docs.xelis.io/exchanges/sevenseas_logo.webp" 
+              market_img="https://docs.xelis.io/exchanges/sevenseas.png" 
+            />
+            <ExchangeBox 
+              name="NonKYC" link="https://nonkyc.io/market/XEL_USDT"
+              logo_img="https://docs.xelis.io/exchanges/nonkyc_logo.png" 
+              market_img="https://docs.xelis.io/exchanges/nonkyc.png" 
+            />
           </div>
         </div>
     </section>
 </template>
+
+<script>
+import ExchangeBox from "@/components/sections/exchanges_section/ExchangeBox.vue";
+export default {
+  components: {
+    ExchangeBox
+  }
+}
+</script>
 
 <style lang="scss">
 @use "@/assets/variables.scss" as var;
@@ -46,7 +74,7 @@
     z-index: 10;
     overflow: hidden;
     text-align: center;
-    padding: 6rem 8rem;
+    padding: 6rem 6rem;
 
     &::before {
       content: "";
@@ -90,6 +118,34 @@
         bottom: 0;
         border-top: 0;
         border-left: 0;
+      }
+    }
+
+    .exchanges-content {
+      overflow: auto;
+      display: flex;
+      gap: 1em;
+      flex-direction: row;
+      justify-content: safe center;
+      margin: 0 1em;
+      padding-bottom: 1em;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgb(15, 15, 15);
+        border-radius: .5em;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: rgb(40, 40, 40);
+        border-radius: .5em;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(70, 70, 70);
       }
     }
   }
