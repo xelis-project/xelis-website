@@ -10,25 +10,25 @@
           <div class="wallets-header">
             <h2>Wallets</h2>
             <p>
-              The wallets are designed fore ease-of-use, to make Xelis’s technology accessible for all
+              Designed for ease-of-use and make Xelis more accessible for everyone.
             </p>
           </div>
           <div class="wallets-content">
             <div class="left item">
-              <img src="@/assets/images/official_wallet.png" alt="Official Wallet" />
-
+              <img src="@/assets/images/genesix_wallet.png" alt="Genesix Wallet" />
               <div class="left-content">
                 <p>
-                  CLI Wallet
+                  Genesix Wallet
                 </p>
                 <p>
-                  Xelis’s flagship wallet. Ready for everything, from daily management tasks to smart contracts
-                  deployment, privacy and DeFi
+                  The main graphical interface wallet. Can be used on all major operating systems and mobile devices. 
                 </p>
+                <div>Not available on app stores yet.</div>
                 <div class="buttons">
-                  <a class="button">
+                  <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-genesix-wallet/releases">
                     <button>
-                      CLI Wallet
+                      <img src="@/assets/images/github.svg" alt="Github logo" />
+                      Releases
                     </button>
                   </a>
                 </div>
@@ -36,60 +36,46 @@
             </div>
             <div class="right">
               <div class="item">
-                <img src="@/assets/images/gui_wallet.png" alt="GUI Wallet" />
+                <img src="@/assets/images/cli_wallet.png" alt="CLI wallet" />
                 <div class="right-content">
                   <p>
-                    GUI Wallet
+                    CLI Wallet
                   </p>
                   <p>
-                    The wallet in your browser. Get access to the latest features with a focus on DeFi
+                    The command line interface wallet. If you're an advanced user or prefer a minimalistic interface.
                   </p>
                   <div class="buttons">
-                    <a class="button">
+                    <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-blockchain/releases">
                       <button>
-                        Chrome
-                      </button>
-                    </a>
-                    <a class="button">
-                      <button>
-                        Firefox
+                        <img src="@/assets/images/github.svg" alt="Github logo" />
+                        Releases
                       </button>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="item">
-                <img src="@/assets/images/mobile_wallet.png" alt="Mobile Wallet" />
+                <img src="@/assets/images/gui_wallet.png" alt="Web wallet" />
                 <div class="right-content">
                   <p>
-                    Mobile Wallet
+                    Web Wallet
                   </p>
                   <p>
-                    Xelis on the go. First-class UX. Available on Android and iOS
+                    The wallet from your browser. Quickly access your funds without the need to download an application.
                   </p>
-                  <div class="buttons">
-                    <a class="button">
-                      <button>
-                        Android
-                      </button>
-                    </a>
-                    <a class="button">
-                      <button>
-                        iOS
-                      </button>
-                    </a>
-                  </div>
+                  <div>Not available.</div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!--
           <div id="wallets_hide">
             <div>
               <span>Soon</span>
             </div>
           </div>
-
+          -->
         </div>
     </section>
 </template>
@@ -121,7 +107,7 @@
     position: relative;
     z-index: 10;
     overflow: hidden;
-    padding: 3rem 8rem;
+    padding: 3rem 8rem 10rem 8rem;
     background: black;
     &::before {
       content: "";
@@ -189,20 +175,27 @@
   }
   .wallets-content {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     > div {
       flex: 1;
     }
 
     .item {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
       flex: 1;
       background: rgba(255, 255, 255, 0.08);
       padding: 2rem;
       border-radius: 1rem;
       img {
+        max-width: 65%;
+        object-fit: cover;
+        border-radius: 1rem;
         width: 100%;
+      }
+      p:first-of-type {
+        font-size: 1.3em;
+        font-weight: bold;
       }
       p:last-of-type {
         color: rgba(255, 255, 255, 0.5);
@@ -222,7 +215,7 @@
     .right {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
       .item {
         img {
           max-width: 45%;
@@ -240,6 +233,16 @@
       flex-wrap: wrap;
       display: flex;
       gap: 0.5rem;
+    }
+    .button {
+      button {
+        display: flex;
+        gap: 1rem;
+
+        img {
+          max-width: 20px !important;
+        }
+      }
     }
   }
 }
@@ -287,7 +290,7 @@
       .left {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         &.item {
           flex-direction: row;
           img {
@@ -303,7 +306,6 @@
         }
       }
     }
-
   }
 }
 
@@ -320,7 +322,7 @@
     }
 
     #wallets {
-      padding: 2rem;
+      padding: 2rem 2em 3em 2em;
       &::before {
         top: -75%;
         left: -25%;
