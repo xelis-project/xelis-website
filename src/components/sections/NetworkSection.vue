@@ -18,7 +18,7 @@
           <li>Maximum Supply: <span>18.4 million</span></li>
           <li>Minimum Transaction Fees: <span>0.00001 XEL per kB</span></li>
           <li>Atomic Units: <span>8</span></li>
-          <li>Block Dev Fee: <span>15%</span></li>
+          <li>Block Dev Fee: <span>10%</span></li>
         </ul>
       </div>
     </section>
