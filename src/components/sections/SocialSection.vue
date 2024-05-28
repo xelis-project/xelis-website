@@ -5,7 +5,7 @@
       </h2>
       <div>
         <div>
-          <a href="https://discord.gg/z543umPUdj" target="_blank">Discord</a>
+          <a href="https://discord.gg/xelis" target="_blank">Discord</a>
           <a href="https://t.me/xelis_io" target="_blank">Telegram</a>
           <a href="https://twitter.com/xelis_project" target="_blank">Twitter / X</a>
         </div>
