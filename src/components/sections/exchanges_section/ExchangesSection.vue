@@ -7,7 +7,7 @@
           <div class="angle br"></div>
 
           <div class="exchanges-header">
-            <h2>Exchanges (4)</h2>
+            <h2>Exchanges (5)</h2>
           </div>
           <div class="exchanges-content">
             <ExchangeBox 
@@ -21,7 +21,7 @@
               market_img="https://docs.xelis.io/exchanges/exbitron.png" 
             />
             <ExchangeBox 
-              name="SeavenSeas" link="https://www.sevenseas.exchange/market/XEL-USDT"
+              name="Seven Seas" link="https://www.sevenseas.exchange/market/XEL-USDT"
               logo_img="https://docs.xelis.io/exchanges/sevenseas_logo.webp" 
               market_img="https://docs.xelis.io/exchanges/sevenseas.png" 
             />
@@ -29,6 +29,11 @@
               name="NonKYC" link="https://nonkyc.io/market/XEL_USDT"
               logo_img="https://docs.xelis.io/exchanges/nonkyc_logo.png" 
               market_img="https://docs.xelis.io/exchanges/nonkyc.png" 
+            />
+            <ExchangeBox 
+              name="Xeggex" link="https://xeggex.com/market/XEL_USDT"
+              logo_img="https://docs.xelis.io/exchanges/xeggex_logo.webp" 
+              market_img="https://docs.xelis.io/exchanges/xeggex.png" 
             />
           </div>
         </div>
