@@ -82,7 +82,7 @@
             </div>
             <div
                 :class="{fade: !preRendered,}"
-                class="done is-animated"
+                class="is-animated"
             >
                 <div class="top">
                     <div>WIP</div>
@@ -95,7 +95,7 @@
             </div>
             <div
                 :class="{fade: !preRendered,}"
-                class="done is-animated"
+                class="is-animated"
             >
                 <div class="top"></div>
                 <div class="circle">
