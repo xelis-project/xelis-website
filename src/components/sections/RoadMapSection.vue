@@ -80,6 +80,32 @@
                     <div>Mainnet launch</div>
                 </div>
             </div>
+            <div
+                :class="{fade: !preRendered,}"
+                class="done is-animated"
+            >
+                <div class="top">
+                    <div>WIP</div>
+                    <div>New POW Algorithm</div>
+                </div>
+                <div class="circle">
+                    <div></div>
+                </div>
+                <div class="bottom"></div>
+            </div>
+            <div
+                :class="{fade: !preRendered,}"
+                class="done is-animated"
+            >
+                <div class="top"></div>
+                <div class="circle">
+                    <div></div>
+                </div>
+                <div class="bottom">
+                    <div>WIP</div>
+                    <div>Smart Contracts</div>
+                </div>
+            </div>
             <!-- <div class="bg bgbr"></div> -->
         </div>
     </section>
