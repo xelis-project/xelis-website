@@ -4,11 +4,11 @@
             A new era of cryptocurrency is here.
         </p>
         <p id="resume">
-            <span>XELIS</span> is an innovative cryptocurrency built from scratch to preserve privacy and developed in Rust for guaranteed memory security.
+            <span>XELIS</span> is an innovative cryptocurrency built from scratch using a Proof-Of-Work consensus over a BlockDAG and Homomorphic Encryption to preserve your privacy.
         </p>
         <div class="hero-button">
             <h4>
-                BlockDAG + Homomorphic Encryption +  Smart Contracts - join the technological revolution.
+                BlockDAG + Homomorphic Encryption + Smart Contracts - join the technological revolution.
             </h4>
             <a
                 class="button"
