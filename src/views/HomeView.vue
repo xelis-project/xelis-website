@@ -16,6 +16,7 @@
     <main id="home">
       <ObjectivesSection />
       <NetworkSection />
+      <SupplySection />
       <RoadMapSection />
       <BlockDAGSection />
       <ClientProtocolSection />
@@ -27,6 +28,7 @@
 <script>
 import ObjectivesSection from '@/components/sections/ObjectivesSection.vue';
 import NetworkSection from '@/components/sections/NetworkSection.vue';
+import SupplySection from '@/components/sections/supply_section/SupplySection.vue';
 import RoadMapSection from '@/components/sections/RoadMapSection.vue';
 import BlockDAGSection from '@/components/sections/BlockDAGSection.vue';
 import ClientProtocolSection from '@/components/sections/ClientProtocolSection.vue';
@@ -42,6 +44,7 @@ export default {
   components: {
     ObjectivesSection,
     NetworkSection,
+    SupplySection,
     RoadMapSection,
     BlockDAGSection,
     ClientProtocolSection,
