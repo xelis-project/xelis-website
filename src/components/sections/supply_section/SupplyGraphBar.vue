@@ -65,11 +65,7 @@ export default {
   }
 
   &:hover {
-    background: var.$ascent-color;
-
-    .supply-bar-graph-year {
-      color: black;
-    }
+    background:  linear-gradient(var.$ascent-color, transparent);
   }
 }
 
