@@ -1,9 +1,9 @@
 <template>
-  <section id="supply-emission">
+  <section id="supply">
     <div class="supply-graph">
       <div class="supply-title">
         Supply Emission
-        <div class="supply-description">Instead of halving, the reward is decreasing with each block.</div>
+        <div class="supply-description">Instead of halving, the reward is decreasing with each block with a maximum supply of 18.4 million.</div>
       </div>
       <SupplyGraphBar :amount="2.8" :graphHeight="50" :year="2024" />
       <SupplyGraphBar :amount="5.2" :graphHeight="100" :year="2025" />
@@ -35,7 +35,7 @@ export default {
 
 
 <style lang="scss">
-  #supply-emission {
+  #supply {
     background-color: rgb(0 0 0 / 60%);
     padding: 5vw;
     display: flex;
@@ -61,5 +61,6 @@ export default {
     font-size: 1.7rem;
     margin-top: 0.5rem;
     color: #ffffffad;
+    max-width: 500px;
   }
 </style>
