@@ -1,6 +1,6 @@
 <template>
     <section id="network_container">
-      <div id="network">
+      <div id="network" class="is-animated">
         <div class="angle tl"></div>
         <div class="angle tr"></div>
         <div class="angle bl"></div>
@@ -36,6 +36,10 @@
   justify-content: space-between;
   padding: 11rem;
 
+  &.active {
+    animation: network-anim 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  }
+
   h2 {
     width: 30%;
   }
@@ -68,6 +72,18 @@
       border-top: 0;
       border-left: 0;
     }
+  }
+}
+
+@keyframes network-anim {
+  0% {
+    opacity: 0;
+    transform: scale(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(100%);
   }
 }
 

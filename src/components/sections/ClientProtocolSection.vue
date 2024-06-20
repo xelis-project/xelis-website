@@ -1,6 +1,6 @@
 <template>
     <section id="client_protocol_container"> <!-- ================= CLIENT PROTOCOL ================= -->
-      <div id="client_protocol">
+      <div id="client_protocol" class="is-animated">
         <div class="angle tl"></div>
         <div class="angle tr"></div>
         <div class="angle bl"></div>
@@ -67,6 +67,11 @@
   gap: 5rem;
   justify-content: space-between;
   padding: 11rem;
+  opacity: 0;
+
+  &.active {
+    animation: client-protocol-anim 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  }
 
   h2 {
     width: 50%;
@@ -105,9 +110,22 @@
   }
 }
 
+@keyframes client-protocol-anim {
+  0% {
+    opacity: 0;
+    transform: scale(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
 #client_protocol {
   $client-width: 1280px;
   $client-height: 674px;
+
   .bgtl {
     top: calc(-400px / $client-height) * 100%;
     left: calc(-400px / $client-width) * 100%;
