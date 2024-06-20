@@ -1,6 +1,6 @@
 <template>
   <section id="supply">
-    <div class="supply-graph">
+    <div class="supply-graph scroll-bar">
       <div class="supply-title">
         Supply Emission
         <div class="supply-description">Instead of halving, the reward is decreasing with each block with a maximum supply of 18.4 million.</div>
@@ -49,6 +49,7 @@ export default {
     overflow: auto;
     max-width: 100%;
     position: relative;
+    padding-bottom: 1rem;
   }
 
   .supply-title {

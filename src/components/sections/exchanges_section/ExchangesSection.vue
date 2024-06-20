@@ -9,7 +9,7 @@
           <div class="exchanges-header">
             <h2>Exchanges (5)</h2>
           </div>
-          <div class="exchanges-content">
+          <div class="exchanges-content scroll-bar">
             <ExchangeBox 
               name="TradeOgre" link="https://tradeogre.com/exchange/XEL-USDT"
               logo_img="https://docs.xelis.io/exchanges/tradeogre_logo.png" 
@@ -134,24 +134,6 @@ export default {
       justify-content: safe center;
       margin: 0 1em;
       padding-bottom: 1em;
-
-      &::-webkit-scrollbar {
-        height: 8px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: rgb(15, 15, 15);
-        border-radius: .5em;
-      }
-      
-      &::-webkit-scrollbar-thumb {
-        background: rgb(40, 40, 40);
-        border-radius: .5em;
-      }
-
-      &::-webkit-scrollbar-thumb:hover {
-        background: rgb(70, 70, 70);
-      }
     }
   }
 }
