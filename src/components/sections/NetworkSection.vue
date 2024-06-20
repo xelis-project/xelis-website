@@ -35,6 +35,7 @@
   gap: 5rem;
   justify-content: space-between;
   padding: 11rem;
+  background: black;
 
   &.active {
     animation: network-anim 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
@@ -89,7 +90,7 @@
 
 #network_container {
   position: relative;
-  background: black;
+
   &::before {
     content: "";
     position: absolute;
