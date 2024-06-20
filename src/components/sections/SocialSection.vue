@@ -5,9 +5,18 @@
       </h2>
       <div>
         <div>
-          <a href="https://discord.gg/xelis" target="_blank">Discord</a>
-          <a href="https://t.me/xelis_io" target="_blank">Telegram</a>
-          <a href="https://twitter.com/xelis_project" target="_blank">Twitter / X</a>
+          <a href="https://discord.gg/xelis" target="_blank">
+            <img src="@/assets/images/discord.svg" alt="Github logo" />
+            Discord
+          </a>
+          <a href="https://t.me/xelis_io" target="_blank">            
+            <img src="@/assets/images/telegram.svg" alt="Telegram logo" />
+            Telegram
+          </a>
+          <a href="https://twitter.com/xelis_project" target="_blank">
+            <img src="@/assets/images/x.svg" alt="Twitter / X logo" />
+            Twitter / X
+          </a>
         </div>
         <!-- <div>
           <a>Linkedin</a>
@@ -53,6 +62,9 @@
       display: flex;
       justify-content: space-around;
       width: 100%;
+      gap: 3rem;
+      flex-wrap: wrap;
+
       + div {
         margin-top: 1rem;
       }
@@ -61,6 +73,9 @@
   a {
     font-size: 2rem;
     text-transform: uppercase;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
 }
 
