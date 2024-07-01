@@ -82,10 +82,10 @@
             </div>
             <div
                 :class="{fade: !preRendered,}"
-                class="is-animated"
+                class="done is-animated"
             >
                 <div class="top">
-                    <div>WIP</div>
+                    <div>July 10, 2024</div>
                     <div>New POW Algorithm</div>
                 </div>
                 <div class="circle">
