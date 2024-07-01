@@ -55,15 +55,22 @@
                 </div>
               </div>
               <div class="item">
-                <img src="@/assets/images/gui_wallet.png" alt="Web wallet" />
+                <img src="@/assets/images/genesix_wallet_web.png" alt="Web wallet" />
                 <div class="right-content">
                   <p>
-                    Web Wallet
+                    Web Wallet (Genesix)
                   </p>
                   <p>
                     The wallet from your browser. Quickly access your funds without the need to download an application.
                   </p>
-                  <div>Not available.</div>
+                  <div class="buttons">
+                    <a class="button" target="_blank" href="https://wallet.xelis.io">
+                      <button>
+                        <img src="@/assets/images/browser.svg" alt="Browser logo" />
+                        Open
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
