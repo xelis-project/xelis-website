@@ -8,10 +8,18 @@
       <div>
         <div class="bottom-menu">
           <div>
-            <a href="#objectives">About</a>
-            <a href="#network">Network</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#socials">Socials</a>
+            <router-link :to="{name: 'home', hash: '#objectives'}">
+              About
+            </router-link>
+            <router-link :to="{name: 'home', hash: '#network'}">
+              Network
+            </router-link>
+            <router-link :to="{name: 'home', hash: '#roadmap'}">
+              Roadmap
+            </router-link>
+            <router-link :to="{name: 'home', hash: '#socials'}">
+              Socials
+            </router-link>
           </div>
           <div>
             <a href="https://docs.xelis.io/" target="_blank">
