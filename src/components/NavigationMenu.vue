@@ -10,38 +10,69 @@
             </div>
           </router-link>
         </li>
-        <li>
-          <router-link :to="{name: 'home', hash: '#objectives'}">
-            About
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'home', hash: '#network'}">
-            Network
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'home', hash: '#supply'}">
-            Supply
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'home', hash: '#roadmap'}">
-            Roadmap
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'home', hash: '#socials'}">
-            Socials
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{name: 'resources'}"
-          >
-            Resources
-          </router-link>
-        </li>
+        <template v-if="$route.name === 'home'">
+          <li>
+            <router-link :to="{name: 'home', hash: '#objectives'}">
+              About
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'home', hash: '#network'}">
+              Network
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'home', hash: '#supply'}">
+              Supply
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'home', hash: '#roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'home', hash: '#socials'}">
+              Socials
+            </router-link>
+          </li>
+          <li>/</li>
+          <li>
+            <router-link
+              :to="{name: 'resources'}"
+            >
+              Resources
+            </router-link>
+          </li>
+        </template>
+        <template v-if="$route.name === 'resources'">
+          <li>
+            <router-link :to="{name: 'resources', hash: '#wallets'}">
+              Wallets
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources', hash: '#nodes_container'}">
+              Nodes
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources', hash: '#exchanges_container'}">
+              Exchanges
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources', hash: '#miners'}">
+              Miners
+            </router-link>
+          </li>
+          <li>/</li>
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+        </template>
         <li>
           <a href="https://docs.xelis.io/" target="_blank">
             Documentation
@@ -56,36 +87,67 @@
     </nav>
     <div id="mobile_menu">
         <ul>
-          <li>
-            <router-link :to="{name: 'home', hash: '#objectives'}">
-              About
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'home', hash: '#network'}">
-              Network
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'home', hash: '#roadmap'}">
-              Roadmap
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'home', hash: '#socials'}">
-              Socials
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'home', hash: '#supply'}">
-              Supply
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'resources'}">
-              Resources
-            </router-link>
-          </li>
+          <template v-if="$route.name === 'home'">
+            <li>
+              <router-link :to="{name: 'home', hash: '#objectives'}">
+                About
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'home', hash: '#network'}">
+                Network
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'home', hash: '#roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'home', hash: '#socials'}">
+                Socials
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'home', hash: '#supply'}">
+                Supply
+              </router-link>
+            </li>
+            <li>-</li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'resources'">
+            <li>
+              <router-link :to="{name: 'resources', hash: '#wallets'}">
+                Wallets
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources', hash: '#nodes_container'}">
+                Nodes
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources', hash: '#exchanges_container'}">
+                Exchanges
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources', hash: '#miners'}">
+                Miners
+              </router-link>
+            </li>
+            <li>-</li>
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+          </template>
           <li>
             <a href="https://docs.xelis.io/" target="_blank">
               Documentation

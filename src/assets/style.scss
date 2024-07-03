@@ -317,7 +317,7 @@ nav {
             font-weight: var.$bold;
             color: var.$white;
         }
-        li:first-child, li:nth-child(6) {
+        li:first-child {
             flex: 1;
         }
         li:first-child {
