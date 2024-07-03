@@ -77,6 +77,11 @@
             </router-link>
           </li>
           <li>
+            <router-link :to="{name: 'home', hash: '#supply'}">
+              Supply
+            </router-link>
+          </li>
+          <li>
             <router-link :to="{name: 'resources'}">
               Resources
             </router-link>
