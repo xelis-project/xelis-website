@@ -110,6 +110,12 @@ export default {
           document.body.classList.toggle("menu-open");
         })
       });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 748) {
+          document.body.classList.remove("menu-open");
+        }
+      });
     }
 }
 </script>
