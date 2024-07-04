@@ -1,5 +1,5 @@
 <template>
-    <section id="miners">
+    <section id="mining">
         <div class="left">
             <h2>Miner<br/>Section</h2>
         </div>
@@ -42,7 +42,7 @@ export default {
 <style lang="scss">
 @use "@/assets/variables.scss" as var;
 
-#miners {
+#mining {
     display: flex;
     gap: 11rem;
     position: relative;
@@ -70,7 +70,7 @@ export default {
 }
 
 @media screen and (max-width: 1100px) {
-    #miners {
+    #mining {
         h2 {
             margin: 0;
         }
@@ -89,7 +89,7 @@ export default {
 }
 
 @media screen and (max-width: 748px) {
-    #miners {
+    #mining {
         .button {
             display: flex;
             justify-content: center;

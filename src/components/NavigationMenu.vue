@@ -62,8 +62,8 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{name: 'resources', hash: '#miners'}">
-              Miners
+            <router-link :to="{name: 'resources', hash: '#mining'}">
+              Mining
             </router-link>
           </li>
           <li>/</li>
@@ -137,8 +137,8 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="{name: 'resources', hash: '#miners'}">
-                Miners
+              <router-link :to="{name: 'resources', hash: '#mining'}">
+                Mining
               </router-link>
             </li>
             <li>-</li>
