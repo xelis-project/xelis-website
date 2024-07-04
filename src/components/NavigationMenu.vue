@@ -226,12 +226,8 @@ export default {
 }
 
 .menu-open {
-  height: 100dvh;
-  overflow: hidden;
+
   #mobile_menu {
-    top: 50%;
-    left: 50%;
-    display: flex;
     visibility: visible;
     opacity: 1;
   }
@@ -254,11 +250,11 @@ export default {
 }
 #mobile_menu {
   position: absolute;
-  top: -50%;
-  left: -50%;
+  left: 50%;
+  margin-top: 2rem;
+  transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
-  transform: translate(-50%, -50%);
   transition: visibility 0s, opacity 0.5s linear;
   ul {
     list-style: none;
