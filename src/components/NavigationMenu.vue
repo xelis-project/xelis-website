@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav>
+    <nav class="scroll-bar">
       <ul>
         <li id="logo">
           <router-link :to="{name: 'home'}">
@@ -99,6 +99,11 @@
               </router-link>
             </li>
             <li>
+              <router-link :to="{name: 'home', hash: '#supply'}">
+                Supply
+              </router-link>
+            </li>
+            <li>
               <router-link :to="{name: 'home', hash: '#roadmap'}">
                 Roadmap
               </router-link>
@@ -106,11 +111,6 @@
             <li>
               <router-link :to="{name: 'home', hash: '#socials'}">
                 Socials
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{name: 'home', hash: '#supply'}">
-                Supply
               </router-link>
             </li>
             <li>-</li>
@@ -184,6 +184,9 @@ export default {
 
 <style lang="scss">
  // ============ MENU =======
+header nav {
+  overflow-x: auto;
+}
 
 #burger_menu {
   display: none;

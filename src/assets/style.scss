@@ -388,17 +388,17 @@ main {
     }
 
     &::-webkit-scrollbar-track {
-        background: rgb(15, 15, 15);
+        background: rgba(15, 15, 15, 0.8);
         border-radius: .5em;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: rgb(40, 40, 40);
+        background: rgba(40, 40, 40, 0.8);
         border-radius: .5em;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: rgb(70, 70, 70);
+        background: rgb(122 250 211);
     }
 }
 
