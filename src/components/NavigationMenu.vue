@@ -52,12 +52,12 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{name: 'resources', hash: '#nodes_container'}">
+            <router-link :to="{name: 'resources', hash: '#nodes'}">
               Nodes
             </router-link>
           </li>
           <li>
-            <router-link :to="{name: 'resources', hash: '#exchanges_container'}">
+            <router-link :to="{name: 'resources', hash: '#exchanges'}">
               Exchanges
             </router-link>
           </li>
@@ -127,12 +127,12 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="{name: 'resources', hash: '#nodes_container'}">
+              <router-link :to="{name: 'resources', hash: '#nodes'}">
                 Nodes
               </router-link>
             </li>
             <li>
-              <router-link :to="{name: 'resources', hash: '#exchanges_container'}">
+              <router-link :to="{name: 'resources', hash: '#exchanges'}">
                 Exchanges
               </router-link>
             </li>

@@ -1,6 +1,6 @@
 <template>
-    <section id="exchanges_container">
-        <div id="exchanges">
+    <section id="exchanges">
+        <div id="exchanges-container">
           <div class="angle tl"></div>
           <div class="angle tr"></div>
           <div class="angle bl"></div>
@@ -53,7 +53,7 @@ export default {
 @use "@/assets/variables.scss" as var;
 
 
-#exchanges_container {
+#exchanges {
   position: relative;
   &::before {
     content: "";
@@ -73,7 +73,7 @@ export default {
     margin-top: 0;
   }
 
-  #exchanges {
+  #exchanges-container {
     background: black;
     position: relative;
     z-index: 10;

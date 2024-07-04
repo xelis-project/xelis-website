@@ -1,7 +1,7 @@
 <template>
-    <section id="nodes_container">
+    <section id="nodes">
         <h2>Nodes</h2>
-        <div id="nodes">
+        <div id="nodes_container">
             <p>
                 Support and secure the network by running your own node. This improves your privacy and the decentralization of the network.
                 <br />
@@ -36,7 +36,7 @@ export default {
 @use "@/assets/variables.scss" as var;
 
 
-#nodes_container {
+#nodes {
     position: relative;
     &::before {
       content: "";
@@ -52,7 +52,7 @@ export default {
       border-radius: 50%;
     }
 
-    #nodes {
+    #nodes_container {
         display: flex;
         gap: 11rem;
         padding-right: 10rem;

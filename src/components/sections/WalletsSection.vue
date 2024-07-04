@@ -1,7 +1,7 @@
 <template>
-    <section id="wallets_container">
+    <section id="wallets">
         <h2>Resources</h2>
-        <div id="wallets">
+        <div id="wallets_container">
           <div class="angle tl"></div>
           <div class="angle tr"></div>
           <div class="angle bl"></div>
@@ -91,7 +91,7 @@
 @use "@/assets/variables.scss" as var;
 
 
-#wallets_container {
+#wallets {
   position: relative;
   &::before {
     content: "";
@@ -110,7 +110,7 @@
   h2 {
     text-align: center;
   }
-  #wallets {
+  #wallets_container {
     position: relative;
     z-index: 10;
     overflow: hidden;
