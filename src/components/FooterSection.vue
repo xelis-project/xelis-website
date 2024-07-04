@@ -80,7 +80,7 @@ footer {
     content: "";
     position: absolute;
     z-index: -1;
-    width: 100vw;
+    width: 150vw;
     background-repeat: no-repeat;
     bottom: 0;
     left: -19.6rem;
@@ -170,11 +170,6 @@ footer {
         width: 20px;
         height: 20px;
       }
-    }
-
-    &::before {
-      background-position: 0rem -26rem;
-      background-size: 130% 100%;
     }
 
     > div:first-child {

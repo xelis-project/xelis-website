@@ -66,6 +66,11 @@
               Mining
             </router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'resources', hash: '#links'}">
+              Links
+            </router-link>
+          </li>
           <li>/</li>
           <li>
             <router-link :to="{name: 'home'}">
@@ -139,6 +144,11 @@
             <li>
               <router-link :to="{name: 'resources', hash: '#mining'}">
                 Mining
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources', hash: '#links'}">
+                Links
               </router-link>
             </li>
             <li>-</li>
