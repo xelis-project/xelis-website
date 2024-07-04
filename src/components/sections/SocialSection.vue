@@ -36,18 +36,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    background-repeat: no-repeat;
-    bottom: -75rem;
-    left: -19.6rem;
-    height: 150rem;
-    background-image: url("@/assets/CircuitBas.svg");
-  }
+  z-index: 1;
 
   h2 {
     width: 40%;

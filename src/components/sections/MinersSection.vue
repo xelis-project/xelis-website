@@ -25,19 +25,16 @@
                 </button>
             </a>
         </div>
-        <CircuitImg />
     </section>
 </template>
 
 <script>
 import GithubLogo from '@/components/GithubLogo.vue';
-import CircuitImg from "@/components/CircuitImg.vue";
 
 export default {
     name: "MinersSection",
     components: {
         GithubLogo,
-        CircuitImg,
     }
 }
 </script>
@@ -49,6 +46,8 @@ export default {
     display: flex;
     gap: 11rem;
     position: relative;
+    z-index: 1;
+
     > div {
         flex: 1;
     }

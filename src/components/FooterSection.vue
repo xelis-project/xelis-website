@@ -73,6 +73,19 @@ footer {
 
   margin: 0 calc(var.$spacing-body * -1);
 
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: -19.6rem;
+    height: 150rem;
+    background-image: url("@/assets/CircuitBas.svg");
+    opacity: .5;
+  }
+
   img {
     width: 230px;
   }
