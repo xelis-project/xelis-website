@@ -8,6 +8,7 @@
       <NodesSection />
       <ExchangeSection />
       <MinersSection />
+      <LinksSection />
     </main>
   </div>
 </template>
@@ -18,6 +19,7 @@ import WalletsSection from "@/components/sections/WalletsSection.vue";
 import NodesSection from "@/components/sections/NodesSection.vue";
 import ExchangeSection from "@/components/sections/exchanges_section/ExchangesSection.vue";
 import MinersSection from "@/components/sections/MinersSection.vue";
+import LinksSection from "@/components/sections/LinksSection.vue";
 
 export default {
   name: "ResourcesView",
@@ -26,7 +28,8 @@ export default {
     WalletsSection,
     NodesSection,
     ExchangeSection,
-    MinersSection
+    MinersSection,
+    LinksSection,
 },
   computed: {
     isSafari() {
