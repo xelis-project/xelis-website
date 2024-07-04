@@ -279,7 +279,7 @@
 }
 
 @media screen and (max-width: 1100px) {
-  #wallets_container {
+  #wallets {
     h2 {
       margin: 2rem 0 6rem 0;
     }
@@ -317,7 +317,7 @@
 }
 
 @media screen and (max-width: 748px) {
-  #wallets_container {
+  #wallets {
     &::before {
       top: -10%;
       right: -50%;
@@ -328,7 +328,7 @@
       transform: rotate(0deg);
     }
 
-    #wallets {
+    #wallets_container {
       padding: 2rem 2em 3em 2em;
       &::before {
         top: -75%;

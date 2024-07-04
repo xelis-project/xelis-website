@@ -80,8 +80,8 @@ export default {
 }
 
 @media screen and (max-width: 748px) {
-    #nodes_container {
-        #nodes {
+    #nodes {
+        #nodes_container {
             padding: 0;
             flex-direction: column;
             gap: 3rem;
