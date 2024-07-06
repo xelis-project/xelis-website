@@ -113,15 +113,13 @@ footer {
   .bottom-menu {
     > div {
       display: flex;
-      justify-content: flex-start;
       flex-wrap: wrap;
-      margin-bottom: 2rem;
-      text-align: left;
-      &:first-child {
-        margin-bottom: 2.5rem;
-      }
+      justify-content: flex-start;
+      margin-bottom: 1.5rem;
+      gap: 2rem;
+
       a {
-        width: 25%;
+        white-space: nowrap;
       }
     }
   }
@@ -145,14 +143,6 @@ footer {
 @media screen and (max-width: 1600px) {
   footer > div:first-child > div:last-child {
     max-width: 60%;
-  }
-
-  footer .bottom-menu > div {
-    gap: 0.5rem;
-    a {
-      width: unset;
-      flex: 1;
-    }
   }
 }
 
@@ -184,9 +174,7 @@ footer {
         gap: 1rem;
         flex-direction: row;
         justify-content: center;
-        a {
-          flex: unset;
-        }
+
         &:last-child {
           flex-direction: row-reverse;
           a {
@@ -196,9 +184,6 @@ footer {
               text-align: right;
             }
           }
-        }
-        a {
-          width: unset;
         }
       }
     }
