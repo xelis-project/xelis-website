@@ -10,7 +10,12 @@ const routes = [
   {
     path: '/resources',
     name: 'resources',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ResourcesView.vue')
+    component: () => import(/* webpackChunkName: "resouces" */ '../views/ResourcesView.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'not_found',
+    component: () => import(/* webpackChunkName: "not_found" */ '../views/NotFound.vue')
   }
 ]
 

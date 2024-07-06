@@ -220,6 +220,7 @@ header {
     flex-direction: column;
     height: calc(100vh - 2rem);
     margin-bottom: 15rem;
+    position: relative;
 
     .header-content {
         flex: 1;

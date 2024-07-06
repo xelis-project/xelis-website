@@ -78,6 +78,18 @@
             </router-link>
           </li>
         </template>
+        <template v-if="$route.name === 'not_found'">
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
+            </router-link>
+          </li>
+        </template>
         <li>
           <a href="https://docs.xelis.io/" target="_blank">
             Documentation
@@ -155,6 +167,18 @@
             <li>
               <router-link :to="{name: 'home'}">
                 Home
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'not_found'">
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
               </router-link>
             </li>
           </template>
