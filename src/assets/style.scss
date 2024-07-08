@@ -241,6 +241,7 @@ header {
             height: $size;
             width: $size;
             z-index: 1;
+            animation: logo-floating 5s ease-in-out infinite;
         }
         .bgtr {
             position: absolute;
@@ -302,8 +303,8 @@ header {
 }
 
 nav {
-    margin-top: 3rem;
-    padding-bottom: 2.2rem;
+    margin: 3rem 0 1.2rem 0;
+    padding-bottom: 1rem;
     ul {
         display: flex;
         gap: 4rem;
@@ -350,6 +351,15 @@ nav {
         width: 5rem;
         height: 5rem;
       }
+}
+
+@keyframes logo-floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(2%);
+    }
 }
 
 // ========= MAIN =========
