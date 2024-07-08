@@ -36,6 +36,8 @@ export default {
 
 <style lang="scss">
   #supply {
+    position: relative;
+    z-index: 1;
     background-color: rgb(0 0 0 / 60%);
     padding: 5vw;
     display: flex;

@@ -36,6 +36,9 @@
 @use "@/assets/variables.scss" as var;
 
 #objectives {
+  position: relative;
+  z-index: 1;
+
   h2 {
     padding-bottom: 2.5rem;
     width: 100%;
