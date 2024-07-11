@@ -1,5 +1,5 @@
 <template>
-    <section id="socials">
+    <section id="socials" class="is-animated">
       <h2>
         Socials
       </h2>
@@ -38,6 +38,10 @@
   position: relative;
   z-index: 1;
 
+  &.active {
+    animation: social-anim .5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+
   h2 {
     width: 40%;
   }
@@ -65,6 +69,18 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+  }
+}
+
+@keyframes social-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 

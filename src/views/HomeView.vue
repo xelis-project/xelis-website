@@ -7,9 +7,9 @@
       </div>
       <div class="bg">
         <XelisLogo />
-        <div class="bgtr" />
-        <div class="bgm" />
-        <div class="bgt" />
+        <div class="bgtr"></div>
+        <div class="bgm"></div>
+        <div class="bgt"></div>
         <CircuitImg />
       </div>
     </header>

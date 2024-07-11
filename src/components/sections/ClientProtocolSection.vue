@@ -113,7 +113,7 @@
 @keyframes client-protocol-anim {
   0% {
     opacity: 0;
-    transform: scale(50%);
+    transform: scale(70%);
   }
 
   100% {

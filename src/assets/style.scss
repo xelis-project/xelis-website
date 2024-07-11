@@ -227,6 +227,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        animation: logo-start .75s forwards;
     }
 
     .bg {
@@ -241,7 +242,7 @@ header {
             height: $size;
             width: $size;
             z-index: 1;
-            animation: logo-floating 5s ease-in-out infinite;
+            animation: logo-start .75s forwards, logo-floating 5s ease-in-out .7s infinite;
         }
         .bgtr {
             position: absolute;
@@ -351,6 +352,17 @@ nav {
         width: 5rem;
         height: 5rem;
       }
+}
+
+@keyframes logo-start {
+    0% {
+        opacity: 0;
+        transform: scale(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
 }
 
 @keyframes logo-floating {

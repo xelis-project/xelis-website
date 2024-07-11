@@ -25,9 +25,10 @@ export default {
   .supply-bar-amount {
     font-weight: bold;
     color: var.$ascent-color;
+    opacity: 0;
 
     &.active {
-      animation: supply-bar-amount-anim 3s;
+      animation: supply-bar-amount-anim 2s forwards .75s;
     }
   }
 }
@@ -49,9 +50,10 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
+  transform: scaleY(0);
 
   &.active {
-    animation: supply-bar-graph-anim 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
+    animation: supply-bar-graph-anim 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
     transform-origin: bottom;
   }
 
