@@ -292,6 +292,7 @@ header nav {
   transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
   transition: visibility 0s, opacity 0.5s linear;
   ul {
     list-style: none;

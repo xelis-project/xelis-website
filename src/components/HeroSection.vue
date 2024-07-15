@@ -65,7 +65,6 @@ export default {
 
 @media screen and (max-width: 748px) {
     .header-content {
-        margin-top: -4rem;
         #hero {
             #resume {
                 font-size: 2.5rem;
