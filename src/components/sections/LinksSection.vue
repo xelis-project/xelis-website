@@ -17,10 +17,10 @@
                 <a href="https://t.me/xelis_io" target="_blank">Telegram</a>
                 <a href="https://twitter.com/xelis_project" target="_blank">Twitter / X</a>
             </div>
-            <div class="title">/ Community</div>
+            <!--<div class="title">/ Community</div>
             <div class="links">
                 <a href="https://xeliscommunity.org/" target="_blank">Articles by Cyber</a>
-            </div>
+            </div>-->
         </div>
     </section>
 </template>

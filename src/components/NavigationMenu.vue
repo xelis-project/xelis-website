@@ -71,6 +71,11 @@
               Links
             </router-link>
           </li>
+          <li>
+            <a href="https://xeliscommunity.org/" target="_blank">
+              Blog
+            </a>
+          </li>
           <li>/</li>
           <li>
             <router-link :to="{name: 'home'}">
@@ -162,6 +167,11 @@
               <router-link :to="{name: 'resources', hash: '#links'}">
                 Links
               </router-link>
+            </li>
+            <li>
+              <a href="https://xeliscommunity.org/" target="_blank">
+                Blog
+              </a>
             </li>
             <li>-</li>
             <li>
