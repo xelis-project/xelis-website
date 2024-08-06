@@ -140,7 +140,7 @@ export default {
 
 @media screen and (max-width: 748px) {
   #exchanges {
-    #exchanges_container {
+    #exchanges-container {
       padding: 5rem 1rem;
 
       &::before {
