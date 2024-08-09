@@ -578,7 +578,7 @@ export default {
         newPath.classList.add("animated-lineover");
         newPath.style.stroke = `#02FFCF`;
         lines.appendChild(newPath);
-      }, getRandomInt(0, 60000));
+      }, getRandomInt(2500, 60000));
     });
   }
 }
