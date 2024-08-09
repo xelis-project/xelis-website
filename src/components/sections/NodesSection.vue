@@ -75,7 +75,7 @@ export default {
         left: -45rem;
         // top: -615%;
         // left: 36%;
-        opacity: 0.75;
+        opacity: 0.5;
     }
 }
 

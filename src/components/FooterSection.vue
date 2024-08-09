@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <CircuitImg />
     <div>
       <div id="bottom_logo">
         <img src="@/assets/logo.svg" />
@@ -63,6 +64,17 @@
   </footer>
 </template>
 
+<script>
+import CircuitImg from "@/components/CircuitImg.vue";
+
+export default {
+    name: "NodesSection",
+    components: {
+        CircuitImg
+    },
+}
+</script>
+
 <style lang="scss">
 @use "@/assets/variables.scss" as var;
 
@@ -76,7 +88,16 @@ footer {
 
   margin: 0 calc(var.$spacing-body * -1);
 
-  &::before {
+  .circuit {
+    z-index: -1;
+    position: absolute;
+    opacity: .2;
+    bottom: 0;
+    left: -19.6rem;
+    height: 150rem;
+  }
+
+  /*&::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -87,7 +108,7 @@ footer {
     height: 150rem;
     background-image: url("@/assets/CircuitBas.svg");
     opacity: .5;
-  }
+  }*/
 
   img {
     width: 230px;
