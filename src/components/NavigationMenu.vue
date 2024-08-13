@@ -71,11 +71,6 @@
               Links
             </router-link>
           </li>
-          <li>
-            <a href="https://xeliscommunity.org/" target="_blank">
-              Blog
-            </a>
-          </li>
           <li>/</li>
           <li>
             <router-link :to="{name: 'home'}">
@@ -95,6 +90,11 @@
             </router-link>
           </li>
         </template>
+        <li>
+          <a href="https://xeliscommunity.org/" target="_blank">
+            Blog
+          </a>
+        </li>
         <li>
           <a href="https://docs.xelis.io/" target="_blank">
             Documentation
@@ -168,11 +168,6 @@
                 Links
               </router-link>
             </li>
-            <li>
-              <a href="https://xeliscommunity.org/" target="_blank">
-                Blog
-              </a>
-            </li>
             <li>-</li>
             <li>
               <router-link :to="{name: 'home'}">
@@ -192,6 +187,11 @@
               </router-link>
             </li>
           </template>
+          <li>
+            <a href="https://xeliscommunity.org/" target="_blank">
+              Blog
+            </a>
+          </li>
           <li>
             <a href="https://docs.xelis.io/" target="_blank">
               Documentation
