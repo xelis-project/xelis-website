@@ -85,8 +85,8 @@
                 class="done is-animated"
             >
                 <div class="top">
-                    <div>July 10, 2024</div>
-                    <div>New POW Algorithm</div>
+                    <div>July 11, 2024</div>
+                    <div>Network Upgrade</div>
                 </div>
                 <div class="circle">
                     <div></div>
