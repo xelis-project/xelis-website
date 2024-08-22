@@ -5,21 +5,21 @@
         Supply Emission
         <div class="supply-description">Instead of halving, the reward is decreasing with each block with a maximum supply of 18.4 million.</div>
       </div>
-      <SupplyGraphBar :amount="2.8" :graphHeight="50" :year="2024" />
-      <SupplyGraphBar :amount="5.2" :graphHeight="100" :year="2025" />
-      <SupplyGraphBar :amount="7.2" :graphHeight="200" :year="2026" />
-      <SupplyGraphBar :amount="8.9" :graphHeight="200" :year="2027" />
-      <SupplyGraphBar :amount="10.4" :graphHeight="200" :year="2028" />
-      <SupplyGraphBar :amount="11.6" :graphHeight="200" :year="2029" />
-      <SupplyGraphBar :amount="12.6" :graphHeight="200" :year="2030" />
-      <SupplyGraphBar :amount="13.5" :graphHeight="200" :year="2031" />
-      <SupplyGraphBar :amount="14.3" :graphHeight="200" :year="2032" />
-      <SupplyGraphBar :amount="14.9" :graphHeight="200" :year="2033" />
-      <SupplyGraphBar :amount="15.5" :graphHeight="200" :year="2034" />
-      <SupplyGraphBar :amount="15.9" :graphHeight="200" :year="2035" />
-      <SupplyGraphBar :amount="16.3" :graphHeight="200" :year="2036" />
-      <SupplyGraphBar :amount="17.7" :graphHeight="200" :year="2044" />
-      <SupplyGraphBar :amount="18.3" :graphHeight="200" :year="2060" />
+      <SupplyGraphBar :amount="2.8" :graphHeight="50" :year="'Q2 2025'" />
+      <SupplyGraphBar :amount="5.2" :graphHeight="100" :year="'Q2 2026'" />
+      <SupplyGraphBar :amount="7.2" :graphHeight="200" :year="'Q2 2027'" />
+      <SupplyGraphBar :amount="8.9" :graphHeight="200" :year="'Q2 2028'" />
+      <SupplyGraphBar :amount="10.4" :graphHeight="200" :year="'Q2 2029'" />
+      <SupplyGraphBar :amount="11.6" :graphHeight="200" :year="'Q2 2030'" />
+      <SupplyGraphBar :amount="12.6" :graphHeight="200" :year="'Q2 2031'" />
+      <SupplyGraphBar :amount="13.5" :graphHeight="200" :year="'Q2 2032'" />
+      <SupplyGraphBar :amount="14.3" :graphHeight="200" :year="'Q2 2033'" />
+      <SupplyGraphBar :amount="14.9" :graphHeight="200" :year="'Q2 2034'" />
+      <SupplyGraphBar :amount="15.5" :graphHeight="200" :year="'Q2 2035'" />
+      <SupplyGraphBar :amount="15.9" :graphHeight="200" :year="'Q2 2036'" />
+      <SupplyGraphBar :amount="16.3" :graphHeight="200" :year="'Q2 2037'" />
+      <SupplyGraphBar :amount="17.7" :graphHeight="200" :year="'Q2 2045'" />
+      <SupplyGraphBar :amount="18.3" :graphHeight="200" :year="'Q2 2061'" />
     </div>
   </section>
 </template>

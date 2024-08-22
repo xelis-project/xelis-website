@@ -1,6 +1,6 @@
 <template>
   <div class="supply-bar">
-    <div class="supply-bar-graph is-animated" :style="{ height: amount*25 + 'px' }">
+    <div class="supply-bar-graph is-animated" :style="{ height: 80+amount*25 + 'px' }">
       <div class="supply-bar-graph-year">{{ year }}</div>
     </div>
     <div class="supply-bar-amount is-animated">{{ amount }}m</div>
@@ -59,6 +59,7 @@ export default {
 
   .supply-bar-graph-year {
     position: absolute;
+    white-space: nowrap;
     bottom: 1rem;
     writing-mode: vertical-lr;
     user-select: none;
