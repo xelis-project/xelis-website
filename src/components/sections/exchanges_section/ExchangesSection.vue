@@ -7,7 +7,7 @@
           <div class="angle br"></div>
 
           <div class="exchanges-header">
-            <h2>Exchanges (6)</h2>
+            <h2>Exchanges (7)</h2>
           </div>
           <div class="exchanges-content scroll-bar">
             <ExchangeBox 
@@ -39,6 +39,11 @@
               name="CoinEx" link="https://www.coinex.com/en/exchange/xel-usdt"
               logo_img="https://docs.xelis.io/exchanges/coinex_logo.png" 
               market_img="https://docs.xelis.io/exchanges/coinex.png" 
+            />
+            <ExchangeBox 
+              name="MEXC" link="https://www.mexc.com/exchange/XEL_USDT"
+              logo_img="https://docs.xelis.io/exchanges/mexc_logo.png" 
+              market_img="https://docs.xelis.io/exchanges/mexc.png" 
             />
           </div>
         </div>
