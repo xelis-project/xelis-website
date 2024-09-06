@@ -44,6 +44,13 @@
               Resources
             </router-link>
           </li>
+          <li>
+            <router-link
+              :to="{name: 'merch'}"
+            >
+              Merch
+            </router-link>
+          </li>
         </template>
         <template v-if="$route.name === 'resources'">
           <li>
@@ -78,6 +85,18 @@
             </router-link>
           </li>
         </template>
+        <template v-if="$route.name === 'merch'">
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
+            </router-link>
+          </li>
+        </template>
         <template v-if="$route.name === 'not_found'">
           <li>
             <router-link :to="{name: 'home'}">
@@ -87,6 +106,11 @@
           <li>
             <router-link :to="{name: 'resources'}">
               Resources
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'merch'}">
+              Merch
             </router-link>
           </li>
         </template>
@@ -141,6 +165,11 @@
                 Resources
               </router-link>
             </li>
+            <li>
+              <router-link :to="{name: 'merch'}">
+                Merch
+              </router-link>
+            </li>
           </template>
           <template v-if="$route.name === 'resources'">
             <li>
@@ -174,6 +203,23 @@
                 Home
               </router-link>
             </li>
+            <li>
+              <router-link :to="{name: 'merch'}">
+                Merch
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'merch'">
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
+              </router-link>
+            </li>
           </template>
           <template v-if="$route.name === 'not_found'">
             <li>
@@ -184,6 +230,11 @@
             <li>
               <router-link :to="{name: 'resources'}">
                 Resources
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'merch'}">
+                Merch
               </router-link>
             </li>
           </template>
