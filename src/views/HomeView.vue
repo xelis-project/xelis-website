@@ -39,6 +39,8 @@ import HeroSection from "@/components/HeroSection.vue";
 import XelisLogo from "@/components/XelisLogo.vue";
 import CircuitImg from "@/components/CircuitImg.vue";
 
+import meta from '../meta';
+
 export default {
   name: "HomeView",
   components: {
@@ -54,6 +56,9 @@ export default {
     HeroSection,
     XelisLogo,
     CircuitImg,
+  },
+  mounted() {
+    document.title = meta[`/`].title;
   },
   computed: {
     isSafari() {

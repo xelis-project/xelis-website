@@ -21,6 +21,8 @@ import ExchangeSection from "@/components/sections/exchanges_section/ExchangesSe
 import MinersSection from "@/components/sections/MinersSection.vue";
 import LinksSection from "@/components/sections/LinksSection.vue";
 
+import meta from '../meta'
+
 export default {
   name: "ResourcesView",
   components: {
@@ -30,7 +32,10 @@ export default {
     ExchangeSection,
     MinersSection,
     LinksSection,
-},
+  },
+  mounted() {
+    document.title = meta['/resources'].title;
+  },
   computed: {
     isSafari() {
       const userAgent = navigator.userAgent.toLowerCase();

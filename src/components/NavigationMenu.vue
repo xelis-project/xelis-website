@@ -84,6 +84,11 @@
               Home
             </router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'merch'}">
+              Merch
+            </router-link>
+          </li>
         </template>
         <template v-if="$route.name === 'merch'">
           <li>

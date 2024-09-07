@@ -1,5 +1,21 @@
 <template>
   <div id="merch">
+    <svg style="display: none" version="2.0">
+      <defs>
+        <symbol id="arrow-icon" viewBox="0 0 24 24">
+          <g>
+            <path
+              d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
+              stroke="currentColor" stroke-width="2"></path>
+            <path d="M16 12L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+        </symbol>
+      </defs>
+      <use href="#arrow-icon"/>
+    </svg>
     <header :class="{safari: isSafari}">
       <NavigationMenu />
       <div class="bg">
@@ -28,28 +44,12 @@
       <div class="content" v-if="itemCount > 0">
         <div>
           <div class="item-count">
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" @click="prevItemIndex()">
-              <g>
-                <path
-                  d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
-                  stroke="currentColor" stroke-width="2"></path>
-                <path d="M16 12L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </g>
+            <svg class="arrow" fill="none" version="2.0" @click="prevItemIndex()">
+              <use href="#arrow-icon" />
             </svg>
             <div class="text">{{ itemIndex }} / {{ itemCount }} items</div>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" @click="nextItemIndex()">
-              <g>
-                <path
-                  d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
-                  stroke="currentColor" stroke-width="2"></path>
-                <path d="M16 12L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </g>
+            <svg class="arrow" fill="none" version="2.0" @click="nextItemIndex()">
+              <use href="#arrow-icon" />
             </svg>
           </div>
           <div v-for="(item, index) in items" :key="index">
@@ -78,6 +78,10 @@
         </template>
       </div>
     </main>
+    <!-- we prerender the page but in that case only the default filter links will be rendered - we will add all links here hidden for seo -->
+    <div class="hidden-seo-links">
+      <a target="_blank" v-for="(item, index) in all_merch" :key="index" :href="item.link">{{ item.title }}</a>
+    </div>
   </div>
 </template>
 
@@ -85,15 +89,27 @@
 import NavigationMenu from "@/components/NavigationMenu.vue";
 
 import merch_items from '../components/merch_items.js';
-console.log(merch_items)
+import meta from '../meta';
+
 export default {
   name: 'MerchView',
   components: {
     NavigationMenu,
   },
+  mounted() {
+    document.title =  meta['/merch'].title;
+  },
   computed: {
     filter() {
       return this.$route.query.filter || "Hoodies";
+    },
+    all_merch() {
+      var all = [];
+      Object.keys(merch_items).forEach((key) => {
+        const merch = merch_items[key] || [];
+        merch.forEach((item) => all.push(item));
+      })
+      return all;   
     },
     items() {
       return merch_items[this.filter] || [];
@@ -164,6 +180,10 @@ body:not(.menu-open) {
     position: relative;
     z-index: 1;
     margin-bottom: 20rem;
+  }
+
+  .hidden-seo-links {
+    display: none;
   }
 
   .header {
