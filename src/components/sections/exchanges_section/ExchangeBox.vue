@@ -28,6 +28,7 @@ export default {
   display: block;
   opacity: .6;
   transition: .25s all;
+  user-select: none;
 
   .exchange-box-title {
     display: flex;

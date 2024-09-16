@@ -9,42 +9,15 @@
           <div class="exchanges-header">
             <h2>Exchanges (7)</h2>
           </div>
+          <div class="sort-container">
+            <button :class="{ active: exchangeSort === 'volume' }" @click="exchangeSort = 'volume'">Sort By Volume</button>
+            <div>|</div>
+            <button :class="{ active: exchangeSort === 'date' }" @click="exchangeSort = 'date'">Sort By Added Date</button>
+          </div>
           <div class="exchanges-content scroll-bar">
-            <ExchangeBox 
-              name="TradeOgre" link="https://tradeogre.com/exchange/XEL-USDT"
-              logo_img="https://docs.xelis.io/exchanges/tradeogre_logo.png" 
-              market_img="https://docs.xelis.io/exchanges/tradeogre.png" 
-            />
-            <ExchangeBox 
-              name="Exbitron" link="https://exbitron.com/trade?market=XEL-USDT"
-              logo_img="https://docs.xelis.io/exchanges/exbitron_logo.png" 
-              market_img="https://docs.xelis.io/exchanges/exbitron.png" 
-            />
-            <ExchangeBox 
-              name="Seven Seas" link="https://www.sevenseas.exchange/market/XEL-USDT"
-              logo_img="https://docs.xelis.io/exchanges/sevenseas_logo.webp" 
-              market_img="https://docs.xelis.io/exchanges/sevenseas.png" 
-            />
-            <ExchangeBox 
-              name="NonKYC" link="https://nonkyc.io/market/XEL_USDT"
-              logo_img="https://docs.xelis.io/exchanges/nonkyc_logo.png" 
-              market_img="https://docs.xelis.io/exchanges/nonkyc.png" 
-            />
-            <ExchangeBox 
-              name="Xeggex" link="https://xeggex.com/market/XEL_USDT"
-              logo_img="https://docs.xelis.io/exchanges/xeggex_logo.webp" 
-              market_img="https://docs.xelis.io/exchanges/xeggex.png" 
-            />
-            <ExchangeBox 
-              name="CoinEx" link="https://www.coinex.com/en/exchange/xel-usdt"
-              logo_img="https://docs.xelis.io/exchanges/coinex_logo.png" 
-              market_img="https://docs.xelis.io/exchanges/coinex.png" 
-            />
-            <ExchangeBox 
-              name="MEXC" link="https://www.mexc.com/exchange/XEL_USDT"
-              logo_img="https://docs.xelis.io/exchanges/mexc_logo.png" 
-              market_img="https://docs.xelis.io/exchanges/mexc.png" 
-            />
+            <ExchangeBox v-for="(exchange, index) in exchanges" v-bind:key="index"
+            :name="exchange.name" :link="exchange.link" 
+            :logo_img="exchange.logo_img" :market_img="exchange.market_img" />
           </div>
         </div>
     </section>
@@ -52,9 +25,25 @@
 
 <script>
 import ExchangeBox from "@/components/sections/exchanges_section/ExchangeBox.vue";
+import exchanges from './exchanges.js';
+
 export default {
   components: {
     ExchangeBox
+  },
+  data() {
+    return {
+      exchangeSort: "volume"
+    };
+  },
+  computed:{
+    exchanges() {
+      if (this.exchangeSort === "date") {
+        return exchanges;
+      }
+
+      return Object.assign([], exchanges).sort((a, b) => a.sort_volume - b.sort_volume);
+    },
   }
 }
 </script>
@@ -103,6 +92,31 @@ export default {
       transform: rotate(0deg);
       filter: blur(90px);
       border-radius: 50%;
+    }
+
+    .sort-container {
+      display: flex;
+      gap: 1rem;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 2rem;
+      align-items: center;
+
+      button {
+        border: thin solid var.$ascent-color;
+          background: transparent;
+          padding: .75rem 2rem;
+          font-weight: bold;
+          border-radius: .5rem;
+          color: var.$ascent-color;
+          cursor: pointer;
+
+        &.active {
+          background: var.$ascent-color;
+          border: none;
+          color: black;
+        }
+      }
     }
 
     .angle {
