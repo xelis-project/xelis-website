@@ -586,7 +586,7 @@ export default {
 
         lines.appendChild(newPath);
       }
-    }, 2000);
+    }, 500);
   }
 }
 </script>
@@ -604,17 +604,14 @@ export default {
           stroke-dashoffset: var(--path-length);
         }
 
-        // create a delay before alternating animation
-        40% {
+        80% {
           stroke-dashoffset: 0;
-        }
-
-        60% {
-          stroke-dashoffset: 0;
+          opacity: 1;
         }
 
         100% {
-          stroke-dashoffset: var(--path-length);
+          stroke-dashoffset: 0;
+          opacity: 0;
         }
     }
 
@@ -627,7 +624,7 @@ export default {
         }
 
         &.animated-lineover {
-            animation: dash2 15s forwards alternate;
+            animation: dash2 5s forwards;
         }
     }
 }
