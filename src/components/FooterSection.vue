@@ -145,6 +145,10 @@ footer {
     }
   }
 
+  #bottom_logo {
+    margin-bottom: 6rem;
+  }
+
   .copyright {
     display: flex;
     justify-content: space-between;

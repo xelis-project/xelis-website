@@ -17,12 +17,39 @@
             <img src="@/assets/images/x.svg" alt="Twitter / X logo" />
             Twitter / X
           </a>
+          <a href="https://youtube.com/@xelis_project" target="_blank">
+            <img src="@/assets/images/youtube.svg" alt="Youtube logo" />
+            Youtube
+          </a>
+          <a href="https://xeliscommunity.org/" target="_blank">
+            <img src="@/assets/images/medium.svg" alt="Medium logo" />
+            Medium
+          </a>
+          <a href="https://github.com/xelis-project" target="_blank">
+            <img src="@/assets/images/github_2.svg" alt="GitHub logo" />
+            GitHub
+          </a>
+          <a href="https://www.facebook.com/xeliscommunity" target="_blank">
+            <img src="@/assets/images/facebook.svg" alt="Facebook logo" />
+            Facebook
+          </a>
+          <a href="https://www.linkedin.com/company/xelis" target="_blank">
+            <img src="@/assets/images/linkedin.svg" alt="LinkedIn logo" />
+            LinkedIn
+          </a>
+          <a href="https://www.reddit.com/r/xelis/" target="_blank">
+            <img src="@/assets/images/reddit.svg" alt="Reddit logo" />
+            Reddit
+          </a>
+          <a href="https://www.instagram.com/xeliscommunity/" target="_blank">
+            <img src="@/assets/images/instagram.svg" alt="Instagram logo" />
+            Instagram
+          </a>
+          <a href="https://tiktok.com/@xeliscommunity" target="_blank">
+            <img src="@/assets/images/tiktok.svg" alt="Tiktok logo" />
+            Tiktok
+          </a>
         </div>
-        <!-- <div>
-          <a>Linkedin</a>
-          <a>Telegram</a>
-          <a>Instagram</a>
-        </div> -->
       </div>
     </section>
 </template>
