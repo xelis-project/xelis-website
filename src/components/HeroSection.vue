@@ -70,6 +70,7 @@ export default {
     .hero-button {
         margin-top: 3.4rem;
         display: flex;
+        gap: 2rem;
         justify-content: space-between;
         align-items: center;
     }
