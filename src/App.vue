@@ -11,10 +11,15 @@
 <script>
 import FooterSection from "./components/FooterSection.vue";
 
+// preload views by importing and avoid page load flicker
+import "./views/ResourcesView.vue";
+import "./views/HomeView.vue";
+import "./views/NotFound.vue";
+
 export default {
   name: "App",
   components: {
-    FooterSection
+    FooterSection,
   },
   data() {
     return {
