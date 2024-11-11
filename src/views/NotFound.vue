@@ -19,6 +19,7 @@ export default {
   components: {
     NavigationMenu,
   },
+  inject: ['isSafari']
 }
 </script>
 

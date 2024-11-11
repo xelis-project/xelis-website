@@ -30,16 +30,8 @@ export default {
     ExchangeSection,
     MinersSection,
     LinksSection,
-},
-  computed: {
-    isSafari() {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isSafari = userAgent.includes("safari") && !userAgent.includes("chrome") && !userAgent.includes("android");
-      const isIos = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-
-      return isSafari || isIos;
-    }
   },
+  inject: ['isSafari']
 }
 </script>
 
