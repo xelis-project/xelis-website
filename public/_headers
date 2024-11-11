@@ -3,4 +3,4 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'self' *.xelis.io; script-src 'self'; object-src 'none';
+  Content-Security-Policy: default-src 'self' *.xelis.io fonts.googleapis.com static.cloudflareinsights.com; script-src 'self'; object-src 'none';
