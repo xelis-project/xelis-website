@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="scroll-bar">
+    <nav class="scroll-bar-top">
       <ul>
         <li id="logo">
           <router-link :to="{name: 'home'}">
@@ -27,16 +27,16 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{name: 'home', hash: '#roadmap'}">
-              Roadmap
-            </router-link>
-          </li>
-          <li>
             <router-link :to="{name: 'home', hash: '#socials'}">
               Socials
             </router-link>
           </li>
           <li>/</li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
           <li>
             <router-link
               :to="{name: 'resources'}"
@@ -75,6 +75,34 @@
           <li>
             <router-link :to="{name: 'home'}">
               Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+        </template>
+        <template v-if="$route.name === 'roadmap'">
+          <li>
+            <router-link :to="{name: 'roadmap', hash: '#tasks'}">
+              Tasks
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap', hash: '#timeline'}">
+              Timeline
+            </router-link>
+          </li>
+          <li>/</li>
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
             </router-link>
           </li>
         </template>
@@ -126,16 +154,16 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="{name: 'home', hash: '#roadmap'}">
-                Roadmap
-              </router-link>
-            </li>
-            <li>
               <router-link :to="{name: 'home', hash: '#socials'}">
                 Socials
               </router-link>
             </li>
             <li>-</li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
             <li>
               <router-link :to="{name: 'resources'}">
                 Resources
@@ -172,6 +200,34 @@
             <li>
               <router-link :to="{name: 'home'}">
                 Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'roadmap'">
+            <li>
+              <router-link :to="{name: 'roadmap', hash: '#tasks'}">
+                Tasks
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap', hash: '#timeline'}">
+                Timeline
+              </router-link>
+            </li>
+            <li>/</li>
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
               </router-link>
             </li>
           </template>

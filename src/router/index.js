@@ -10,7 +10,12 @@ const routes = [
   {
     path: '/resources',
     name: 'resources',
-    component: () => import(/* webpackChunkName: "resouces" */ '../views/ResourcesView.vue')
+    component: () => import(/* webpackChunkName: "resources" */ '../views/ResourcesView.vue')
+  },
+  {
+    path: '/roadmap',
+    name: 'roadmap',
+    component: () => import(/* webpackChunkName: "roadmap" */ '../views/RoadmapView.vue')
   },
   {
     path: '/:catchAll(.*)',
@@ -28,9 +33,9 @@ const router = createRouter({
       if (hashElement) {
         hashElement.scrollIntoView({ behavior: 'smooth', block: "center" });
       } else {
-        setTimeout(() => {
+        /*setTimeout(() => {
           document.querySelector(to.hash).scrollIntoView({ behavior: 'smooth', block: "center" });
-        }, 300)
+        }, 300)*/
       }
     } else {
       window.scrollTo(0, 0);

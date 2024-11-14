@@ -17,7 +17,6 @@
       <ObjectivesSection />
       <NetworkSection />
       <SupplySection />
-      <RoadMapSection />
       <BlockDAGSection />
       <ClientProtocolSection />
       <SocialSection />
@@ -29,7 +28,6 @@
 import ObjectivesSection from '@/components/sections/ObjectivesSection.vue';
 import NetworkSection from '@/components/sections/NetworkSection.vue';
 import SupplySection from '@/components/sections/supply_section/SupplySection.vue';
-import RoadMapSection from '@/components/sections/RoadMapSection.vue';
 import BlockDAGSection from '@/components/sections/BlockDAGSection.vue';
 import ClientProtocolSection from '@/components/sections/ClientProtocolSection.vue';
 import SocialSection from '@/components/sections/SocialSection.vue';
@@ -45,7 +43,6 @@ export default {
     ObjectivesSection,
     NetworkSection,
     SupplySection,
-    RoadMapSection,
     BlockDAGSection,
     ClientProtocolSection,
     SocialSection,

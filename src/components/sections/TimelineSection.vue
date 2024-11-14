@@ -1,7 +1,7 @@
 <template>
-    <section id="roadmap">
-        <h2>Roadmap</h2>
-        <div id="timeline">
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <div id="timeline-container">
             <div
                 :class="{fade: !preRendered,}"
                 class="done is-animated"
@@ -115,14 +115,18 @@
 @use "@/assets/variables.scss" as var;
 
 
-#roadmap {
+#timeline {
+    position: relative;
+    z-index: 1;
+
     h2 {
         text-align: center;
     }
 
-    #timeline {
+    #timeline-container {
         font-size: 1.8rem;
         display: flex;
+        padding-top: 2rem;
 
         >div {
             display: flex;

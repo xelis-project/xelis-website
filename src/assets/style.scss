@@ -305,7 +305,7 @@ header {
 
 nav {
     margin: 3rem 0 1.2rem 0;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     ul {
         display: flex;
         gap: 4rem;
@@ -406,7 +406,7 @@ main {
 // ======== Scroll bar ========
 .scroll-bar {
     &::-webkit-scrollbar {
-        height: 8px;
+        height: 10px;
     }
 
     &::-webkit-scrollbar-track {
@@ -417,6 +417,28 @@ main {
     &::-webkit-scrollbar-thumb {
         background: rgba(40, 40, 40, 0.8);
         border-radius: .5em;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(122 250 211);
+    }
+}
+
+.scroll-bar-top {
+    &::-webkit-scrollbar {
+        height: 10px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 0.5em;
+        border: thin solid #e4e9e8;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #dae0df3d;
+        border-radius: 0.5em;
     }
 
     &::-webkit-scrollbar-thumb:hover {
