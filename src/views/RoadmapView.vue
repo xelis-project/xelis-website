@@ -2,6 +2,10 @@
   <div id="roadmap_view">
     <header :class="{safari: isSafari}">
       <NavigationMenu />
+      <div class="bg">
+        <div class="bgtr"></div>
+        <div class="bgt"></div>
+      </div>
     </header>
     <main>
       <TasksSection />

@@ -128,6 +128,7 @@ export default {
 
   .task-search {
     background: transparent;
+    backdrop-filter: blur(10px);
     border: .2rem solid white;
     border-radius: 1rem;
     padding: 1.5rem 2.5rem;
