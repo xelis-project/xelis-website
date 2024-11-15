@@ -26,7 +26,8 @@ export default {
   padding: 2rem;
   border-radius: 1rem;
   /*background-color: rgba($color: white, $alpha: .5);*/
-  border: .25rem solid white;
+  background: rgba(0, 0, 0, 0.4);
+  border: .25rem solid #848988;
   backdrop-filter: blur(5px);
   width: 30rem;
   height: 20rem;
