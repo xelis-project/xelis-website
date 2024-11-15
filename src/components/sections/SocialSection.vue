@@ -49,6 +49,10 @@
             <img src="@/assets/images/tiktok.svg" alt="Tiktok logo" />
             Tiktok
           </a>
+          <a href="https://matrix.to/#/#xelis:matrix.org" target="_blank">
+            <img src="@/assets/images/matrix.svg" alt="Matrix logo" />
+            Matrix
+          </a>
         </div>
       </div>
     </section>
