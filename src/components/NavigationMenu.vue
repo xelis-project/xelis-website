@@ -27,6 +27,11 @@
             </router-link>
           </li>
           <li>
+            <router-link :to="{name: 'home', hash: '#timeline'}">
+              Timeline
+            </router-link>
+          </li>
+          <li>
             <router-link :to="{name: 'home', hash: '#socials'}">
               Socials
             </router-link>
