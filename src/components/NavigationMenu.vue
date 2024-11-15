@@ -224,7 +224,7 @@
                 Timeline
               </router-link>
             </li>
-            <li>/</li>
+            <li>-</li>
             <li>
               <router-link :to="{name: 'home'}">
                 Home
