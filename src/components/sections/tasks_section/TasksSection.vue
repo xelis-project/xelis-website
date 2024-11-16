@@ -182,6 +182,7 @@ export default {
     border-radius: 1rem;
     padding: 1.5rem 2.5rem;
     font-weight: bold;
+    font-size: 2.2rem;
     color: white;
     outline: none;
     margin-bottom: 4rem;

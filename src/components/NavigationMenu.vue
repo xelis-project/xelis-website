@@ -268,9 +268,12 @@ export default {
     name: "NavigationMenu",
     mounted() {
       // MENU
-      document.querySelector("#burger_menu button").addEventListener("click", () => {
-        document.body.classList.toggle("menu-open");
-      });
+      const menuButton = document.querySelector("#burger_menu button");
+      if (menuButton) {
+        menuButton.addEventListener("click", () => {
+         document.body.classList.toggle("menu-open");
+        });
+      }
 
       document.querySelectorAll("#mobile_menu a").forEach((a) => {
         a.addEventListener("click", () => {
