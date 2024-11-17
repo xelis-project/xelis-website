@@ -1,14 +1,11 @@
 <template>
     <div id="hero">
-        <p>
-            A new era of cryptocurrency is here.
-        </p>
         <p id="resume">
-            <span>XELIS</span> is an innovative cryptocurrency built from scratch using a Proof-Of-Work consensus over a BlockDAG and Homomorphic Encryption to preserve your privacy.
+            XELIS is the first blockchain solution for <span>Privacy</span>, <span>Speed</span>, <span>Security</span> and <span>Scalability</span>.
         </p>
         <div class="hero-button">
             <h4>
-                BlockDAG + Homomorphic Encryption + Smart Contracts - join the technological revolution.
+                Layer 1 + Rust + BlockDAG + Homomorphic Encryption + Smart Contracts - created by the people, for the people.
             </h4>
             <div class="hero-button-links">
                 <a class="button" href="https://github.com/xelis-project/xelis-blockchain" target="_blank">
@@ -56,19 +53,20 @@ export default {
         font-weight: 600;
     }
     #resume {
-        margin-top: 3.9rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-        padding-bottom: 3.4rem;
         padding-right: 15%;
-        font-size: 3.5rem;
+        font-size: 6rem;
+        line-height: 8rem;
         font-family: "Helios Bold";
         span {
             font-family: "Helios Bold";
             color: var.$ascent-color;
         }
     }
+    h4 {
+        font-size: 2.5rem;
+        opacity: .6;
+    }
     .hero-button {
-        margin-top: 3.4rem;
         display: flex;
         gap: 2rem;
         justify-content: space-between;
@@ -81,16 +79,28 @@ export default {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    #resume {
+        padding-right: 0 !important;
+    }
+
+    .hero-button {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
 @media screen and (max-width: 748px) {
     .header-content {
         #hero {
             #resume {
-                font-size: 2.5rem;
+                font-size: 4rem;
                 padding-right: 0;
+                line-height: 4.5rem;
             }
-            .hero-button {
-                flex-direction: column;
-                gap: 2rem;
+            
+            h4 {
+                font-size: 2rem;
             }
         }
     }
