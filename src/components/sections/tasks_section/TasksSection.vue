@@ -18,6 +18,7 @@
           <div class="filter-buttons">
             <button :class="{ 'active': !year}" @click="setYear(null)">All</button>
             <button :class="{ 'active': year === '2024'}" @click="setYear('2024')">2024</button>
+            <button :class="{ 'active': year === '2023'}" @click="setYear('2023')">2023</button>
           </div>
         </div>
         <div>
@@ -42,12 +43,13 @@
       </div>
       <div class="task-list">
         <div v-for="(task, index) in tasks" v-bind:key="index">
-          <TaskItem :name="task.name" :description="task.description" :status="task.status" :year="task.year" :priority="task.priority" :tag="task.tag" />
+          <TaskItem :name="task.name" :description="task.description" :status="task.status" 
+            :year="task.year" :priority="task.priority" :tag="task.tag" :quarter="task.quarter" />
         </div>
       </div>
       <div v-if="tasks.length === 0">No results</div>
       <div class="disclaimer">
-        / Does NOT include previous achievements, internal tasks, bug fixes, maintenance, minor enhancements, etc.
+        / Does NOT include internal tasks, bug fixes, maintenance, minor enhancements, etc.
       </div>
   </section>
 </template>

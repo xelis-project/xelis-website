@@ -1,112 +1,24 @@
 <template>
     <section id="timeline">
         <h2>Timeline</h2>
-        <div id="timeline-container">
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
+        <div id="timeline-container" class="scroll-bar">
+            <div v-for="(task, index) in tasks" v-bind:key="index" class="is-animated" :class="{ 'done': task.status === 'Completed'}">
                 <div class="top">
-                    <div>2021</div>
-                    <div>Beginning of the project</div>
+                    <template v-if="index % 2 === 0">
+                        <div>{{ task.year }} {{ task.quarter }}</div>
+                        <div>{{ task.name }}</div>
+                    </template>
                 </div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom"></div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top"></div>
                 <div class="circle">
                     <div></div>
                 </div>
                 <div class="bottom">
-                    <div>Q2 2023</div>
-                    <div>BlockDAG</div>
+                    <template v-if="index % 2 === 1">
+                        <div>{{ task.year }} {{ task.quarter }}</div>
+                        <div>{{ task.name }}</div>
+                    </template>
                 </div>
             </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top">
-                    <div>Q3 2023</div>
-                    <div>XSWD</div>
-                </div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom"></div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top"></div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom">
-                    <div>Q4 2023</div>
-                    <div>Client Protocol</div>
-                </div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top">
-                    <div>Q1 2024</div>
-                    <div>Homomorphic Encryption integration</div>
-                </div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom"></div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top"></div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom">
-                    <div>April 20, 2024</div>
-                    <div>Mainnet launch</div>
-                </div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="done is-animated"
-            >
-                <div class="top">
-                    <div>July 11, 2024</div>
-                    <div>Network Upgrade</div>
-                </div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom"></div>
-            </div>
-            <div
-                :class="{fade: !preRendered,}"
-                class="is-animated"
-            >
-                <div class="top"></div>
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="bottom">
-                    <div>WIP</div>
-                    <div>Smart Contracts</div>
-                </div>
-            </div>
-            <!-- <div class="bg bgbr"></div> -->
         </div>
         <router-link :to="{name: 'roadmap'}" v-if="showRoadmapLink">
             <svg fill="currentColor" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -128,8 +40,15 @@
 </template>
 
 <script>
+import tasks from './tasks_section/tasks';
+
 export default {
-    props: ['showRoadmapLink']
+    props: ['showRoadmapLink'],
+    data() {
+        return {
+            tasks
+        }
+    }
 }
 </script>
 
@@ -169,11 +88,16 @@ export default {
         font-size: 1.8rem;
         display: flex;
         padding-top: 2rem;
-
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: 2rem;
+        
         >div {
             display: flex;
             flex-direction: column;
             flex: 1;
+            min-width: 15rem;
 
             >div {
                 text-align: center;
@@ -235,7 +159,6 @@ export default {
             }
 
             &.done {
-
                 .circle:before,
                 .circle:after {
                     background: var.$ascent-color;

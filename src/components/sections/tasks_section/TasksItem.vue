@@ -10,7 +10,7 @@
           <div class="status-dot" :class="classStatus"></div>
           <div>{{ status }}</div>
         </div>
-        <div>{{ year }}</div>
+        <div>{{ year }} {{ quarter }}</div>
       </div>
       <div class="task-more">
         <div>{{ tag }}</div>
@@ -23,7 +23,7 @@
 <script>
 export default {
   name: "TaskItem",
-  props: ["name", "description", "status", "year", "priority", "tag"],
+  props: ["name", "description", "status", "year", "priority", "tag", "quarter"],
   computed: {
     classStatus() {
       return this.status.toLowerCase().split(' ').join('-');
