@@ -91,10 +91,11 @@ footer {
   .circuit {
     z-index: -1;
     position: absolute;
-    opacity: .2;
+    opacity: .4;
     bottom: 0;
     left: -19.6rem;
     height: 150rem;
+    transform: scale3d(2, 2, 1);
   }
 
   /*&::before {
