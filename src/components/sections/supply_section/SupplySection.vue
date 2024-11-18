@@ -1,10 +1,10 @@
 <template>
   <section id="supply">
     <div class="supply-graph scroll-bar">
-      <div class="supply-title">
+      <h2 class="supply-title">
         Supply Emission
         <div class="supply-description">Instead of halving, the reward is decreasing with each block with a maximum supply of 18.4 million.</div>
-      </div>
+      </h2>
       <SupplyGraphBar :amount="2.8" :graphHeight="50" :year="'Q2 2025'" />
       <SupplyGraphBar :amount="5.2" :graphHeight="100" :year="'Q2 2026'" />
       <SupplyGraphBar :amount="7.2" :graphHeight="200" :year="'Q2 2027'" />
@@ -55,14 +55,13 @@ export default {
   }
 
   .supply-title {
-    font-family: "Helios Bold";
-    font-size: 3rem;
     position: absolute;
+    margin-top: 0;
   }
 
   .supply-description {
     font-size: 1.7rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     color: #ffffffad;
     max-width: 500px;
   }
