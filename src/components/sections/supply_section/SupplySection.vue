@@ -51,7 +51,6 @@ export default {
     max-width: 100%;
     position: relative;
     padding-bottom: 1rem;
-    justify-content: center;
   }
 
   h2 {
