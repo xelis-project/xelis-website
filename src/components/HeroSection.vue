@@ -1,7 +1,7 @@
 <template>
     <div id="hero">
         <p id="resume">
-            XELIS is the first blockchain solution for <span>Privacy</span>, <span>Speed</span>, <span>Security</span> and <span>Scalability</span>.
+            XELIS is the world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span> and <span>Smart Contracts</span>.
         </p>
         <div class="hero-button">
             <h4>
