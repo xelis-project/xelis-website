@@ -15,6 +15,8 @@ import FooterSection from "./components/FooterSection.vue";
 import "./views/ResourcesView.vue";
 import "./views/HomeView.vue";
 import "./views/NotFound.vue";
+import "./views/RoadmapView.vue";
+import "./views/ExchangesView.vue";
 
 export default {
   name: "App",

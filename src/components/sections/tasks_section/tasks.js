@@ -234,6 +234,15 @@ export default [
     quarter: "Q4"
   },
   {
+    name: "XVM - Enums",
+    description: "Useful for future event system.",
+    status: "Completed",
+    year: "2024",
+    tag: "XVM",
+    priority: "High",
+    quarter: "Q4"
+  },
+  {
     name: "WooCommerce Payment",
     description: "New WooCommerce payment plugin. Easily accept XELIS for online business.",
     status: "In Progress",
@@ -268,15 +277,6 @@ export default [
     tag: "App",
     priority: "Mid",
     quarter: ""
-  },
-  {
-    name: "XVM - Enums",
-    description: "Useful for future event system.",
-    status: "Completed",
-    year: "2024",
-    tag: "XVM",
-    priority: "High",
-    quarter: "Q4"
   },
   {
     name: "XVM - Shunting Yard Algo",

@@ -49,6 +49,11 @@
               Resources
             </router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
+            </router-link>
+          </li>
         </template>
         <template v-if="$route.name === 'resources'">
           <li>
@@ -59,11 +64,6 @@
           <li>
             <router-link :to="{name: 'resources', hash: '#nodes'}">
               Nodes
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'resources', hash: '#exchanges'}">
-              Exchanges
             </router-link>
           </li>
           <li>
@@ -87,6 +87,11 @@
               Roadmap
             </router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
+            </router-link>
+          </li>
         </template>
         <template v-if="$route.name === 'roadmap'">
           <li>
@@ -103,6 +108,28 @@
           <li>
             <router-link :to="{name: 'home'}">
               Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
+            </router-link>
+          </li>
+        </template>
+        <template v-if="$route.name === 'exchanges'">
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
             </router-link>
           </li>
           <li>
@@ -174,6 +201,11 @@
                 Resources
               </router-link>
             </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
+              </router-link>
+            </li>
           </template>
           <template v-if="$route.name === 'resources'">
             <li>
@@ -184,11 +216,6 @@
             <li>
               <router-link :to="{name: 'resources', hash: '#nodes'}">
                 Nodes
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{name: 'resources', hash: '#exchanges'}">
-                Exchanges
               </router-link>
             </li>
             <li>
@@ -212,6 +239,11 @@
                 Roadmap
               </router-link>
             </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
+              </router-link>
+            </li>
           </template>
           <template v-if="$route.name === 'roadmap'">
             <li>
@@ -228,6 +260,28 @@
             <li>
               <router-link :to="{name: 'home'}">
                 Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'exchanges'">
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
               </router-link>
             </li>
             <li>

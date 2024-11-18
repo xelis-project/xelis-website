@@ -18,6 +18,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "roadmap" */ '../views/RoadmapView.vue')
   },
   {
+    path: '/exchanges',
+    name: 'exchanges',
+    component: () => import(/* webpackChunkName: "exchanges" */ '../views/ExchangesView.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'not_found',
     component: () => import(/* webpackChunkName: "not_found" */ '../views/NotFound.vue')
