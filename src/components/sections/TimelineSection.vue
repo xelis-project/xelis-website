@@ -173,13 +173,13 @@ export default {
     }
 }
 @media screen and (max-width: 1830px) {
-    #roadmap #timeline {
+    #timeline #timeline-container {
         font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 748px) {
-    #roadmap #timeline {
+    #timeline #timeline-container {
         position: relative;
         flex-direction: column;
 
