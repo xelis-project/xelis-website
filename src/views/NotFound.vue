@@ -24,14 +24,6 @@ export default {
 </script>
 
 <style lang="scss">
-body:not(.menu-open) {
-  #not_found_view {
-    header {
-      height: unset;
-    }
-  }
-}
-
 #not_found_view {
   position: relative;
   z-index: 1;

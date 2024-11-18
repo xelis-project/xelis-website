@@ -46,7 +46,7 @@
 
   .network-icon {
     position: absolute;
-    opacity: .05;
+    opacity: .03;
     color: var.$ascent-color;
     top: -10rem;
     left: -20rem;
@@ -161,6 +161,8 @@
 
 @media screen and (max-width: 1200px) {
   #network {
+    flex-direction: column;
+    gap: 0;
     padding: 11rem 8rem;
   }
 }
@@ -177,7 +179,6 @@
 
 @media screen and (max-width: 900px) {
   #network {
-    flex-direction: column;
     gap: 3rem;
     padding: 3rem;
     .bg {

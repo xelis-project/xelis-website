@@ -1,7 +1,7 @@
 <template>
     <section id="timeline">
         <h2>Timeline</h2>
-        <div id="timeline-container" class="scroll-bar is-animated" :class="{'fade': !preRendered,}">
+        <div id="timeline-container" class="scroll-bar is-animated" :class="{'fade-childs': !preRendered,}">
             <div v-for="(task, index) in tasks" v-bind:key="index" class="is-animated" :class="{ 'done': task.status === 'Completed'}">
                 <div class="top">
                     <template v-if="index % 2 === 0">

@@ -34,11 +34,4 @@ export default {
 <style lang="scss">
 @use "@/assets/variables.scss" as var;
 
-body:not(.menu-open) {
-  #roadmap_view {
-    header {
-      height: unset;
-    }
-  }
-}
 </style>

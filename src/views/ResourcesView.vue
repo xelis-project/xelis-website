@@ -38,11 +38,4 @@ export default {
 <style lang="scss">
 @use "@/assets/variables.scss" as var;
 
-body:not(.menu-open) {
-  #resources_view {
-    header {
-      height: unset;
-    }
-  }
-}
 </style>

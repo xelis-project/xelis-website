@@ -85,6 +85,7 @@ footer {
   border-top: 1px solid #02FFCF;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
+  overflow: hidden;
 
   margin: 0 calc(var.$spacing-body * -1);
 

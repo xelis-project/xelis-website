@@ -277,7 +277,7 @@ export default {
 
       document.querySelectorAll("#mobile_menu a").forEach((a) => {
         a.addEventListener("click", () => {
-          document.body.classList.toggle("menu-open");
+          document.body.classList.remove("menu-open");
         })
       });
 
@@ -337,13 +337,10 @@ header nav {
 }
 
 .menu-open {
-
   #mobile_menu {
+    position: inherit;
     visibility: visible;
     opacity: 1;
-  }
-  #hero {
-    display: none;
   }
 
   #burger_menu button span:before {
@@ -355,15 +352,10 @@ header nav {
     width: 2.3rem;
     transform: translateY(-3px) translateX(0px) rotate(-45deg);
   }
-  #resume {
-    display: none;
-  }
 }
 #mobile_menu {
   position: absolute;
-  left: 50%;
-  margin-top: 2rem;
-  transform: translateX(-50%);
+  margin: 3rem 0 10rem 0;
   visibility: hidden;
   opacity: 0;
   z-index: 1;
