@@ -8,7 +8,7 @@
           :class="{'fade': !preRendered,}"
           class="is-animated"
         >
-          <h3>Main Objectives:</h3>
+          <h3>Main Objectives</h3>
           <ol>
             <li>Provide privacy on transactions / balances.</li>
             <li>Enable Smart Contracts.</li>
@@ -20,7 +20,7 @@
           :class="{'fade': !preRendered,}"
           class="is-animated"
         >
-          <h3>Other Objectives:</h3>
+          <h3>Other Objectives</h3>
           <ol>
             <li>Issue custom assets identical to the native XEL.</li>
             <li>POW algorithm designed as CPU / GPU friendly.</li>
@@ -40,10 +40,9 @@
   z-index: 1;
 
   h2 {
-    padding-bottom: 2.5rem;
     width: 100%;
-    border-bottom: 2px solid var.$white;
   }
+
   > div {
     display: flex;
     gap: 6rem;
@@ -52,6 +51,10 @@
     }
     ol li + li {
       margin-top: 1rem;
+    }
+    ol {
+      padding-left: 1.8rem;
+      font-size: 2rem;
     }
   }
 }

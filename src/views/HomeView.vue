@@ -14,6 +14,7 @@
       </div>
     </header>
     <main id="home">
+      <FeaturesSection />
       <ObjectivesSection />
       <NetworkSection />
       <SupplySection />
@@ -38,6 +39,7 @@ import NavigationMenu from "@/components/NavigationMenu.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import XelisLogo from "@/components/XelisLogo.vue";
 import CircuitImg from "@/components/CircuitImg.vue";
+import FeaturesSection from '@/components/sections/FeaturesSection.vue';
 
 export default {
   name: 'HomeView',
@@ -49,6 +51,7 @@ export default {
     ClientProtocolSection,
     SocialSection,
     TimelineSection,
+    FeaturesSection,
 
     NavigationMenu,
     HeroSection,
