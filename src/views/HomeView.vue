@@ -21,7 +21,6 @@
       <SupplySection />
       <TimelineSection :show-roadmap-link="true"/>
       <BlockDAGSection />
-      <ClientProtocolSection />
       <SocialSection />
     </main>
   </div>
@@ -32,7 +31,6 @@ import ObjectivesSection from '@/components/sections/ObjectivesSection.vue';
 import NetworkSection from '@/components/sections/NetworkSection.vue';
 import SupplySection from '@/components/sections/supply_section/SupplySection.vue';
 import BlockDAGSection from '@/components/sections/BlockDAGSection.vue';
-import ClientProtocolSection from '@/components/sections/ClientProtocolSection.vue';
 import SocialSection from '@/components/sections/SocialSection.vue';
 import TimelineSection from '@/components/sections/TimelineSection.vue';
 
@@ -50,7 +48,6 @@ export default {
     NetworkSection,
     SupplySection,
     BlockDAGSection,
-    ClientProtocolSection,
     SocialSection,
     TimelineSection,
     FeaturesSection,
