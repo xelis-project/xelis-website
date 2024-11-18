@@ -52,7 +52,7 @@
     svg {
       position: absolute;
       z-index: -1;
-      opacity: .04;
+      opacity: .07;
       top: 0rem;
       left: 0rem;
       color: var.$ascent-color;

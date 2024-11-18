@@ -45,12 +45,17 @@ export default {
   }
 
   .supply-graph {
+    flex-direction: column;
     display: flex;
-    gap: 1.5rem;
-    overflow: auto;
-    max-width: 100%;
-    position: relative;
-    padding-bottom: 1rem;
+    gap: 1rem;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      overflow: auto;
+      padding-bottom: 1rem;
+      height: 700px;
+      gap: 1.5rem;
+    }
   }
 
   h2 {
