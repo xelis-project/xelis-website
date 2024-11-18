@@ -181,7 +181,7 @@ export default [
   },
   {
     name: "Whitepaper",
-    description: "General overview of the project, featuring technical explications.",
+    description: "General overview of the project, featuring technical explanations.",
     status: "Completed",
     year: "2024",
     tag: "",
