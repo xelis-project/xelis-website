@@ -201,9 +201,12 @@ export default {
     display: flex;
     gap: 2rem;
     width: 100%;
-    justify-content: space-around;
     margin-bottom: 4rem;
     flex-wrap: wrap;
+
+    @media screen and (min-width: 1024px) {
+      justify-content: space-around;
+    }
 
     > div {
       display: flex;

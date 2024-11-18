@@ -80,30 +80,36 @@ export default {
 }
 
 @media screen and (max-width: 1200px) {
-    #resume {
-        padding-right: 0 !important;
-    }
-
-    .hero-button {
-        flex-direction: column;
-        gap: 2rem;
+    #hero {
+        #resume {
+            padding-right: 0;
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+        .hero-button {
+            flex-direction: column;
+            gap: 2rem;
+        }
     }
 }
 
 @media screen and (max-width: 748px) {
-    .header-content {
-        #hero {
-            #resume {
-                font-size: 4rem;
-                padding-right: 0;
-                line-height: 4.5rem;
-            }
-            
-            h4 {
-                font-size: 2rem;
-            }
+    #hero {
+        #resume {
+            font-size: 4rem;
+            padding-right: 0;
+            line-height: 5rem;
+        }
+        
+        h4 {
+            font-size: 2rem;
+        }
+
+        .hero-button-links {
+            flex-direction: column;
+            width: 100%;
+            align-items: start;
         }
     }
-
 }
 </style>
