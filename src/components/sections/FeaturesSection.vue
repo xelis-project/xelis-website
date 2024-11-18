@@ -1,6 +1,6 @@
 <template>
     <section id="features">
-        <h2>Features</h2>
+        <h2>Key Features</h2>
         <div id="features-container">
             <div class="feature-item is-animated" :class="{'fade': !preRendered,}">
                 <svg width="40" height="40" fill="currentColor" viewBox="0 0 96.666 96.666">
