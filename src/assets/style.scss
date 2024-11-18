@@ -303,7 +303,7 @@ header {
             position: absolute;
             top: 0%;
             left: -100%;
-            transform: rotateY(180deg);
+            transform: rotateY(180deg) scale3d(1.5, 1.5, 1);
             width: 167vw;
             height: 151vw;
             z-index: -1;
