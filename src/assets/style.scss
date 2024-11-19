@@ -85,7 +85,7 @@ section {
     button {
         cursor: pointer;
         color: black;
-        transition: background-color 0.2s ease-in-out;
+        transition: all 0.15s ease-in-out;
         background-color: var.$ascent-color;
         padding: 1rem 2.5rem;
         font-size: 1.5rem;
@@ -108,6 +108,7 @@ section {
     &:hover {
         button {
             background-color: var.$white;
+            transform: scale3d(.95, .95, 1);
         }
     }
 }
