@@ -11,9 +11,7 @@
                 <a class="button" href="https://github.com/xelis-project/xelis-blockchain" target="_blank">
                     <button class="big">
                         <GithubLogo/>
-                        <span>
-                            GitHub
-                        </span>
+                        <span>GitHub</span>
                     </button>
                 </a>
                 <a class="button" href="https://whitepaper.xelis.io" target="_blank">
@@ -25,9 +23,7 @@
                             <path d="M8 13H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M8 9H9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <span>
-                            Whitepaper
-                        </span>
+                        <span>Whitepaper</span>
                     </button>
                 </a>
             </div>

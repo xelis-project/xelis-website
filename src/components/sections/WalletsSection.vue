@@ -29,7 +29,7 @@
                   <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-genesix-wallet/releases">
                     <button>
                       <img src="@/assets/images/github.svg" alt="Github logo" />
-                      Releases
+                      <span>Releases</span>
                     </button>
                   </a>
                 </div>
@@ -48,7 +48,7 @@
                     <a class="button" target="_blank" href="https://paperwallet.xelis.io">
                       <button>
                         <img src="@/assets/images/browser.svg" alt="Browser logo" />
-                        Open
+                        <span>Open</span>
                       </button>
                     </a>
                   </div>
@@ -69,7 +69,7 @@
                     <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-blockchain/releases">
                       <button>
                         <img src="@/assets/images/github.svg" alt="Github logo" />
-                        Releases
+                        <span>Releases</span>
                       </button>
                     </a>
                   </div>
@@ -88,7 +88,7 @@
                     <a class="button" target="_blank" href="https://wallet.xelis.io">
                       <button>
                         <img src="@/assets/images/browser.svg" alt="Browser logo" />
-                        Open
+                        <span>Open</span>
                       </button>
                     </a>
                   </div>

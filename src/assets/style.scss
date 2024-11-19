@@ -93,6 +93,9 @@ section {
         align-items: center;
         border-radius: 0.5rem;
         border: none;
+        display: flex;
+        gap: 1rem;
+
         &.big {
             padding: 1.6rem 3.8rem;
         }
