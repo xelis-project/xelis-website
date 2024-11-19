@@ -10,7 +10,7 @@
         <div class="bottom-menu">
           <div>
             <router-link :to="{name: 'home', hash: '#objectives'}">
-              About
+              Objectives
             </router-link>
             <router-link :to="{name: 'home', hash: '#network'}">
               Network

@@ -13,7 +13,7 @@
         <template v-if="$route.name === 'home'">
           <li>
             <router-link :to="{name: 'home', hash: '#objectives'}">
-              About
+              Objectives
             </router-link>
           </li>
           <li>
@@ -172,7 +172,7 @@
           <template v-if="$route.name === 'home'">
             <li>
               <router-link :to="{name: 'home', hash: '#objectives'}">
-                About
+                Objectives
               </router-link>
             </li>
             <li>

@@ -55,6 +55,7 @@ export default {
       padding-bottom: 1rem;
       height: 700px;
       gap: 1.5rem;
+      justify-content: center;
     }
   }
 

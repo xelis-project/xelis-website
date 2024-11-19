@@ -253,7 +253,7 @@ export default [
   },
   {
     name: "Merch Store",
-    description: "Partership with retailers to offer XEL goodies through an eCommerce website, along with a dedicated XELIS merch front page.",
+    description: "Partnership with retailers to offer XEL goodies through an eCommerce website, along with a dedicated XELIS merch front page.",
     status: "In Progress",
     year: "2024",
     tag: "App",
