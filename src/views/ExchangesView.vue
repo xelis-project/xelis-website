@@ -171,6 +171,7 @@ export default {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (min-width: 1024px) {
       flex-direction: row;
