@@ -36,6 +36,7 @@ html, body { // For safari
 
 #app {
     padding: 2rem var.$spacing-body 0 var.$spacing-body;
+    overflow: hidden;
 }
 
 // ======== GLOBAL STYLES ========

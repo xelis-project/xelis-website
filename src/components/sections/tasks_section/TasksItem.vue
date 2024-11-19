@@ -38,8 +38,7 @@ export default {
 .task-item {
   padding: 2rem;
   border-radius: 1rem;
-  /*background-color: rgba($color: white, $alpha: .5);*/
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.1);
   border: .25rem dashed #848988;
   backdrop-filter: blur(5px);
   width: 30rem;

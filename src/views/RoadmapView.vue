@@ -5,6 +5,7 @@
       <div class="bg">
         <div class="bgtr"></div>
         <div class="bgt"></div>
+        <CircuitImg />
       </div>
     </header>
     <main>
@@ -19,6 +20,7 @@
 import TimelineSection from '@/components/sections/TimelineSection.vue';
 import NavigationMenu from '@/components/NavigationMenu.vue';
 import TasksSection from '@/components/sections/tasks_section/TasksSection.vue';
+import CircuitImg from '@/components/CircuitImg.vue';
 
 export default {
   name: 'RoadmapView',
@@ -26,6 +28,7 @@ export default {
     NavigationMenu,
     TasksSection,
     TimelineSection,
+    CircuitImg
   },
   inject: ['isSafari']
 }

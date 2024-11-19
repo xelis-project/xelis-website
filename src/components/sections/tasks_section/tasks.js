@@ -270,15 +270,6 @@ export default [
     quarter: "Q4"
   },
   {
-    name: "Genesix Update v0.0.7",
-    description: "TBD",
-    status: "In Progress",
-    year: "2025",
-    tag: "App",
-    priority: "Mid",
-    quarter: ""
-  },
-  {
     name: "XVM - Shunting Yard Algo",
     description: "Priority rules for code execution flow.",
     status: "In Progress",
@@ -304,6 +295,15 @@ export default [
     tag: "Plugin",
     priority: "Low",
     quarter: "Q4"
+  },
+  {
+    name: "Genesix Update v0.0.7",
+    description: "TBD",
+    status: "In Progress",
+    year: "2025",
+    tag: "App",
+    priority: "Mid",
+    quarter: ""
   },
   {
     name: "XELIS Quests",

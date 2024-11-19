@@ -8,9 +8,16 @@
           <div>Status</div>
           <div class="filter-buttons">
             <button :class="{ 'active': !status}" @click="setStatus(null)">All</button>
-            <button :class="{ 'active': status === 'In Progress'}" @click="setStatus('In Progress')">In Progress</button>
-            <button :class="{ 'active': status === 'Planned'}" @click="setStatus('Planned')">Planned</button>
-            <button :class="{ 'active': status === 'Completed'}" @click="setStatus('Completed')">Completed</button>
+            <button :class="{ 'active': status === 'In Progress'}" @click="setStatus('In Progress')">
+              In Progress ({{ countTasks('In Progress') }})
+
+            </button>
+            <button :class="{ 'active': status === 'Planned'}" @click="setStatus('Planned')">
+              Planned ({{ countTasks('Planned') }})
+            </button>
+            <button :class="{ 'active': status === 'Completed'}" @click="setStatus('Completed')">
+              Completed ({{ countTasks('Completed') }})
+            </button>
           </div>
         </div>
         <div>
@@ -97,6 +104,9 @@ export default {
         this.pushQuery(searchValue, this.status, this.year, this.priority, this.tag);
         this.searchCancelTimeout = null;
       }, 400);
+    },
+    countTasks(status) {
+      return tasks.filter(x => x.status === status).length;
     },
   },
   computed:{
@@ -217,15 +227,15 @@ export default {
 
   .filter-buttons {
     button {
-      background: white;
+      background: rgba(255, 255, 255, 0.4);
       border: none;
       padding: .6rem 1rem;
-      opacity: .4;
       cursor: pointer;
+      backdrop-filter: blur(2px);
     }
 
     button:hover, button.active {
-      opacity: 1;
+      background: white;
     }
   }
 

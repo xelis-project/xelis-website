@@ -32,7 +32,7 @@
     </header>
     <main> 
       <h2>
-        Exchanges (7)
+        Exchanges ({{ exchanges.length }})
         <div>
           Use at your own risk, and never keep your coins on the platform after trading.
           Not your keys, not your coins!
