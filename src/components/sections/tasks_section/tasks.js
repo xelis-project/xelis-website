@@ -18,15 +18,6 @@ export default [
     quarter: "Q2"
   },
   {
-    name: "BoostSync & FastSync",
-    description: "Synchronize the full blockchain faster in parallel or instantly using the last chain state.",
-    status: "Completed",
-    year: "2024",
-    tag: "Blockchain",
-    priority: "Mid",
-    quarter: "Q2"
-  },
-  {
     name: "XSWD",
     description: "Permissioned protocol that uses WebSocket to exchange data between wallet and dApp.",
     status: "Completed",
@@ -106,6 +97,15 @@ export default [
     tag: "App",
     priority: "High",
     quarter: "Q1"
+  },
+  {
+    name: "BoostSync & FastSync",
+    description: "Synchronize the full blockchain faster in parallel or instantly using the last chain state.",
+    status: "Completed",
+    year: "2024",
+    tag: "Blockchain",
+    priority: "Mid",
+    quarter: "Q2"
   },
   {
     name: "Project Mainnet Launch",
