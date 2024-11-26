@@ -7,7 +7,7 @@
                     <rect x="36" y="6" width="24.666" height="24.666"></rect><rect x="36" y="66" width="24.666" height="24.666"></rect><rect y="66" width="24.666" height="24.666"></rect><rect x="72" y="66" width="24.666" height="24.666"></rect><polygon points="15.31,51.333 45.833,51.333 45.833,62.666 50.833,62.666 50.833,51.333 82.105,51.333 82.105,63.066  86.561,63.066 86.561,46.4 84.334,46.4 84.334,46.333 50.833,46.333 50.833,35 45.833,35 45.833,46.333 12.334,46.333 12.334,46.4  10.856,46.4 10.856,63.066 15.31,63.066  "></polygon>
                 </svg>
                 <div class="title">BlockDAG</div>
-                <div class="description">Mutliple block at the same height to improve scalability and security of the network.</div>
+                <div class="description">Mutliple blocks at the same height to improve scalability and security of the network.</div>
             </div>
             <div class="feature-item">
                 <svg width="40" height="40" viewBox="0 0 16 16">
