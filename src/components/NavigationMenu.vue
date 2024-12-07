@@ -145,8 +145,18 @@
             </router-link>
           </li>
           <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
             <router-link :to="{name: 'resources'}">
               Resources
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
             </router-link>
           </li>
         </template>
@@ -297,8 +307,18 @@
               </router-link>
             </li>
             <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+            <li>
               <router-link :to="{name: 'resources'}">
                 Resources
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
               </router-link>
             </li>
           </template>
