@@ -1,6 +1,66 @@
 export default {
   "Hoodies": [
     {
+      title: "Xelis: Quadlemma Solved Unisex Hoodie",
+      description: "This comfy unisex hoodie has a soft outside with a vibrant print and an even softer brushed fleece inside. The hoodie has a relaxed fit, and it's perfect for wrapping yourself into on a chilly evening.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-hoodie-2/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-front-675a3f19ef514.webp",
+          hover_src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-back-675a3f19f06c2.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Out of the Smoke Unisex Hoodie",
+      description: "This comfy unisex hoodie has a soft outside with a vibrant print and an even softer brushed fleece inside. The hoodie has a relaxed fit, and it's perfect for wrapping yourself into on a chilly evening.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-unisex-hoodie-3/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-front-6759dd680f7f4.webp",
+          hover_src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-back-6759dd681050a.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Night Moon Unisex Hoodie",
+      description: "This comfy unisex hoodie has a soft outside with a vibrant print and an even softer brushed fleece inside. The hoodie has a relaxed fit, and it's perfect for wrapping yourself into on a chilly evening.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-unisex-hoodie/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-front-6759d817a0644.webp",
+          hover_src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-back-6759d817a1382.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Rises Unisex Hoodie",
+      description: "This comfy unisex hoodie has a soft outside with a vibrant print and an even softer brushed fleece inside. The hoodie has a relaxed fit, and it's perfect for wrapping yourself into on a chilly evening.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-hoodie/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-front-6759d6b759342.webp",
+          hover_src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-back-6759d6b759e49.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Eclipse Unisex Hoodie",
+      description: "This comfy unisex hoodie has a soft outside with a vibrant print and an even softer brushed fleece inside. The hoodie has a relaxed fit, and it's perfect for wrapping yourself into on a chilly evening.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-unisex-hoodie-2/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-front-6759cd109330d.webp",
+          hover_src: "/merch/hoodies/transparent/all-over-print-recycled-unisex-hoodie-white-back-6759cd10942c1.webp",
+        },
+      ]
+    },
+    {
       title: "Full Logo Print Unisex Hoodie",
       description: "Who knew that the softest hoodie you'll ever own comes with such a cool design. You won't regret buying this classic streetwear piece of apparel with a convenient pouch pocket and warm hood for chilly evenings.",
       link: "https://poolpartynodes.com/product/xelis-full-logo-print-unisex-hoodie-4/",
@@ -157,6 +217,78 @@ export default {
     },
   ],
   "T Shirts": [
+    {
+      title: "Xelis Neon Proofs Men's t-shirt",
+      description: "Get to know your new favorite tee—it's super smooth, super comfortable, and made from a cotton touch polyester jersey that won't fade after washing.",
+      link: "https://poolpartynodes.com/product/xelis-custom-designs-mens-t-shirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-front-6757730de70ab.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-back-6757730de99be.webp",
+        },
+      ]
+    },
+    {
+      title: "Pulse of Xelis Men's t-shirt",
+      description: "Get to know your new favorite tee—it's super smooth, super comfortable, and made from a cotton touch polyester jersey that won't fade after washing.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-mens-t-shirt-2/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-front-675771c3ce5f0.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-back-675771c3cf3e0.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Limitless Men's t-shirt",
+      description: "Get to know your new favorite tee—it's super smooth, super comfortable, and made from a cotton touch polyester jersey that won't fade after washing.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-mens-t-shirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-front-67576fbf08f0e.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-back-67576fbf09b7c.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Eclipse Design Men's t-shirt",
+      description: "Get to know your new favorite tee—it's super smooth, super comfortable, and made from a cotton touch polyester jersey that won't fade after washing.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-design-mens-t-shirt-2/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-front-6753063180417.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-back-6753063181056.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Men's t-shirt",
+      description: "Get to know your new favorite tee—it's super smooth, super comfortable, and made from a cotton touch polyester jersey that won't fade after washing.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-mens-t-shirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-front-675a3e2fea542.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-crew-neck-t-shirt-white-back-675a3e2feae40.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved All-Over Print Men's Athletic T-shirt",
+      description: "A t-shirt perfect for all kinds of workouts. Its moisture management is sure to keep athletes dry and comfortable even during the most vigorous of workouts.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-all-over-print-mens-athletic-t-shirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/t_shirts/transparent/all-over-print-mens-athletic-t-shirt-white-front-675a40e3171e8.webp",
+          hover_src: "/merch/t_shirts/transparent/all-over-print-mens-athletic-t-shirt-white-back-675a40e317b47.webp",
+        },
+      ]
+    },
     {
       title: "Full Logo Print Men's premium heavyweight tee",
       description: "Elevate your outfit with the men's premium heavyweight tee. The tee has a structured, classy fit and is both durable and soft thanks to its ring-spun cotton material. Layer the t-shirt or wear it on its own and enjoy great looks with little effort!",
@@ -494,6 +626,66 @@ export default {
     },
   ],
   "Sweatshirts": [
+    {
+      title: "Xelis: Quadlemma Solved Unisex Sweatshirt",
+      description: "Each unique, all-over printed sweatshirt is precision-cut and hand-sewn to achieve the best possible look and bring out the intricate design. What's more, the durable fabric with a cotton-feel face and soft brushed fleece inside means that this sweatshirt is bound to become your favorite for a long time.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-sweatshirt-4/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-front-675a3f6e75b6c.webp",
+          hover_src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-back-675a3f6e76966.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Neon Proofs Unisex Sweatshirt",
+      description: "Each unique, all-over printed sweatshirt is precision-cut and hand-sewn to achieve the best possible look and bring out the intricate design. What's more, the durable fabric with a cotton-feel face and soft brushed fleece inside means that this sweatshirt is bound to become your favorite for a long time.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-sweatshirt-3/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-front-675a3cbfbaf60.webp",
+          hover_src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-back-675a3cbfbba61.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Night Moon Unisex Sweatshirt",
+      description: "Each unique, all-over printed sweatshirt is precision-cut and hand-sewn to achieve the best possible look and bring out the intricate design. What's more, the durable fabric with a cotton-feel face and soft brushed fleece inside means that this sweatshirt is bound to become your favorite for a long time.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-sweatshirt-2/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-front-675a3c4bb5bec.webp",
+          hover_src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-back-675a3c4bb664d.webp",
+        },
+      ]
+    },
+    {
+      title: "Pulse of Xelis Unisex Sweatshirt",
+      description: "Each unique, all-over printed sweatshirt is precision-cut and hand-sewn to achieve the best possible look and bring out the intricate design. What's more, the durable fabric with a cotton-feel face and soft brushed fleece inside means that this sweatshirt is bound to become your favorite for a long time.",
+      link: "https://poolpartynodes.com/product/xelis-custom-design-unisex-sweatshirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-front-675b68dbe0f43.webp",
+          hover_src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-back-675b68dbe1abb.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis Limitless Unisex Sweatshirt",
+      description: "Each unique, all-over printed sweatshirt is precision-cut and hand-sewn to achieve the best possible look and bring out the intricate design. What's more, the durable fabric with a cotton-feel face and soft brushed fleece inside means that this sweatshirt is bound to become your favorite for a long time.",
+      link: "https://poolpartynodes.com/product/xelis-custom-logo-unisex-sweatshirt/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-front-675a3a6968ee2.webp",
+          hover_src: "/merch/sweatshirts/transparent/all-over-print-recycled-unisex-sweatshirt-white-back-675a3a6969819.webp",
+        },
+      ]
+    },
     {
       title: "Full Logo Print Unisex organic raglan sweatshirt",
       description: "To do list: feel comfy and look stylish at the same time. Mark both tasks as done with the unisex organic raglan sweatshirt. Its brushed fleece lining will make you feel like you're being hugged by a cloud of softness . . . and the 100% cotton exterior will ensure a smooth feel on the outside.",

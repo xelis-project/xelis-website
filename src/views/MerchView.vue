@@ -2,15 +2,11 @@
   <div id="merch">
     <svg style="display: none" version="2.0">
       <defs>
-        <symbol id="arrow-icon" viewBox="0 0 24 24">
+        <symbol id="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <g>
-            <path
-              d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
-              stroke="currentColor" stroke-width="2"></path>
-            <path d="M16 12L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z" stroke-width="2"></path>
+            <path d="M16 12L8 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </g>
         </symbol>
       </defs>
@@ -29,7 +25,7 @@
       <div class="header">
         <div>
           <div class="title">Merch</div>
-          <div class="subtitle">68 premium products</div>
+          <div class="subtitle">84 premium products</div>
         </div>
         <img src="/merch/merch.webp" />
       </div>
@@ -44,11 +40,11 @@
       <div class="content" v-if="itemCount > 0">
         <div>
           <div class="item-count">
-            <svg class="arrow" fill="none" version="2.0" @click="prevItemIndex()">
+            <svg class="arrow" @click="prevItemIndex()">
               <use href="#arrow-icon" />
             </svg>
             <div class="text">{{ itemIndex }} / {{ itemCount }} items</div>
-            <svg class="arrow" fill="none" version="2.0" @click="nextItemIndex()">
+            <svg class="arrow" @click="nextItemIndex()">
               <use href="#arrow-icon" />
             </svg>
           </div>
@@ -59,6 +55,9 @@
                 <div class="description">{{item.description}}</div>
                 <div>
                   <a :href="item.link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3C3.89543 3 3 3.89543 3 5V6.83772L1.49006 11.3675C1.10052 12.5362 1.8474 13.7393 3 13.963V20C3 21.1046 3.89543 22 5 22H9H10H14H15H19C20.1046 22 21 21.1046 21 20V13.963C22.1526 13.7393 22.8995 12.5362 22.5099 11.3675L21 6.83772V5C21 3.89543 20.1046 3 19 3H5ZM15 20H19V14H17.5H12H6.5H5V20H9V17C9 15.3431 10.3431 14 12 14C13.6569 14 15 15.3431 15 17V20ZM11 20H13V17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17V20ZM3.38743 12L4.72076 8H6.31954L5.65287 12H4H3.38743ZM7.68046 12L8.34713 8H11V12H7.68046ZM13 12V8H15.6529L16.3195 12H13ZM18.3471 12L17.6805 8H19.2792L20.6126 12H20H18.3471ZM19 5V6H16.5H12H7.5H5V5H19Z" />
+                    </svg>
                     Go to supplier
                   </a>
                 </div>
@@ -204,15 +203,8 @@ body:not(.menu-open) {
     }
 
     img {
-      min-width: 40%;
-      max-width: 40%;
-    }
-
-    @media screen and (min-width: 700px) {
-      img {
-        min-width: 20%;
-        max-width: 20%;
-      }
+      min-width: 200px;
+      max-width: 20vw;
     }
   }
 
@@ -246,7 +238,7 @@ body:not(.menu-open) {
     .item-count {
       font-weight: bold;
       font-size: 2.5rem;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
       display: flex;
       gap: 3rem;
       flex-direction: row;
@@ -263,6 +255,7 @@ body:not(.menu-open) {
 
       .arrow {
         width: 50px;
+        height: 50px;
         cursor: pointer;
         color: white;
         opacity: .8;
@@ -300,6 +293,9 @@ body:not(.menu-open) {
         color: white;
         display: inline-block;
         font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
         
         &:hover {
           background: white;
