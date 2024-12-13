@@ -41,6 +41,8 @@ import CircuitImg from "@/components/CircuitImg.vue";
 import FeaturesSection from '@/components/sections/FeaturesSection.vue';
 import QuadSection from '@/components/sections/QuadSection.vue';
 
+import meta from "@/meta";
+
 export default {
   name: "HomeView",
   components: {
@@ -58,6 +60,9 @@ export default {
     XelisLogo,
     CircuitImg,
   },
-  inject: ['isSafari']
+  inject: ['isSafari'],
+  mounted() {
+    document.title =  meta['/'].title;
+  },
 }
 </script>

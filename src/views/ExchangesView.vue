@@ -58,10 +58,15 @@
 import NavigationMenu from '@/components/NavigationMenu.vue';
 import exchanges from '../components/sections/exchanges_section/exchanges.js';
 
+import meta from '@/meta.js';
+
 export default {
   name: 'ExchangesView',
   components: {
     NavigationMenu
+  },
+  mounted() {
+    document.title =  meta['/exchanges'].title;
   },
   methods: {
     setSort(value) {

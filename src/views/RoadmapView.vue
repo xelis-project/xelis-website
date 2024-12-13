@@ -22,6 +22,8 @@ import NavigationMenu from '@/components/NavigationMenu.vue';
 import TasksSection from '@/components/sections/tasks_section/TasksSection.vue';
 import CircuitImg from '@/components/CircuitImg.vue';
 
+import meta from '@/meta';
+
 export default {
   name: 'RoadmapView',
   components: {
@@ -30,7 +32,10 @@ export default {
     TimelineSection,
     CircuitImg
   },
-  inject: ['isSafari']
+  inject: ['isSafari'],
+  mounted() {
+    document.title =  meta['/roadmap'].title;
+  },
 }
 </script>
 

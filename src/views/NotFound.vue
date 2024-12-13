@@ -19,7 +19,10 @@ export default {
   components: {
     NavigationMenu,
   },
-  inject: ['isSafari']
+  inject: ['isSafari'],
+  mounted() {
+    document.title = `XELIS - Not found`
+  },
 }
 </script>
 

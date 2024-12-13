@@ -20,6 +20,8 @@ import NodesSection from "@/components/sections/NodesSection.vue";
 import MinersSection from "@/components/sections/MinersSection.vue";
 import LinksSection from "@/components/sections/LinksSection.vue";
 
+import meta from '@/meta';
+
 export default {
   name: "ResourcesView",
   components: {
@@ -29,7 +31,10 @@ export default {
     MinersSection,
     LinksSection,
   },
-  inject: ['isSafari']
+  inject: ['isSafari'],
+  mounted() {
+    document.title =  meta['/resources'].title;
+  },
 }
 </script>
 
