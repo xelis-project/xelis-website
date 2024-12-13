@@ -21,6 +21,7 @@
         <div class="bgt"></div>
       </div>
     </header>
+    <div class="store-bg"></div>
     <main>
       <div class="header">
         <div>
@@ -179,6 +180,21 @@ body:not(.menu-open) {
     position: relative;
     z-index: 1;
     margin-bottom: 20rem;
+  }
+
+  .store-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .5;
+    filter: blur(10px);
+    background-position: center center;
+    background-image: url('/public/merch/store-bg.webp');
   }
 
   .hidden-seo-links {
