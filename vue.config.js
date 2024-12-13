@@ -12,7 +12,7 @@ module.exports = defineConfig({
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, "dist"),
         // Required - Routes to render.
-        routes: ["/", "/resources", "/merch"],
+        routes: Object.keys(meta),
         renderer: new PuppeteerRenderer(),
         postProcess: function (ctx) {
           const metaItem = meta[ctx.route];
