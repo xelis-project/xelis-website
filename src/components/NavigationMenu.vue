@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="scroll-bar">
+    <nav class="scroll-bar-top">
       <ul>
         <li id="logo">
           <router-link :to="{name: 'home'}">
@@ -13,7 +13,7 @@
         <template v-if="$route.name === 'home'">
           <li>
             <router-link :to="{name: 'home', hash: '#objectives'}">
-              About
+              Objectives
             </router-link>
           </li>
           <li>
@@ -27,8 +27,8 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{name: 'home', hash: '#roadmap'}">
-              Roadmap
+            <router-link :to="{name: 'home', hash: '#timeline'}">
+              Timeline
             </router-link>
           </li>
           <li>
@@ -38,6 +38,11 @@
           </li>
           <li>/</li>
           <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
             <router-link
               :to="{name: 'resources'}"
             >
@@ -45,10 +50,13 @@
             </router-link>
           </li>
           <li>
-            <router-link
-              :to="{name: 'merch'}"
-            >
+            <router-link :to="{name: 'merch'}">
               Merch
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
             </router-link>
           </li>
         </template>
@@ -61,11 +69,6 @@
           <li>
             <router-link :to="{name: 'resources', hash: '#nodes'}">
               Nodes
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'resources', hash: '#exchanges'}">
-              Exchanges
             </router-link>
           </li>
           <li>
@@ -101,8 +104,29 @@
               Resources
             </router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
+            </router-link>
+          </li>
         </template>
-        <template v-if="$route.name === 'not_found'">
+        <template v-if="$route.name === 'roadmap'">
+          <li>
+            <router-link :to="{name: 'roadmap', hash: '#tasks'}">
+              Tasks
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap', hash: '#timeline'}">
+              Timeline
+            </router-link>
+          </li>
+          <li>/</li>
           <li>
             <router-link :to="{name: 'home'}">
               Home
@@ -116,6 +140,50 @@
           <li>
             <router-link :to="{name: 'merch'}">
               Merch
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
+            </router-link>
+          </li>
+        </template>
+        <template v-if="$route.name === 'exchanges'">
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
+            </router-link>
+          </li>
+        </template>
+        <template v-if="$route.name === 'not_found'">
+          <li>
+            <router-link :to="{name: 'home'}">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'roadmap'}">
+              Roadmap
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'resources'}">
+              Resources
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'exchanges'}">
+              Exchanges
             </router-link>
           </li>
         </template>
@@ -141,7 +209,7 @@
           <template v-if="$route.name === 'home'">
             <li>
               <router-link :to="{name: 'home', hash: '#objectives'}">
-                About
+                Objectives
               </router-link>
             </li>
             <li>
@@ -155,16 +223,16 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="{name: 'home', hash: '#roadmap'}">
-                Roadmap
-              </router-link>
-            </li>
-            <li>
               <router-link :to="{name: 'home', hash: '#socials'}">
                 Socials
               </router-link>
             </li>
             <li>-</li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
             <li>
               <router-link :to="{name: 'resources'}">
                 Resources
@@ -173,6 +241,11 @@
             <li>
               <router-link :to="{name: 'merch'}">
                 Merch
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
               </router-link>
             </li>
           </template>
@@ -185,11 +258,6 @@
             <li>
               <router-link :to="{name: 'resources', hash: '#nodes'}">
                 Nodes
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{name: 'resources', hash: '#exchanges'}">
-                Exchanges
               </router-link>
             </li>
             <li>
@@ -225,8 +293,29 @@
                 Resources
               </router-link>
             </li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
+              </router-link>
+            </li>
           </template>
-          <template v-if="$route.name === 'not_found'">
+          <template v-if="$route.name === 'roadmap'">
+            <li>
+              <router-link :to="{name: 'roadmap', hash: '#tasks'}">
+                Tasks
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap', hash: '#timeline'}">
+                Timeline
+              </router-link>
+            </li>
+            <li>-</li>
             <li>
               <router-link :to="{name: 'home'}">
                 Home
@@ -240,6 +329,50 @@
             <li>
               <router-link :to="{name: 'merch'}">
                 Merch
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'exchanges'">
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
+              </router-link>
+            </li>
+          </template>
+          <template v-if="$route.name === 'not_found'">
+            <li>
+              <router-link :to="{name: 'home'}">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'roadmap'}">
+                Roadmap
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'resources'}">
+                Resources
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{name: 'exchanges'}">
+                Exchanges
               </router-link>
             </li>
           </template>
@@ -263,13 +396,16 @@ export default {
     name: "NavigationMenu",
     mounted() {
       // MENU
-      document.querySelector("#burger_menu button").addEventListener("click", () => {
-        document.body.classList.toggle("menu-open");
-      });
+      const menuButton = document.querySelector("#burger_menu button");
+      if (menuButton) {
+        menuButton.addEventListener("click", () => {
+         document.body.classList.toggle("menu-open");
+        });
+      }
 
       document.querySelectorAll("#mobile_menu a").forEach((a) => {
         a.addEventListener("click", () => {
-          document.body.classList.toggle("menu-open");
+          document.body.classList.remove("menu-open");
         })
       });
 
@@ -329,13 +465,10 @@ header nav {
 }
 
 .menu-open {
-
   #mobile_menu {
+    position: inherit;
     visibility: visible;
     opacity: 1;
-  }
-  #hero {
-    display: none;
   }
 
   #burger_menu button span:before {
@@ -347,15 +480,10 @@ header nav {
     width: 2.3rem;
     transform: translateY(-3px) translateX(0px) rotate(-45deg);
   }
-  #resume {
-    display: none;
-  }
 }
 #mobile_menu {
   position: absolute;
-  left: 50%;
-  margin-top: 2rem;
-  transform: translateX(-50%);
+  margin: 3rem 0 10rem 0;
   visibility: hidden;
   opacity: 0;
   z-index: 1;

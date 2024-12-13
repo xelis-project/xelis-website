@@ -10,7 +10,7 @@
         <div class="bottom-menu">
           <div>
             <router-link :to="{name: 'home', hash: '#objectives'}">
-              About
+              Objectives
             </router-link>
             <router-link :to="{name: 'home', hash: '#network'}">
               Network
@@ -85,16 +85,18 @@ footer {
   border-top: 1px solid #02FFCF;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
+  overflow: hidden;
 
   margin: 0 calc(var.$spacing-body * -1);
 
   .circuit {
     z-index: -1;
     position: absolute;
-    opacity: .2;
+    opacity: .4;
     bottom: 0;
     left: -19.6rem;
     height: 150rem;
+    transform: scale3d(2, 2, 1);
   }
 
   /*&::before {
@@ -143,6 +145,10 @@ footer {
         white-space: nowrap;
       }
     }
+  }
+
+  #bottom_logo {
+    margin-bottom: 6rem;
   }
 
   .copyright {

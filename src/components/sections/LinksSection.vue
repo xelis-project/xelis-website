@@ -13,9 +13,9 @@
                 <a href="https://github.com/xelis-project" target="_blank">Project Repository</a>
                 <a href="https://docs.xelis.io/links/pools" target="_blank">Mining Pools</a>
                 <a href="https://docs.xelis.io/links/seed_nodes" target="_blank">Seed Nodes</a>
-                <a href="https://discord.gg/xelis" target="_blank">Discord</a>
-                <a href="https://t.me/xelis_io" target="_blank">Telegram</a>
-                <a href="https://twitter.com/xelis_project" target="_blank">Twitter / X</a>
+                <a href="https://docs.xelis.io/developers-sdk" target="_blank">SDKs</a>
+                <a href="https://docs.xelis.io/getting-started/bootstrap" target="_blank">Bootstrap</a>
+                <a href="https://paperwallet.xelis.io/" target="_blank">Paper Wallet</a>
             </div>
             <!--<div class="title">/ Community</div>
             <div class="links">

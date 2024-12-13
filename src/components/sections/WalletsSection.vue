@@ -14,7 +14,8 @@
             </p>
           </div>
           <div class="wallets-content">
-            <div class="left item">
+            <div class="left">
+              <div class="item">
               <img src="@/assets/images/genesix_wallet.png" alt="Genesix Wallet" />
               <div class="left-content">
                 <p>
@@ -28,9 +29,29 @@
                   <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-genesix-wallet/releases">
                     <button>
                       <img src="@/assets/images/github.svg" alt="Github logo" />
-                      Releases
+                      <span>Releases</span>
                     </button>
                   </a>
+                </div>
+              </div>
+            </div>
+              <div class="item">
+                <img src="@/assets/images/paperwallet.png" alt="Paper Wallet" />
+                <div class="left-content">
+                  <p>
+                    Paper Wallet
+                  </p>
+                  <p>
+                    Generate offline keys and print for long term storage.
+                  </p>
+                  <div class="buttons">
+                    <a class="button" target="_blank" href="https://paperwallet.xelis.io">
+                      <button>
+                        <img src="@/assets/images/browser.svg" alt="Browser logo" />
+                        <span>Open</span>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -48,7 +69,7 @@
                     <a class="button" target="_blank" href="https://github.com/xelis-project/xelis-blockchain/releases">
                       <button>
                         <img src="@/assets/images/github.svg" alt="Github logo" />
-                        Releases
+                        <span>Releases</span>
                       </button>
                     </a>
                   </div>
@@ -67,7 +88,7 @@
                     <a class="button" target="_blank" href="https://wallet.xelis.io">
                       <button>
                         <img src="@/assets/images/browser.svg" alt="Browser logo" />
-                        Open
+                        <span>Open</span>
                       </button>
                     </a>
                   </div>
@@ -210,6 +231,9 @@
     }
 
     .left {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       &.item {
         flex-direction: column;
       }

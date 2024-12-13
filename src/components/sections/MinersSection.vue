@@ -19,9 +19,7 @@
             >
                 <button class="big">
                     <GithubLogo/>
-                    <span>
-                        GitHub
-                    </span>
+                    <span>GitHub</span>
                 </button>
             </a>
         </div>

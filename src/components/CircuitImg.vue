@@ -564,22 +564,29 @@ export default {
     }
 
     const lines = this.$refs.svg.getElementById(`circuit-lines`);
-    lines.querySelectorAll('path').forEach((path) => {
-      // Set the --path-length CSS custom property to the total length of the path
+    const paths = lines.querySelectorAll('path');
+    paths.forEach(path => {
       const pathLength = path.getTotalLength();
       path.style.setProperty("--path-length", pathLength);
 
       setTimeout(() => {
         path.classList.add("animated");
       }, getRandomInt(0, 2500));
+    });
 
-      setTimeout(() => {
+    setInterval(() => {
+      const path = paths[getRandomInt(0, paths.length)];
+      if (path) {
         let newPath = path.cloneNode(true);
         newPath.classList.add("animated-lineover");
         newPath.style.stroke = `#02FFCF`;
+        newPath.addEventListener('animationend', () => {
+          newPath.remove();
+        });
+
         lines.appendChild(newPath);
-      }, getRandomInt(2500, 60000));
-    });
+      }
+    }, 500);
   }
 }
 </script>
@@ -597,17 +604,14 @@ export default {
           stroke-dashoffset: var(--path-length);
         }
 
-        // create a delay before alternating animation
-        40% {
+        80% {
           stroke-dashoffset: 0;
-        }
-
-        60% {
-          stroke-dashoffset: 0;
+          opacity: 1;
         }
 
         100% {
-          stroke-dashoffset: var(--path-length);
+          stroke-dashoffset: 0;
+          opacity: 0;
         }
     }
 
@@ -620,7 +624,7 @@ export default {
         }
 
         &.animated-lineover {
-            animation: dash2 30s forwards infinite alternate;
+            animation: dash2 5s forwards;
         }
     }
 }

@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-if="!isSafari"
-    id="noise_effect"
-  ></div>
-
+  <div v-if="!isSafari" id="noise_effect"></div>
   <router-view v-slot="{ Component }">
     <transition name="fade-router" mode="out-in" :css="!preRendered">
       <component :is="Component" />
@@ -15,15 +11,27 @@
 <script>
 import FooterSection from "./components/FooterSection.vue";
 
+// preload views by importing and avoid page load flicker
+import "./views/ResourcesView.vue";
+import "./views/HomeView.vue";
+import "./views/NotFound.vue";
+import "./views/RoadmapView.vue";
+import "./views/ExchangesView.vue";
+
 export default {
   name: "App",
   components: {
-    FooterSection
+    FooterSection,
   },
   data() {
     return {
       isMobile: false,
     };
+  },
+  provide() {
+    return {
+      isSafari: this.isSafari
+    }
   },
   computed: {
     isSafari() {

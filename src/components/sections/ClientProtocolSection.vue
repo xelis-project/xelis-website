@@ -17,13 +17,13 @@
             we simply refrain from executing the TX and retain its hash.
           </p>
           <br/>
-          <p>
+          <div>
             The same TX can be contained in multiple blocks only if:
-          <ul class="list">
-            <li>TX must not be executed at a stable height.</li>
-            <li>TX is not already included in the same chain branch (previous blocks).</li>
-          </ul>
-          </p>
+            <ul class="list">
+              <li>TX must not be executed at a stable height.</li>
+              <li>TX is not already included in the same chain branch (previous blocks).</li>
+            </ul>
+          </div>
           <br/>
           <p>
             During the generation of the DAG order (linking unique topoheight to a block hash),

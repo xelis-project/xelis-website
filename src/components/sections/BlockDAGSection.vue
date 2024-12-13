@@ -7,11 +7,8 @@
           Up to several chains in parallel, each block can have multiple parents.
         </span>
       </div>
-      <ul class="content">
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+      <ul class="content is-animated" :class="{'fade-childs': !preRendered,}">
+        <li class="item is-animated">
           <div class="number">
             1.
           </div>
@@ -20,10 +17,7 @@
             Instead of choosing one block, both blocks are included in the DAG. 
           </div>
         </li>
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+        <li class="item is-animated">
           <div class="number">
             2.
           </div>
@@ -31,10 +25,7 @@
             Height is not unique anymore and can have multiple blocks.
           </div>
         </li>
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+        <li class="item is-animated">
           <div class="number">
             3.
           </div>
@@ -42,10 +33,7 @@
             Topo Height (topological height) is the new and unique height for a block which is ordered by the DAG.
           </div>
         </li>
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+        <li class="item is-animated">
           <div class="number">
             4.
           </div>
@@ -53,10 +41,7 @@
             Stable height is the last height in which the order of the DAG cannot change.
           </div>
         </li>
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+        <li class="item is-animated">
           <div class="number">
             5.
           </div>
@@ -77,10 +62,7 @@
             </ul>
           </div>
         </li>
-        <li
-          :class="{'fade': !preRendered,}"
-          class="item is-animated"
-        >
+        <li class="item is-animated">
           <div class="number">
             6.
           </div>

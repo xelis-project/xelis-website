@@ -14,12 +14,13 @@
       </div>
     </header>
     <main id="home">
+      <QuadSection />
+      <FeaturesSection />
       <ObjectivesSection />
       <NetworkSection />
       <SupplySection />
-      <RoadMapSection />
+      <TimelineSection :show-roadmap-link="true"/>
       <BlockDAGSection />
-      <ClientProtocolSection />
       <SocialSection />
     </main>
   </div>
@@ -29,17 +30,16 @@
 import ObjectivesSection from "@/components/sections/ObjectivesSection.vue";
 import NetworkSection from "@/components/sections/NetworkSection.vue";
 import SupplySection from "@/components/sections/supply_section/SupplySection.vue";
-import RoadMapSection from "@/components/sections/RoadMapSection.vue";
 import BlockDAGSection from "@/components/sections/BlockDAGSection.vue";
-import ClientProtocolSection from "@/components/sections/ClientProtocolSection.vue";
 import SocialSection from "@/components/sections/SocialSection.vue";
+import TimelineSection from '@/components/sections/TimelineSection.vue';
 
 import NavigationMenu from "@/components/NavigationMenu.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import XelisLogo from "@/components/XelisLogo.vue";
 import CircuitImg from "@/components/CircuitImg.vue";
-
-import meta from '../meta';
+import FeaturesSection from '@/components/sections/FeaturesSection.vue';
+import QuadSection from '@/components/sections/QuadSection.vue';
 
 export default {
   name: "HomeView",
@@ -47,30 +47,17 @@ export default {
     ObjectivesSection,
     NetworkSection,
     SupplySection,
-    RoadMapSection,
     BlockDAGSection,
-    ClientProtocolSection,
     SocialSection,
+    TimelineSection,
+    FeaturesSection,
+    QuadSection,
 
     NavigationMenu,
     HeroSection,
     XelisLogo,
     CircuitImg,
   },
-  mounted() {
-    document.title = meta[`/`].title;
-  },
-  computed: {
-    isSafari() {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isSafari =
-        userAgent.includes("safari") &&
-        !userAgent.includes("chrome") &&
-        !userAgent.includes("android");
-      const isIos = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-
-      return isSafari || isIos;
-    },
-  },
-};
+  inject: ['isSafari']
+}
 </script>
