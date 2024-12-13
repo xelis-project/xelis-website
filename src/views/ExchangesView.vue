@@ -58,7 +58,7 @@
 import NavigationMenu from '@/components/NavigationMenu.vue';
 import exchanges from '../components/sections/exchanges_section/exchanges.js';
 
-import meta from '@/meta.js';
+import meta from '@/meta';
 
 export default {
   name: 'ExchangesView',
