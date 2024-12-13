@@ -192,7 +192,7 @@ body:not(.menu-open) {
     bottom: 0;
     right: 0;
     opacity: .5;
-    filter: blur(10px);
+    filter: blur(6px);
     background-position: center center;
     background-image: url('/public/merch/store-bg.webp');
   }
