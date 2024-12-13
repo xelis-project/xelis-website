@@ -19,6 +19,11 @@ const meta = {
     description: `Past & ongoing development tasks of the XELIS project.`,
     keywords: ``,
   },
+  '/exchanges': {
+    title: `XELIS - Exchanges`,
+    description: `List of exchanges where you can trade XELIS.`,
+    keywords: ``
+  }
 }
 
 module.exports = meta;
