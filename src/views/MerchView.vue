@@ -61,7 +61,9 @@
                     </svg>
                     Go to supplier
                   </a>
-                  <div class="subtext">XELIS is accepted as a form of payment!</div>
+                  <div class="subtext">
+                    XELIS is accepted as a form of payment by using the <span class="payment-option-btn" @click="modal_xelis_option = true">XELIS payment option</span>.
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,9 +81,25 @@
         </template>
       </div>
     </main>
-    <!-- we prerender the page but in that case only the default filter links will be rendered - we will add all links here hidden for seo -->
+    <!-- we do prerender the page but because the default filter links is the only one being rendered, we will add all links here hidden for seo -->
     <div class="hidden-seo-links">
       <a target="_blank" v-for="(item, index) in all_merch" :key="index" :href="item.link">{{ item.title }}</a>
+    </div>
+    <div class="modal" v-if="modal_xelis_option" @click="handleXelisOptionModal($event)">
+      <div class="modal-backdrop"></div>
+      <div  class="modal-content">
+        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" @click="modal_xelis_option = false">
+          <path d="M15 9.00004L9 15M15 15L9 9.00004M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>Pay with XELIS!</div>
+        <div>
+          Add the items you wish to purchase to your cart on the supplier's platform and process to checkout.
+          On the checkout page, select the XELIS payment option and complete your payment. Once it is confirmed, finalize
+          your order by clicking 'Place Your Order'.
+        </div>
+        <div>A preview of how it should appear ↓</div>
+        <img src="/merch/xelis-payment-option.webp" alt="Buy with XELIS payment option" />
+      </div>
     </div>
   </div>
 </template>
@@ -135,6 +153,7 @@ export default {
   },
   data() {
     return {
+      modal_xelis_option: false,
       img_key: "src",
       filters: Object.keys(merch_items),
     };
@@ -163,6 +182,11 @@ export default {
     filterItemCount(filter) {
       return merch_items[filter].length;
     },
+    handleXelisOptionModal(e) {
+      if(e.target.classList.contains("modal-backdrop")) {
+        this.modal_xelis_option = false;
+      }
+    }
   },
 }
 </script>
@@ -328,8 +352,9 @@ body:not(.menu-open) {
       }
 
       .subtext {
-        opacity: .5;
-        margin-top: 1rem;
+        color: #a0a0a0;
+        margin-top: 2rem;
+        max-width: 400px;
       }
     }
 
@@ -382,6 +407,57 @@ body:not(.menu-open) {
   @media screen and (min-width: 700px) {
     .content {
       flex-direction: row;
+    }
+  }
+
+  .payment-option-btn {
+    text-decoration: underline;
+    color: #02ffcf;
+    cursor: pointer;
+  }
+  
+  .modal {
+    padding: 2rem;
+
+    .modal-content {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+      left: 50%;
+      translate: -50%;
+      background: black;
+      padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      max-width: 600px;
+
+      > :nth-child(1) {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2rem;
+      }
+
+      > :nth-child(2) {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
 }
