@@ -40,7 +40,7 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   gap: 5rem;
 
@@ -53,7 +53,7 @@
   }
 
   h2 {
-    max-width: 50rem;
+    max-width: 80rem;
 
     >div{
       margin-top: 1rem;
