@@ -30,7 +30,7 @@
         </div>
         <img src="/merch/merch.webp" />
       </div>
-      <div class="type-filter">
+      <div class="type-filter scroll-bar">
         <div v-for="filter in filters" :key="filter" :class="{ active: isActiveFilter(filter) }" @click="setFilter(filter)">
           {{ filter }}&nbsp;&nbsp;({{ filterItemCount(filter) }})
         </div>
@@ -38,29 +38,30 @@
       <div class="content" v-if="itemCount === 0">
         No items for this category.
       </div>
+      <div class="item-count">
+        <svg class="arrow" @click="prevItemIndex()">
+          <use href="#arrow-icon" />
+        </svg>
+        <div class="text">{{ itemIndex }} / {{ itemCount }} items</div>
+        <svg class="arrow" @click="nextItemIndex()">
+          <use href="#arrow-icon" />
+        </svg>
+      </div>
       <div class="content" v-if="itemCount > 0">
         <div>
-          <div class="item-count">
-            <svg class="arrow" @click="prevItemIndex()">
-              <use href="#arrow-icon" />
-            </svg>
-            <div class="text">{{ itemIndex }} / {{ itemCount }} items</div>
-            <svg class="arrow" @click="nextItemIndex()">
-              <use href="#arrow-icon" />
-            </svg>
-          </div>
           <div v-for="(item, index) in items" :key="index">
             <div class="item" v-if="index === (itemIndex-1)">
               <div class="item-info">
                 <div class="title">{{item.title}}</div>
                 <div class="description">{{item.description}}</div>
                 <div>
-                  <a :href="item.link" target="_blank">
+                  <a class="link" :href="item.link" target="_blank">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3C3.89543 3 3 3.89543 3 5V6.83772L1.49006 11.3675C1.10052 12.5362 1.8474 13.7393 3 13.963V20C3 21.1046 3.89543 22 5 22H9H10H14H15H19C20.1046 22 21 21.1046 21 20V13.963C22.1526 13.7393 22.8995 12.5362 22.5099 11.3675L21 6.83772V5C21 3.89543 20.1046 3 19 3H5ZM15 20H19V14H17.5H12H6.5H5V20H9V17C9 15.3431 10.3431 14 12 14C13.6569 14 15 15.3431 15 17V20ZM11 20H13V17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17V20ZM3.38743 12L4.72076 8H6.31954L5.65287 12H4H3.38743ZM7.68046 12L8.34713 8H11V12H7.68046ZM13 12V8H15.6529L16.3195 12H13ZM18.3471 12L17.6805 8H19.2792L20.6126 12H20H18.3471ZM19 5V6H16.5H12H7.5H5V5H19Z" />
                     </svg>
                     Go to supplier
                   </a>
+                  <div class="subtext">XELIS is accepted as a form of payment!</div>
                 </div>
               </div>
             </div>
@@ -209,13 +210,14 @@ body:not(.menu-open) {
 
     .title {
       font-family: "Helios Bold";
-      font-size: 5rem;
+      font-size: min(7vw, 6rem);
     }
 
     .subtitle {
       font-family: "Helios";
       opacity: .6;
-      font-size: 2rem;
+      font-size: min(3vw, 3rem);
+      margin-top: .5rem;
     }
 
     img {
@@ -229,7 +231,8 @@ body:not(.menu-open) {
     gap: 1.5rem;
     margin-bottom: 5rem;
     font-size: 2rem;
-    flex-wrap: wrap;
+    overflow: auto;
+    padding-bottom: 1rem;
 
     > div {
       cursor: pointer;
@@ -237,6 +240,7 @@ body:not(.menu-open) {
       background: black;
       padding: .75rem 1.5rem;
       border-bottom: .25rem solid transparent;
+      white-space: nowrap;
 
       &.active, &:hover {
         opacity: 1;
@@ -245,47 +249,50 @@ body:not(.menu-open) {
     }
   }
 
-  .content {
+  .item-count {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     display: flex;
-    gap: 5rem;
-    flex-direction: column;
+    gap: 3rem;
+    flex-direction: row;
     align-items: center;
+    user-select: none;
 
-    .item-count {
-      font-weight: bold;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      display: flex;
-      gap: 3rem;
-      flex-direction: row;
-      align-items: center;
-      user-select: none;
+    .text {
+      opacity: .8;
+    }
 
-      .text {
-        opacity: .8;
-      }
+    > :first-child {
+      transform: rotate(180deg);
+    }
 
-      > :first-child {
-        transform: rotate(180deg);
-      }
+    .arrow {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      color: white;
+      opacity: .8;
 
-      .arrow {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        color: white;
-        opacity: .8;
-
-        &:hover {
-          opacity: 1;
-        }
+      &:hover {
+        opacity: 1;
       }
     }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 0;
 
     .item {
       display: flex;
       gap: 5rem;
       flex-direction: column;
+      background: #00000030;
+      padding: 3rem;
+      backdrop-filter: blur(30px);
 
       .item-info {
         display: flex;
@@ -293,7 +300,7 @@ body:not(.menu-open) {
         flex-direction: column;
 
         .title {
-          font-size: 4rem;
+          font-size: min(6vw, 5rem);
           font-weight: bold;
         }
 
@@ -303,7 +310,7 @@ body:not(.menu-open) {
         }
       }
 
-      a {
+      .link {
         padding: 1rem 2rem;
         border: .25rem solid white;
         color: white;
@@ -318,6 +325,11 @@ body:not(.menu-open) {
           color: black;
           transform: scale(.96);
         }
+      }
+
+      .subtext {
+        opacity: .5;
+        margin-top: 1rem;
       }
     }
 
@@ -340,6 +352,11 @@ body:not(.menu-open) {
 
     .images {
       display: flex;
+      backdrop-filter: blur(10px);
+      padding: 5rem;
+      background: rgba(255, 255, 255, 0.048);
+      justify-content: center;
+      width: 100%;
     }
 
     .colors {
@@ -365,7 +382,6 @@ body:not(.menu-open) {
   @media screen and (min-width: 700px) {
     .content {
       flex-direction: row;
-      align-items: start;
     }
   }
 }
