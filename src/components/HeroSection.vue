@@ -1,7 +1,8 @@
 <template>
     <div id="hero">
         <router-link :to="{name: 'merch'}"  class="merch-available">
-            Merch<br>Available
+            <div class="merch-available-bg"></div>
+            <div>Merch<br>Available</div>
         </router-link>
         <p id="resume">
             XELIS is the world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span> and <span>Smart Contracts</span>.
@@ -79,29 +80,44 @@ export default {
     }
 
     .merch-available {
-        background-image: url('/public/bg.png');
-        background-size: contain;
-        width: 250px;
-        height: 250px;
         position: absolute;
         top: -5rem;
         right: 0;
         align-items: center;
         display: flex;
         justify-content: center;
-        background-size: cover;
         color: #02FFCF;
-        font-size: 2rem;
         text-align: center;
-        font-family: "Helios Bold";
         cursor: pointer;
-        animation: merch-available 2s ease-in-out infinite alternate, merch-available-open .5s ease-in-out;
         transition: .25s all;
+        width: 250px;
+        height: 250px;
 
         &:hover {
-            animation-play-state: paused;
-            opacity: 1 !important;
-            transform: scale(.9);
+            transform: scale(.98);
+
+            .merch-available-bg {
+                animation-play-state: paused;
+                box-shadow: #00000042 0 0 30px 20px, inset rgba(62, 201, 150, 0.3294117647) 0 0 20px 20px;
+            }
+        }
+
+        .merch-available-bg {
+            background-image: url('/public/bg.png');
+            background-size: contain;
+            width: 250px;
+            height: 250px;
+            background-size: cover;
+            position: absolute;
+            border-radius: 50%;
+            animation: merch-available 60s linear infinite;
+            box-shadow: #00000042 0 0 30px 20px;
+        }
+
+        >:nth-child(2) {
+            font-family: "Helios Bold";
+            font-size: 2rem;
+            position: relative;
         }
     }
 
@@ -111,21 +127,12 @@ export default {
         }
     }
 
-    @keyframes merch-available-open {
-        0% {
-            transform: scale(0);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
     @keyframes merch-available {
         0% {
-            opacity: 1;
+            transform: rotate(0deg);
         }
         100% {
-            opacity: .4;
+            transform: rotate(360deg);
         }
     }
 }
