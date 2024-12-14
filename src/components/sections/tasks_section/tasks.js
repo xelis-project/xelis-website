@@ -245,7 +245,7 @@ export default [
   {
     name: "WooCommerce Payment",
     description: "New WooCommerce payment plugin. Easily accept XELIS for online business.",
-    status: "In Progress",
+    status: "Completed",
     year: "2024",
     tag: "Plugin",
     priority: "High",
@@ -254,7 +254,7 @@ export default [
   {
     name: "Merch Store",
     description: "Partnership with retailers to offer XEL goodies through an eCommerce website, along with a dedicated XELIS merch front page.",
-    status: "In Progress",
+    status: "Completed",
     year: "2024",
     tag: "App",
     priority: "Mid",
@@ -263,7 +263,7 @@ export default [
   {
     name: "XVM Playground",
     description: "An accessible webpage to experiment with coding in the XELIS programming language.",
-    status: "In Progress",
+    status: "Completed",
     year: "2024",
     tag: "App",
     priority: "Mid",
