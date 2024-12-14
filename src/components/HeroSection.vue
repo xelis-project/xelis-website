@@ -103,7 +103,7 @@ export default {
         }
 
         .merch-available-bg {
-            background-image: url('/public/bg.png');
+            background-image: url('/public/merch/merch-available.webp');
             background-size: contain;
             width: 250px;
             height: 250px;
