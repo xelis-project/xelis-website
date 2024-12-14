@@ -1,5 +1,8 @@
 <template>
     <div id="hero">
+        <router-link :to="{name: 'merch'}"  class="merch-available">
+            Merch<br>Available
+        </router-link>
         <p id="resume">
             XELIS is the world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span> and <span>Smart Contracts</span>.
         </p>
@@ -49,7 +52,7 @@ export default {
         font-weight: 600;
     }
     #resume {
-        padding-right: 15%;
+        padding-right: 20%;
         font-size: 6rem;
         line-height: 8rem;
         font-family: "Helios Bold";
@@ -64,14 +67,66 @@ export default {
     }
     .hero-button {
         display: flex;
-        gap: 2rem;
+        gap: 5rem;
         justify-content: space-between;
         align-items: center;
+        margin-top: 3rem;
     }
     .hero-button-links {
         display: flex;
         align-items: center;
         gap: 2rem;
+    }
+
+    .merch-available {
+        background-image: url('/public/bg.png');
+        background-size: contain;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: -5rem;
+        right: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        color: #02FFCF;
+        font-size: 2rem;
+        text-align: center;
+        font-family: "Helios Bold";
+        cursor: pointer;
+        animation: merch-available 2s ease-in-out infinite alternate, merch-available-open .5s ease-in-out;
+        transition: .25s all;
+
+        &:hover {
+            animation-play-state: paused;
+            opacity: 1 !important;
+            transform: scale(.9);
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .merch-available {
+            display: none;
+        }
+    }
+
+    @keyframes merch-available-open {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes merch-available {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: .4;
+        }
     }
 }
 
