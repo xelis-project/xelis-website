@@ -93,7 +93,7 @@
         </svg>
         <div>Pay with XELIS!</div>
         <div>
-          Add the items you wish to purchase to your cart on the supplier's platform and process to checkout.
+          Add the items you wish to purchase to your cart on the supplier's platform and proceed to checkout.
           On the checkout page, select the XELIS payment option and complete your payment. Once it is confirmed, finalize
           your order by clicking 'Place Your Order'.
         </div>
