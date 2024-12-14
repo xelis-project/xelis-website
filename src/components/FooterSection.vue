@@ -81,7 +81,7 @@ export default {
 footer {
   position: relative;
   padding: 15rem calc(var.$spacing-body * 1.5);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border-top: 1px solid #02FFCF;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
@@ -176,7 +176,7 @@ footer {
 @media screen and (max-width: 900px) {
   footer {
     padding: 5rem 4rem;
-    margin: 0 calc(var.$spacing-body * -0.2);
+    //margin: 0 calc(var.$spacing-body * -0.2);
     backdrop-filter: blur(0.2px);
     background-color: rgba(0, 0, 0, 0.5);
 
