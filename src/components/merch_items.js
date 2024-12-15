@@ -1042,6 +1042,102 @@ export default {
   ],
   "Accessories": [
     {
+      title: "Xelis: Quadlemma Solved Poster",
+      description: "Museum-quality posters made on thick matte paper. Add a wonderful accent to your room and office with these posters that are sure to brighten any environment.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-poster/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/enhanced-matte-paper-poster-in-11x14-front-675dd06caa1e0.webp",
+          hover_src: "/merch/accessories/transparent/enhanced-matte-paper-poster-in-11x14-front-675dd06caa1e0.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Stainless steel water bottle with a straw lid",
+      description: "Stay hydrated all day with this 32 oz (950 ml) water bottle. It's ideal for workouts or busy days, with a wide-mouth foldable straw for spill-free sipping and a rotating handle for easy carrying.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-stainless-steel-water-bottle-with-a-straw-lid/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/stainless-steel-water-bottle-with-a-straw-lid-white-32-oz-front-675dd015bb9b1.webp",
+          hover_src: "/merch/accessories/transparent/stainless-steel-water-bottle-with-a-straw-lid-white-32-oz-left-675dd015bc5e1.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Black Glossy Mug",
+      description: "This cupboard essential is sturdy, sleek, and perfect for your morning java or afternoon tea.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-black-glossy-mug/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/black-glossy-mug-black-15-oz-front-675dcf70dce11.webp",
+          hover_src: "/merch/accessories/transparent/black-glossy-mug-black-11-oz-handle-on-right-675dcf70dd629.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Flag",
+      description: "Who doesn't want to turn their house into a home? Brighten up your space by adding this unique flag to your wall. Your flag won't crease or shrink thanks to the polyester material and will last a long time.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-flag/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/all-over-print-flag-white-front-675dce155241c.webp",
+          hover_src: "/merch/accessories/transparent/all-over-print-flag-white-product-details-675dce1552d93.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Tote bag",
+      description: "A spacious and trendy tote bag to help you carry around everything that matters.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-tote-bag/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/all-over-print-tote-bag-black-15x15-front-675dcdccb2751.webp",
+          hover_src: "/merch/accessories/transparent/all-over-print-tote-bag-black-15x15-front-675dcdccb2109.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Drawstring bag",
+      description: "Combine your love for vibrant prints and a sporty style with a cool drawstring bag. It's a must-have gym essential that can be worn as a backpack with drawstring closure at top, and narrow, contrasting shoulder straps.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-drawstring-bag/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/all-over-print-drawstring-bag-white-mockup-675dcd849d6af.webp",
+          hover_src: "/merch/accessories/transparent/all-over-print-drawstring-bag-white-mockup-675dcd849d6af.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Utility crossbody bag",
+      description: "This bag is sturdy, stylish, and ready to go wherever you do. With adjustable straps and two spacious pockets, it's the ultimate accessory for hiking, festivals, and everyday use.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-utility-crossbody-bag/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/all-over-print-utility-crossbody-bag-white-front-675dccf602bee.webp",
+          hover_src: "/merch/accessories/transparent/all-over-print-utility-crossbody-bag-white-front-675dccf602bee.webp",
+        },
+      ]
+    },
+    {
+      title: "Xelis: Quadlemma Solved Backpack",
+      description: "This medium size backpack is just what you need for daily use or sports activities! The pockets (including one for your laptop) give plenty of room for all your necessities, while the water-resistant material will protect them from the weather.",
+      link: "https://poolpartynodes.com/product/xelis-quadlemma-solved-backpack/",
+      images: [
+        {
+          color: 'black',
+          src: "/merch/accessories/transparent/all-over-print-backpack-white-front-675dcc8a802d0.webp",
+          hover_src: "/merch/accessories/transparent/all-over-print-backpack-white-back-675dcc8a80d84.webp",
+        },
+      ]
+    },
+    {
       title: "Full Logo Drawstring bag",
       description: "Combine your love for vibrant prints and a sporty style with a cool drawstring bag. It's a must-have gym essential that can be worn as a backpack with drawstring closure at top, and narrow, contrasting shoulder straps.",
       link: "https://poolpartynodes.com/product/xelis-full-logo-drawstring-bag/",
