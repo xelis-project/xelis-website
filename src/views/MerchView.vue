@@ -41,6 +41,7 @@
         No items for this category.
       </div>
       <div class="item-count">
+        <div>{{ filter }}</div>
         <svg class="arrow" @click="prevItemIndex()">
           <use href="#arrow-icon" />
         </svg>
@@ -387,9 +388,10 @@ body:not(.menu-open) {
 
     .text {
       opacity: .8;
+      font-size: 2rem;
     }
 
-    > :first-child {
+    > :nth-child(2) {
       transform: rotate(180deg);
     }
 
