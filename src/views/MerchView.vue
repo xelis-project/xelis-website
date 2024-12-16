@@ -58,7 +58,7 @@
                 <div class="description">{{item.description}}</div>
                 <div>
                   <a class="link" :href="item.link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3C3.89543 3 3 3.89543 3 5V6.83772L1.49006 11.3675C1.10052 12.5362 1.8474 13.7393 3 13.963V20C3 21.1046 3.89543 22 5 22H9H10H14H15H19C20.1046 22 21 21.1046 21 20V13.963C22.1526 13.7393 22.8995 12.5362 22.5099 11.3675L21 6.83772V5C21 3.89543 20.1046 3 19 3H5ZM15 20H19V14H17.5H12H6.5H5V20H9V17C9 15.3431 10.3431 14 12 14C13.6569 14 15 15.3431 15 17V20ZM11 20H13V17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17V20ZM3.38743 12L4.72076 8H6.31954L5.65287 12H4H3.38743ZM7.68046 12L8.34713 8H11V12H7.68046ZM13 12V8H15.6529L16.3195 12H13ZM18.3471 12L17.6805 8H19.2792L20.6126 12H20H18.3471ZM19 5V6H16.5H12H7.5H5V5H19Z" />
                     </svg>
                     Go to supplier
@@ -81,6 +81,14 @@
             </div>
           </div>
         </template>
+      </div>
+      <div class="disclaimer">
+        <svg width="30px" height="30px" viewBox="0 0 18 18" fill="currentColor">
+          <path d="M9,14a1.5,1.5,0,1,1,1.5068-1.5A1.5035,1.5035,0,0,1,9,14Z"/>
+          <path d="M9,2A7,7,0,1,1,2,9,7.0079,7.0079,0,0,1,9,2M9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z"/>
+          <path d="M10,4H8a1,1,0,0,0-.97,1.2425l1,4a1,1,0,0,0,1.94,0l1-4A1,1,0,0,0,10,4Zm0,2h0Z"/>
+        </svg>
+        PoolPartyNodes is the official supplier of all high-quality XELIS merchandise. The XELIS merch store operates as a non-profit initiative, with all proceeds from sales to the supplier.
       </div>
     </main>
     <!-- we do prerender the page but because the default filter links is the only one being rendered, we will add all links here hidden for seo -->
@@ -362,7 +370,7 @@ body:not(.menu-open) {
 
       &.active, &:hover {
         opacity: 1;
-        border-bottom: .25rem solid white;
+        border-bottom: .4rem solid white;
       }
     }
   }
@@ -508,6 +516,19 @@ body:not(.menu-open) {
     text-decoration: underline;
     color: #02ffcf;
     cursor: pointer;
+  }
+
+  .disclaimer {
+    max-width: 90rem;
+    margin: 10rem auto 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    svg {
+      min-width: 30px;
+      min-height: 30px;
+    }
   }
   
   .modal {
