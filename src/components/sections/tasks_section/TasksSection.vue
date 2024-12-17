@@ -24,6 +24,7 @@
           <div>Years</div>
           <div class="filter-buttons">
             <button :class="{ 'active': !year}" @click="setYear(null)">All</button>
+            <button :class="{ 'active': year === '2025'}" @click="setYear('2025')">2025</button>
             <button :class="{ 'active': year === '2024'}" @click="setYear('2024')">2024</button>
             <button :class="{ 'active': year === '2023'}" @click="setYear('2023')">2023</button>
           </div>

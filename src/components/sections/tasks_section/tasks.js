@@ -298,7 +298,7 @@ export default [
   },
   {
     name: "Genesix Update v0.0.7",
-    description: "TBD",
+    description: "Add tx timestamp, improve seed recovery UX, and launch the app on Android & IOS.",
     status: "In Progress",
     year: "2025",
     tag: "App",
@@ -329,6 +329,15 @@ export default [
     status: "In Progress",
     year: "2025",
     tag: "Blockchain",
+    priority: "High",
+    quarter: ""
+  },
+  {
+    name: "XELIS DEX",
+    description: "Smart contract based liquidity pools, swaps, and spot trading.",
+    status: "Planned",
+    year: "2025",
+    tag: "App",
     priority: "High",
     quarter: ""
   },
