@@ -26,8 +26,8 @@ export default [
   {
     "name": "NonKYC",
     "link": "https://nonkyc.io/market/XEL_USDT",
-    "logo_img": "https://docs.xelis.io/exchanges/nonkyc_logo.png",
-    "market_img": "https://docs.xelis.io/exchanges/nonkyc.png",
+    "logo_img": "https://docs.xelis.io/exchanges/nonkyc_logo.webp",
+    "market_img": "https://docs.xelis.io/exchanges/nonkyc.webp",
     "sort_volume": 5
   },
   {
