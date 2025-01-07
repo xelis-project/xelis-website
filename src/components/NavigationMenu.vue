@@ -37,7 +37,6 @@
             </router-link>
           </li>
           <li>/</li>
-          <NavLinks />
         </template>
         <template v-if="$route.name === 'resources'">
           <li>
@@ -61,7 +60,6 @@
             </router-link>
           </li>
           <li>/</li>
-          <NavLinks />
         </template>
         <template v-if="$route.name === 'roadmap'">
           <li>
@@ -75,17 +73,8 @@
             </router-link>
           </li>
           <li>/</li>
-          <NavLinks />
         </template>
-        <template v-if="$route.name === 'exchanges'">
-          <NavLinks />
-        </template>
-        <template v-if="$route.name === 'merch'">
-          <NavLinks />
-        </template>
-        <template v-if="$route.name === 'not_found'">
-          <NavLinks />
-        </template>
+        <NavLinks />
         <li id="burger_menu">
           <button>
             <span></span>
@@ -117,7 +106,6 @@
               </router-link>
             </li>
             <li>-</li>
-            <NavLinks />
           </template>
           <template v-if="$route.name === 'resources'">
             <li>
@@ -141,7 +129,6 @@
               </router-link>
             </li>
             <li>-</li>
-            <NavLinks />
           </template>
           <template v-if="$route.name === 'roadmap'">
             <li>
@@ -155,17 +142,8 @@
               </router-link>
             </li>
             <li>-</li>
-            <NavLinks />
           </template>
-          <template v-if="$route.name === 'exchanges'">
-            <NavLinks />
-          </template>
-          <template v-if="$route.name === 'merch'">
-            <NavLinks />
-          </template>
-          <template v-if="$route.name === 'not_found'">
-            <NavLinks />
-          </template>
+          <NavLinks />
         </ul>
       </div>
   </div>

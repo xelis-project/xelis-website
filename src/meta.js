@@ -23,6 +23,11 @@ const meta = {
     title: `XELIS - Exchanges`,
     description: `List of exchanges where you can trade XELIS.`,
     keywords: ``
+  },
+  '/confidentiality': {
+    title: `XELIS - Confidentiality`,
+    description: ``,
+    keywords: ``
   }
 }
 

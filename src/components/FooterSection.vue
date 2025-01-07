@@ -24,6 +24,9 @@
             <router-link :to="{name: 'home', hash: '#socials'}">
               Socials
             </router-link>
+            <router-link :to="{name: 'confidentiality' }">
+              Confidentiality
+            </router-link>
           </div>
           <div>
             <a href="https://docs.xelis.io/" target="_blank">
