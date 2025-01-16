@@ -209,8 +209,7 @@ export default {
       }
 
       img {
-        width: 7rem;
-        height: 7rem;
+        max-width: 7rem;
       }
 
       .ebg {
