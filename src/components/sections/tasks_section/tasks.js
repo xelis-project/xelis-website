@@ -316,7 +316,7 @@ export default [
   },
   {
     name: "Smart Contract Integration",
-    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code.",
+    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code. (Testnet)",
     status: "Completed",
     year: "2025",
     tag: "Blockchain",
