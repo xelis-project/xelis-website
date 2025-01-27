@@ -184,7 +184,7 @@ export default [
     description: "General overview of the project, featuring technical explanations.",
     status: "Completed",
     year: "2024",
-    tag: "",
+    tag: "Research",
     priority: "High",
     quarter: "Q4"
   },
@@ -272,7 +272,7 @@ export default [
   {
     name: "XVM - Shunting Yard Algo",
     description: "Priority rules for code execution flow.",
-    status: "In Progress",
+    status: "Completed",
     year: "2024",
     tag: "XVM",
     priority: "High",
@@ -281,7 +281,7 @@ export default [
   {
     name: "XVM - Optimizations",
     description: "Reduce the cost of running Smart Contracts.",
-    status: "In Progress",
+    status: "Completed",
     year: "2024",
     tag: "XVM",
     priority: "High",
@@ -297,6 +297,15 @@ export default [
     quarter: "Q4"
   },
   {
+    name: "Network Upgrade #2",
+    description: "MultiSig, P2P DH, security patch & additional improvements (track burned supply).",
+    status: "Completed",
+    year: "2024",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q4"
+  },
+  {
     name: "Genesix Update v0.0.7",
     description: "Add tx timestamp, improve seed recovery UX, and launch the app on Android & IOS.",
     status: "In Progress",
@@ -306,12 +315,39 @@ export default [
     quarter: ""
   },
   {
-    name: "XELIS Quests",
-    description: "A new interactive guide to easily onboard newcomers in the XELIS world.	",
+    name: "Smart Contract Integration",
+    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code.",
+    status: "Completed",
+    year: "2025",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q1"
+  },
+  {
+    name: "Update SDKs",
+    description: "Incorporate significant API changes, along with new functions and methods, including support for smart contract calls.",
+    status: "In Progress",
+    year: "2025",
+    tag: "App",
+    priority: "High",
+    quarter: "Q1"
+  },
+  {
+    name: "Fiat OnRamp Interface",
+    description: "A dedicated website aggregating quotes from third-party providers. Starting with CoinOn.",
+    status: "Completed",
+    year: "2025",
+    tag: "App",
+    priority: "High",
+    quarter: "Q1"
+  },
+  {
+    name: "XELIS DEX",
+    description: "Smart contract based liquidity pools, swaps, and spot trading.",
     status: "Planned",
     year: "2025",
     tag: "App",
-    priority: "Low",
+    priority: "High",
     quarter: ""
   },
   {
@@ -324,21 +360,12 @@ export default [
     quarter: ""
   },
   {
-    name: "Smart Contract Integration",
-    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code.",
-    status: "In Progress",
-    year: "2025",
-    tag: "Blockchain",
-    priority: "High",
-    quarter: ""
-  },
-  {
-    name: "XELIS DEX",
-    description: "Smart contract based liquidity pools, swaps, and spot trading.",
+    name: "XELIS Quests",
+    description: "A new interactive guide to easily onboard newcomers in the XELIS world.	",
     status: "Planned",
     year: "2025",
     tag: "App",
-    priority: "High",
+    priority: "Low",
     quarter: ""
   },
 ]

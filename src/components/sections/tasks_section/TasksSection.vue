@@ -46,6 +46,7 @@
             <button :class="{ 'active': tag === 'XVM'}" @click="setTag('XVM')">XVM</button>
             <button :class="{ 'active': tag === 'App'}" @click="setTag('App')">App</button>
             <button :class="{ 'active': tag === 'Plugin'}" @click="setTag('Plugin')">Plugin</button>
+            <button :class="{ 'active': tag === 'Research'}" @click="setTag('Research')">Research</button>
           </div>
         </div>
       </div>
