@@ -78,5 +78,12 @@ export default [
     "logo_img": "https://docs.xelis.io/exchanges/xt_logo.webp",
     "market_img": "https://docs.xelis.io/exchanges/xt.webp",
     "sort_volume": 2
-  }
+  },
+  {
+    "name": "Trocador",
+    "link": "https://trocador.app/en/?ref=1JXff8w6Gx&ticker_to=xel",
+    "logo_img": "https://docs.xelis.io/exchanges/trocador_logo.webp",
+    "market_img": "https://docs.xelis.io/exchanges/trocador.webp",
+    "sort_volume": 2
+  },
 ]
