@@ -1,9 +1,9 @@
 <template>
     <div id="hero">
-        <router-link :to="{name: 'merch'}"  class="merch-available">
+        <!-- <router-link :to="{name: 'merch'}"  class="merch-available">
             <div class="merch-available-bg"></div>
             <div>Merch<br>Available</div>
-        </router-link>
+        </router-link> -->
         <p id="resume">
             XELIS is the world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span> and <span>Smart Contracts</span>.
         </p>

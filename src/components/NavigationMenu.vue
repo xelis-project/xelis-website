@@ -10,7 +10,7 @@
             </div>
           </router-link>
         </li>
-        <template v-if="$route.name === 'home'">
+        <!-- <template v-if="$route.name === 'home'">
           <li>
             <router-link :to="{name: 'home', hash: '#objectives'}">
               Objectives
@@ -37,7 +37,7 @@
             </router-link>
           </li>
           <li>/</li>
-        </template>
+        </template> -->
         <template v-if="$route.name === 'resources'">
           <li>
             <router-link :to="{name: 'resources', hash: '#wallets'}">
@@ -84,7 +84,7 @@
     </nav>
     <div id="mobile_menu">
         <ul>
-          <template v-if="$route.name === 'home'">
+          <!-- <template v-if="$route.name === 'home'">
             <li>
               <router-link :to="{name: 'home', hash: '#objectives'}">
                 Objectives
@@ -106,7 +106,7 @@
               </router-link>
             </li>
             <li>-</li>
-          </template>
+          </template> -->
           <template v-if="$route.name === 'resources'">
             <li>
               <router-link :to="{name: 'resources', hash: '#wallets'}">
