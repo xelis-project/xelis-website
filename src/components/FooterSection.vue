@@ -9,26 +9,6 @@
       <div>
         <div class="bottom-menu">
           <div>
-            <router-link :to="{name: 'home', hash: '#objectives'}">
-              Objectives
-            </router-link>
-            <router-link :to="{name: 'home', hash: '#network'}">
-              Network
-            </router-link>
-            <router-link :to="{name: 'home', hash: '#supply'}">
-              Supply
-            </router-link>
-            <router-link :to="{name: 'home', hash: '#roadmap'}">
-              Roadmap
-            </router-link>
-            <router-link :to="{name: 'home', hash: '#socials'}">
-              Socials
-            </router-link>
-            <router-link :to="{name: 'confidentiality' }">
-              Confidentiality
-            </router-link>
-          </div>
-          <div>
             <a href="https://docs.xelis.io/" target="_blank">
               Documentation
             </a>
@@ -51,7 +31,7 @@
     </div>
     <div class="copyright">
       <div>
-        © 2024 Copyright
+        © {{  new Date().getFullYear() }} Copyright
       </div>
       <div>
         Website designed by
