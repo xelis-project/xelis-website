@@ -262,7 +262,7 @@ export default [
   },
   {
     name: "XVM Playground",
-    description: "An accessible webpage to experiment with coding in the XELIS programming language.",
+    description: "An accessible webpage to experiment with coding in the XELIS programming language (SILEX).",
     status: "Completed",
     year: "2024",
     tag: "App",
@@ -308,15 +308,15 @@ export default [
   {
     name: "Genesix Update v0.0.7",
     description: "Add tx timestamp, improve seed recovery UX, and launch the app on Android & IOS.",
-    status: "In Progress",
+    status: "Completed",
     year: "2025",
     tag: "App",
     priority: "Mid",
-    quarter: ""
+    quarter: "Q1"
   },
   {
-    name: "Smart Contract Integration",
-    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code. (Testnet)",
+    name: "Testnet Smart Contract",
+    description: "Integration of XVM into the XELIS blockchain core. Write decentralized code.",
     status: "Completed",
     year: "2025",
     tag: "Blockchain",
@@ -343,8 +343,8 @@ export default [
   },
   {
     name: "XELIS DEX",
-    description: "Smart contract based liquidity pools, swaps, and spot trading.",
-    status: "Planned",
+    description: "A browser platform for smart contract based liquidity pools, swaps, and spot trading.",
+    status: "In Progress",
     year: "2025",
     tag: "App",
     priority: "High",
@@ -368,4 +368,49 @@ export default [
     priority: "Low",
     quarter: ""
   },
+  {
+    name: "Genesix Update v0.0.8",
+    description: "Enable support for XSWD, multisig, biometric auth, an enhanced address book, and advanced asset tracking.",
+    status: "Completed",
+    year: "2025",
+    tag: "App",
+    priority: "Mid",
+    quarter: "Q2"
+  },
+  {
+    name: "XELIS.ORG",
+    description: "A website to present XELIS in a more digestible way for businesses or enthusiasts.",
+    status: "Completed",
+    year: "2025",
+    tag: "App",
+    priority: "Low",
+    quarter: "Q2"
+  },
+  {
+    name: "P2p Tracker Rework",
+    description: "Rework the P2P Tracker to achieve a more stable and efficient boost sync.",
+    status: "Completed",
+    year: "2025",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q1"
+  },
+  {
+    name: "Multi Thread Txs",
+    description: "Improve transaction verification to handle high TPS.",
+    status: "Completed",
+    year: "2025",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q1"
+  },
+  {
+    name: "RocksDB",
+    description: "Replace the Sled database with RocksDB to drastically improve storage performance, stability, and size.",
+    status: "Completed",
+    year: "2025",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q2"
+  }
 ]
