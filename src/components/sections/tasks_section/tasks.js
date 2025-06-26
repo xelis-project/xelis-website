@@ -6,7 +6,8 @@ export default [
     year: "2021",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "BlockDAG Implementation",
@@ -15,7 +16,8 @@ export default [
     year: "2023",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: true
   },
   {
     name: "XSWD",
@@ -24,7 +26,8 @@ export default [
     year: "2023",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q3"
+    quarter: "Q3",
+    home: true
   },
   {
     name: "Client Protocol",
@@ -33,7 +36,8 @@ export default [
     year: "2023",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: true
   },
   {
     name: "Homomorphic Encryption",
@@ -42,7 +46,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "Difficulty Adjustement",
@@ -51,7 +56,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "XELIS Hash",
@@ -60,7 +66,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "Block Explorer",
@@ -69,7 +76,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "Indexer & Stats Tools",
@@ -78,16 +86,18 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Mid",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
-    name: "Genesix Wallet (Desktop & Mobile)",
+    name: "Genesix Wallet",
     description: "New official XELIS wallet written in Flutter.",
     status: "Completed",
     year: "2024",
     tag: "App",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "Documentations",
@@ -96,7 +106,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: true
   },
   {
     name: "BoostSync & FastSync",
@@ -105,7 +116,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "Project Mainnet Launch",
@@ -114,7 +126,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: true
   },
   {
     name: "XELIS Hash V2",
@@ -123,7 +136,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: true
   },
   {
     name: "Network Upgrade #1",
@@ -132,7 +146,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "Status Page",
@@ -141,7 +156,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Low",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "Mainnet Faucet",
@@ -150,7 +166,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Low",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "Multisig",
@@ -159,7 +176,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: true
   },
   {
     name: "FastSync Rework",
@@ -168,7 +186,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "ZK Proof",
@@ -177,7 +196,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "Whitepaper",
@@ -186,7 +206,8 @@ export default [
     year: "2024",
     tag: "Research",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Paper Wallet",
@@ -195,7 +216,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "P2P Key Enchange Encryption",
@@ -204,7 +226,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Balance Proof",
@@ -213,7 +236,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Ownership Proof",
@@ -222,7 +246,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Genesix Update v0.0.6",
@@ -231,7 +256,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "XVM - Enums",
@@ -240,7 +266,8 @@ export default [
     year: "2024",
     tag: "XVM",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "WooCommerce Payment",
@@ -249,7 +276,8 @@ export default [
     year: "2024",
     tag: "Plugin",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Merch Store",
@@ -258,7 +286,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "XVM Playground",
@@ -267,7 +296,8 @@ export default [
     year: "2024",
     tag: "App",
     priority: "Mid",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: true
   },
   {
     name: "XVM - Shunting Yard Algo",
@@ -276,7 +306,8 @@ export default [
     year: "2024",
     tag: "XVM",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "XVM - Optimizations",
@@ -285,7 +316,8 @@ export default [
     year: "2024",
     tag: "XVM",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "VSCode Extension for XVM",
@@ -294,7 +326,8 @@ export default [
     year: "2024",
     tag: "Plugin",
     priority: "Low",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Network Upgrade #2",
@@ -303,7 +336,8 @@ export default [
     year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q4"
+    quarter: "Q4",
+    home: false
   },
   {
     name: "Genesix Update v0.0.7",
@@ -312,16 +346,18 @@ export default [
     year: "2025",
     tag: "App",
     priority: "Mid",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
     name: "Testnet Smart Contract",
     description: "Integration of XVM into the XELIS blockchain core. Write decentralized code.",
     status: "Completed",
-    year: "2025",
+    year: "2024",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q4",
+    home: true
   },
   {
     name: "Update SDKs",
@@ -330,7 +366,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
     name: "Fiat OnRamp Interface",
@@ -339,7 +376,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
     name: "XELIS DEX",
@@ -348,7 +386,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "High",
-    quarter: ""
+    quarter: "",
+    home: false
   },
   {
     name: "Ledger App",
@@ -357,7 +396,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "Low",
-    quarter: ""
+    quarter: "",
+    home: false
   },
   {
     name: "XELIS Quests",
@@ -366,7 +406,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "Low",
-    quarter: ""
+    quarter: "",
+    home: false
   },
   {
     name: "Genesix Update v0.0.8",
@@ -375,7 +416,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "Mid",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "XELIS.ORG",
@@ -384,7 +426,8 @@ export default [
     year: "2025",
     tag: "App",
     priority: "Low",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   },
   {
     name: "P2p Tracker Rework",
@@ -393,7 +436,8 @@ export default [
     year: "2025",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
     name: "Multi Thread Txs",
@@ -402,7 +446,8 @@ export default [
     year: "2025",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q1"
+    quarter: "Q1",
+    home: false
   },
   {
     name: "RocksDB",
@@ -411,6 +456,7 @@ export default [
     year: "2025",
     tag: "Blockchain",
     priority: "High",
-    quarter: "Q2"
+    quarter: "Q2",
+    home: false
   }
 ]

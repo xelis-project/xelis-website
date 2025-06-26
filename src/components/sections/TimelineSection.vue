@@ -43,11 +43,13 @@
 import tasks from './tasks_section/tasks';
 
 export default {
-    props: ['showRoadmapLink'],
+    props: ['showRoadmapLink', 'home'],
     data() {
-        return {
-            tasks
+        if (this.home) {
+            return { tasks: tasks.filter(x => x.home) };
         }
+
+        return { tasks };
     }
 }
 </script>

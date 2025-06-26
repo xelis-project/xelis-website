@@ -19,7 +19,7 @@
       <ObjectivesSection />
       <NetworkSection />
       <SupplySection />
-      <TimelineSection :show-roadmap-link="true"/>
+      <TimelineSection :show-roadmap-link="true" :home="true" />
       <BlockDAGSection />
       <SocialSection />
     </main>
