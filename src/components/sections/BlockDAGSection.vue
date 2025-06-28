@@ -83,6 +83,21 @@
 @use "@/assets/variables.scss" as var;
 
 #blockdag {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    z-index: -1;
+    width: calc(1060.003px / 1920px) * 100vw;
+    height: 800px;
+    background: rgba(0, 170, 150, 0.2);
+    filter: blur(150px);
+    border-radius: 100%;
+  }
+
   .title {
     display: flex;
     gap: 4rem;

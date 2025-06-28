@@ -42,6 +42,20 @@ export default {
     padding: 5vw;
     display: flex;
     flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -60%;
+      left: 0%;
+      z-index: -1;
+      width: calc(1060.003px / 1920px) * 300vw;
+      height: 800px;
+      background: rgba(0, 170, 150, 0.1);
+      transform: rotate(45deg);
+      transform-origin: center;
+      filter: blur(150px);
+    }
   }
 
   .supply-graph {
