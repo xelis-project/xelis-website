@@ -1,7 +1,7 @@
 <template>
   <section id="quad">
     <h2>
-      Solving the Quadlemma
+      Solving the Quadrilemma
       <div>
         XELIS introduces the concept of a quadrilemma or ”quadlemma”, as it will be referred to, adding privacy as a critical fourth pillar.
       </div>
