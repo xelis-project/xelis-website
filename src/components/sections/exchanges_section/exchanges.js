@@ -31,13 +31,6 @@ export default [
     "sort_volume": 6
   },
   {
-    "name": "Xeggex",
-    "link": "https://xeggex.com/market/XEL_USDT",
-    "logo_img": "https://docs.xelis.io/exchanges/xeggex_logo.webp",
-    "market_img": "https://docs.xelis.io/exchanges/xeggex.webp",
-    "sort_volume": 5
-  },
-  {
     "name": "CoinEx",
     "link": "https://www.coinex.com/en/exchange/xel-usdt",
     "logo_img": "https://docs.xelis.io/exchanges/coinex_logo.webp",
