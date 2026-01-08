@@ -64,26 +64,38 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 4rem 2rem;
 
     a {
-        border: thin solid rgb(255 255 255 / 70%);
-        padding: .8rem 1rem;
+        border: 2px solid rgb(255 255 255 / 70%);
+        padding: 1rem 2rem;
         white-space: nowrap;
         display: inline-flex;
         gap: 1rem;
         align-items: center;
+        border-radius: 0.8rem;
+        font-weight: 600;
+        transition: all 300ms ease;
 
         &:hover {
-            border: thin solid #02FFCF;
+            border: 2px solid #02FFCF;
+            background: rgba(2, 255, 207, 0.1);
+            transform: scale(1.05);
         }
 
         &:hover svg {
-            color: thin solid #02FFCF;
+            color: #02FFCF;
         }
     }
 
     h2 {
         text-align: center;
+        margin-bottom: 3rem;
+        font-size: 3.5rem;
+        background: linear-gradient(135deg, #02FFCF 0%, #00AA96 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     #timeline-container {
@@ -94,6 +106,7 @@ export default {
         overflow-x: auto;
         overflow-y: hidden;
         margin-bottom: 2rem;
+        gap: 1rem;
         
         >div {
             display: flex;
@@ -120,6 +133,14 @@ export default {
             .top> :first-child,
             .bottom> :first-child {
                 color: var.$ascent-color;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+
+            .top> :last-child,
+            .bottom> :last-child {
+                font-size: 1.6rem;
+                font-weight: 600;
             }
 
             .circle {
@@ -132,11 +153,13 @@ export default {
 
                 >div {
                     position: relative;
-                    width: 20px;
-                    height: 20px;
+                    width: 24px;
+                    height: 24px;
                     background: #001915;
                     border: 2px solid var.$dark-ascent-color;
                     border-radius: 50%;
+                    transition: all 300ms ease;
+                    box-shadow: 0 0 0 2px rgba(2, 255, 207, 0);
                 }
 
                 &:before,
@@ -146,9 +169,10 @@ export default {
                     top: 50%;
                     z-index: -1;
                     width: 50%;
-                    height: 2px;
+                    height: 3px;
                     background: var.$dark-ascent-color;
                     transform: translateY(-50%);
+                    transition: all 300ms ease;
                 }
 
                 &:before {
@@ -164,12 +188,20 @@ export default {
                 .circle:before,
                 .circle:after {
                     background: var.$ascent-color;
+                    box-shadow: 0 0 15px rgba(2, 255, 207, 0.3);
                 }
 
                 .circle>div {
                     background: #004C3E;
                     border: 2px solid var.$ascent-color;
+                    box-shadow: 0 0 12px rgba(2, 255, 207, 0.5);
                 }
+            }
+
+            transition: opacity 300ms ease;
+
+            &.is-animated:not(.done) {
+                opacity: 0.6;
             }
         }
     }

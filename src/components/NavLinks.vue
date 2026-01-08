@@ -25,11 +25,6 @@
     </router-link>
   </li>
   <li>
-    <a href="https://xeliscommunity.org/" target="_blank">
-      Blog
-    </a>
-  </li>
-  <li>
     <a href="https://docs.xelis.io/" target="_blank">
       Documentation
     </a>

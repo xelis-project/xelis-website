@@ -13,6 +13,10 @@ export default {
   props: ['amount', 'year'],
   computed: {
     width() {
+      if (this.amount >= 18.4) {
+        return '92%';
+      }
+
       return Math.min(Math.max(10, (this.amount*100)/18.4), 90) + '%';
     }
   }

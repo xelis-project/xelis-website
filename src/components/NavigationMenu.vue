@@ -183,9 +183,17 @@ export default {
 </script>
 
 <style lang="scss">
- // ============ MENU =======
+@use "@/assets/variables.scss" as var;
+
+// ============ MENU =======
 header nav {
   overflow-x: auto;
+  padding: 1.4rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.6rem;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(120deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.4) 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 #burger_menu {
@@ -259,6 +267,27 @@ header nav {
       text-align: center;
       & + li {
         margin-top: 1.5rem;
+        padding: 0.8rem 0;
+        position: relative;
+        letter-spacing: 0.02em;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -0.6rem;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var.$ascent-color, transparent);
+          opacity: 0;
+          transform: translateY(4px);
+          transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        &:hover:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }

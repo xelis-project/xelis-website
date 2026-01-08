@@ -447,7 +447,7 @@ export default [
     tag: "Blockchain",
     priority: "High",
     quarter: "Q1",
-    home: false
+    home: true
   },
   {
     name: "RocksDB",
@@ -457,6 +457,36 @@ export default [
     tag: "Blockchain",
     priority: "High",
     quarter: "Q2",
-    home: false
+    home: true
+  },
+  {
+    name: "Smart Contracts Mainnet",
+    description: "Launch Smart Contracts on the mainnet, enabling decentralized applications and programmable transactions.",
+    status: "Completed",
+    year: "2025",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "Q4",
+    home: true
+  },
+  {
+    name: "Smart Contracts improvements",
+    description: "Add new features and optimizations to the Smart Contract platform based on community feedback and usage patterns.",
+    status: "Planned",
+    year: "2026",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "",
+    home: true
+  },
+  {
+    name: "BlockDAG Improvements",
+    description: "Ongoing enhancements to the BlockDAG structure to improve scalability, security, and efficiency of the network.",
+    status: "Planned",
+    year: "2026",
+    tag: "Blockchain",
+    priority: "High",
+    quarter: "",
+    home: true
   }
 ]

@@ -1,14 +1,21 @@
 <template>
   <footer>
     <CircuitImg />
-    <div>
-      <div id="bottom_logo">
-        <img src="@/assets/logo.svg" />
-        <div>XELIS</div>
-      </div>
-      <div>
-        <div class="bottom-menu">
-          <div>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-branding">
+          <div id="bottom_logo">
+            <img src="@/assets/logo.svg" />
+            <div>XELIS</div>
+          </div>
+          <p class="footer-description">
+            The world's first BlockDAG with Privacy, Speed, Scalability and Smart Contracts.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <div class="link-group">
             <a href="https://docs.xelis.io/" target="_blank">
               Documentation
             </a>
@@ -23,25 +30,18 @@
             </a>
           </div>
         </div>
+      </div>
+
+      <div class="footer-disclaimer">
         <p>
-          XELIS is a private blockDAG with Homomorphic Encryption and Smart Contracts.<br/>
-          Use our tools and software at your own risk, we will not take any responsibility in the way it is used.
+          Use our tools and software at your own risk. We will not take any responsibility in the way it is used.
         </p>
       </div>
-    </div>
-    <div class="copyright">
-      <div>
-        © {{  new Date().getFullYear() }} Copyright
-      </div>
-      <div>
-        Website designed by
-        <a href="https://exactly.digital/" target="_blank">
-          exactly.digital
-        </a>
-        & integrated by
-        <a href="https://github.com/HectoFR" target=" _blank">
-          HectoFR
-        </a>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          © {{  new Date().getFullYear() }} XELIS Project
+        </div>
       </div>
     </div>
   </footer>
@@ -63,164 +63,197 @@ export default {
 
 footer {
   position: relative;
-  padding: 15rem calc(var.$spacing-body * 1.5);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 6rem calc(var.$spacing-body * 1.2);
   font-size: 1.8rem;
-  border-top: 1px solid #02FFCF;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+  border-top: 1px solid var.$border-strong;
+  background: linear-gradient(160deg, rgba(10, 17, 20, 0.9), rgba(6, 12, 15, 0.92));
+  backdrop-filter: blur(4px);
   overflow: hidden;
-
-  margin: 0 calc(var.$spacing-body * -1);
+  box-shadow: var.$glow, 0 -20px 60px rgba(0, 0, 0, 0.45);
 
   .circuit {
     z-index: -1;
     position: absolute;
-    opacity: .4;
+    opacity: .3;
     bottom: 0;
     left: -19.6rem;
     height: 150rem;
     transform: scale3d(2, 2, 1);
   }
 
-  /*&::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 150vw;
-    background-repeat: no-repeat;
-    bottom: 0;
-    left: -19.6rem;
-    height: 150rem;
-    background-image: url("@/assets/CircuitBas.svg");
-    opacity: .5;
-  }*/
-
-  img {
-    width: 230px;
+  .footer-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 
-  > div:first-child {
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var.$border-soft;
+  }
+
+  .footer-branding {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 4rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    > div:last-child {
-      flex: 1;
-      max-width: 50%;
+    flex-direction: column;
+    gap: 2rem;
+
+    #bottom_logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2.4rem;
+      font-weight: bold;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .footer-description {
+      font-size: 1.6rem;
+      color: rgba(245, 247, 251, 0.75);
+      line-height: 2.4rem;
+      margin: 0;
     }
   }
 
-  p {
-    font-size: 1.5rem;
-    margin-top: 4rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
+  .footer-links {
+    h4 {
+      font-size: 1.8rem;
+      color: var.$ascent-color;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: 0.05em;
+    }
 
-  .bottom-menu {
-    > div {
+    .link-group {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin-bottom: 1.5rem;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 1rem;
 
       a {
-        white-space: nowrap;
+        font-size: 1.6rem;
+        color: rgba(245, 247, 251, 0.85);
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+
+        &:hover {
+          color: var.$ascent-color;
+          text-shadow: 0 0 16px rgba(2, 255, 207, 0.35);
+        }
       }
     }
   }
 
-  #bottom_logo {
-    margin-bottom: 6rem;
+  .footer-disclaimer {
+    padding: 2rem;
+    border: 1px solid var.$border-soft;
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.02);
+
+    p {
+      font-size: 1.4rem;
+      color: rgba(245, 247, 251, 0.65);
+      margin: 0;
+      line-height: 2rem;
+    }
   }
 
-  .copyright {
+  .footer-bottom {
     display: flex;
-    justify-content: space-between;
-    opacity: 0.5;
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    justify-content: center;
+
+    .copyright {
+      font-size: 1.4rem;
+      color: rgba(245, 247, 251, 0.5);
+    }
   }
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1200px) {
   footer {
-    margin: 0 calc(var.$spacing-body * -1.3);
-    // margin-top: 26rem;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  footer > div:first-child > div:last-child {
-    max-width: 60%;
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 }
 
 @media screen and (max-width: 900px) {
   footer {
-    padding: 5rem 4rem;
-    //margin: 0 calc(var.$spacing-body * -0.2);
-    backdrop-filter: blur(0.2px);
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4rem 3rem;
 
-    #bottom_logo {
-      margin-bottom: 4rem;
-      font-size: 2rem;
-      img {
-        width: 20px;
-        height: 20px;
+    .footer-branding {
+      #bottom_logo {
+        font-size: 1.8rem;
+
+        img {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+
+      .footer-description {
+        font-size: 1.4rem;
       }
     }
 
-    > div:first-child {
-      flex-direction: column;
-      > div:last-child {
-        max-width: 100%;
+    .footer-links {
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      .link-group a {
+        font-size: 1.4rem;
       }
     }
 
-    .bottom-menu {
-      > div {
-        gap: 1rem;
-        flex-direction: row;
-        justify-content: center;
+    .footer-disclaimer p {
+      font-size: 1.3rem;
+    }
+  }
+}
 
-        &:last-child {
-          flex-direction: row-reverse;
-          a {
-            width: 41%;
-            width: calc(50% - 0.5rem);
-            &:nth-child(2n) {
-              text-align: right;
-            }
-          }
+@media screen and (max-width: 748px) {
+  footer {
+    padding: 3rem 2rem;
+
+    .footer-top {
+      gap: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .footer-branding {
+      gap: 1.5rem;
+    }
+
+    .footer-links {
+      h4 {
+        font-size: 1.3rem;
+      }
+
+      .link-group {
+        gap: 0.8rem;
+
+        a {
+          font-size: 1.3rem;
         }
       }
     }
 
-    p {
-      text-align: center;
-    }
+    .footer-disclaimer {
+      padding: 1.5rem;
 
-    .copyright {
-      gap: 1rem;
-      flex-direction: column;
-      text-align: center;
+      p {
+        font-size: 1.2rem;
+      }
     }
   }
 }
-
-@media screen and (max-width: 900px) {
-  footer.safari {
-    backdrop-filter: blur(0.2px);
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (max-width: 748px) {
-  footer.safari {
-    backdrop-filter: blur(0.2px);
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-
 </style>

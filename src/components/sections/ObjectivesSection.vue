@@ -1,11 +1,5 @@
 <template>
     <section id="objectives">
-      <div class="obg">
-        <svg width="800px" height="800px" viewBox="0 0 16 16" fill="currentColor">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4ZM6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8Z" />
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0ZM2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8Z" />
-        </svg>
-      </div>
       <h2>
         Objectives
       </h2>
@@ -39,44 +33,54 @@
   position: relative;
   z-index: 1;
 
-  .obg {
-    position: absolute;
-    background: #0808082e;
-    width: 200%;
-    height: 100%;
-    left: -50%;
-    backdrop-filter: blur(5px);
-    z-index: -1;
-    overflow: hidden;
+  padding: 6rem;
+  border: 1px solid var.$border-soft;
+  border-radius: 2rem;
+  background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
+  box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
 
-    svg {
-      position: absolute;
-      z-index: -1;
-      opacity: .07;
-      top: 0rem;
-      left: 0rem;
-      color: var.$ascent-color;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 30%, rgba(2, 255, 207, 0.08), transparent 40%),
+                radial-gradient(circle at 80% 10%, rgba(0, 52, 42, 0.18), transparent 40%),
+                linear-gradient(180deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.9) 100%);
+    z-index: 0;
+    border-radius: 2.4rem;
+    pointer-events: none;
   }
 
   h2 {
     width: 100%;
-    padding-top: 10rem;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
   }
 
   > div {
     display: flex;
     gap: 6rem;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
     > div {
       flex: 1;
+      padding: 2.4rem;
+      border: 1px solid var.$border-soft;
+      border-radius: 1.6rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.02), rgba(2, 255, 207, 0.05));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
     }
     ol li + li {
       margin-top: 1rem;
     }
     ol {
       padding-left: 1.8rem;
-      font-size: 2rem;
+      font-size: 1.9rem;
+      color: rgba(245, 247, 251, 0.85);
     }
   }
 }

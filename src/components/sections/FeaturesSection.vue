@@ -32,13 +32,6 @@
                 <div class="description">Account based blockchain with more advantages than traditional UTXO.</div>
             </div>
             <div class="feature-item">
-                <svg width="35" height="35" viewBox="0 0 512 512" fill="currentColor">
-                    <polygon points="386.415,193.208 287.481,193.208 359.434,0 161.566,0 125.585,280.151 206.528,280.151 170.557,512"/>
-                </svg>
-                <div class="title">Boost & Fast Synchronization</div>
-                <div class="description">Synchronize in parallel across multiple nodes or instantly with the latest chain state.</div>
-            </div>
-            <div class="feature-item">
                 <svg width="40" height="40" fill="currentColor" viewBox="0 0 32 32">
                     <path d="M21.022 7.57l-1.085 0.672-0.638 4.16-0.001 0.002 2.392-3.692zM17.176 13.044l-4.91-1.623-1.362 0.841 0.897 1.080zM12.916 4.884c0.199-0.111 0.367-0.269 0.483-0.471 0.404-0.701 0.048-1.664-0.796-2.151s-1.856-0.314-2.26 0.386c-0.117 0.202-0.17 0.426-0.166 0.655-2.892-1.297-6.034-1.598-8.557-0.37 6.565 1.888 12.005 5.305 16.746 9.674-0.665-3.046-2.783-5.805-5.451-7.723zM8.636 6.416l-7.023 12.172c0.521 0.857 1.287 1.552 2.592 1.498l7.023-12.172c-0.798-0.574-1.666-1.068-2.592-1.498zM25.291 12.093l-11.3 3.489-2.641 5.171 13.511 9.812 5.526-15.689z"></path>
                 </svg>
@@ -108,9 +101,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 6rem;
+    border: 1px solid var.$border-soft;
+    border-radius: 2rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
+    box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 15% 30%, rgba(2, 255, 207, 0.08), transparent 40%),
+                    radial-gradient(circle at 80% 10%, rgba(0, 52, 42, 0.18), transparent 40%),
+                    linear-gradient(180deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.9) 100%);
+        z-index: 0;
+        border-radius: 2.4rem;
+        pointer-events: none;
+    }
 
     h2 {
         margin-bottom: 7rem;
+        position: relative;
+        z-index: 1;
+        align-self: flex-start;
+        text-align: left;
     }
 
     #features-container {
@@ -118,38 +132,107 @@
         gap: 2rem;
         width: 100%;
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        position: relative;
+        z-index: 1;
 
         .feature-item {
             position: relative;
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(6px);
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 1.5rem;
+            gap: 1rem;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(145deg, rgba(6, 12, 15, 0.85), rgba(10, 17, 20, 0.55));
+            border: 1px solid var.$border-soft;
+            border-radius: 1.8rem;
             padding: 3rem;
-
             overflow: hidden;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 20px 60px rgba(0, 0, 0, 0.45);
+            transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
 
             .title {
                 font-size: 3rem;
                 margin-bottom: 1rem;
                 font-weight: bold;
                 margin-right: 4rem;
+                color: var.$white;
             }
 
             .description {
-                font-weight: lighter;
-                opacity: .8;
+                font-weight: 400;
+                opacity: .82;
+                color: rgba(245, 247, 251, 0.8);
             }
 
             svg {
                 position: absolute;
                 z-index: -1;
-                opacity: .2;
+                opacity: .18;
                 color: var.$ascent-color;
-                top: 2rem; 
+                top: 2rem;
                 right: 2rem;
+                filter: drop-shadow(0 0 25px rgba(2, 255, 207, 0.25));
             }
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 20% 20%, rgba(2, 255, 207, 0.08), transparent 40%);
+                z-index: -2;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                inset: -1px;
+                border-radius: inherit;
+                border: 1px solid rgba(2, 255, 207, 0.14);
+                opacity: 0;
+                transition: opacity 0.2s ease;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                border: 1px solid var.$border-strong;
+                box-shadow: var.$glow, 0 25px 70px rgba(0, 0, 0, 0.6);
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Responsive tweaks to avoid horizontal overflow and center content
+@media screen and (max-width: 1100px) {
+    #features {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #features {
+        padding: 3rem 2rem;
+        
+        h2 {
+            align-self: center;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        #features-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 748px) {
+    #features {
+        padding: 2rem 1.6rem;
+
+        #features-container {
+            gap: 1.6rem;
         }
     }
 }

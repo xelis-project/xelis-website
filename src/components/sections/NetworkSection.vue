@@ -38,7 +38,10 @@
   gap: 5rem;
   justify-content: space-between;
   padding: 11rem;
-  background: black;
+  background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
+  border: 1px solid var.$border-soft;
+  border-radius: 2rem;
+  box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
 
   &.active {
     animation: network-anim 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
@@ -55,13 +58,15 @@
 
   h2 {
     width: 30%;
+    font-size: 4.8rem;
+    letter-spacing: -0.01em;
   }
 
   .angle {
     position: absolute;
     width: 30px;
     height: 30px;
-    border: 1px solid var.$ascent-color;
+    border: 1px solid rgba(2, 255, 207, 0.5);
     &.tl {
       top: 0;
       left: 0;
@@ -150,6 +155,7 @@
   }
   li span {
     color: var.$ascent-color;
+    text-shadow: 0 0 16px rgba(2, 255, 207, 0.35);
   }
 
   .bg {

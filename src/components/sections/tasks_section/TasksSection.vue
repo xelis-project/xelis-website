@@ -228,16 +228,34 @@ export default {
   }
 
   .filter-buttons {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+
     button {
-      background: rgba(255, 255, 255, 0.4);
-      border: none;
-      padding: .6rem 1rem;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 0.8rem 1.5rem;
       cursor: pointer;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(4px);
+      border-radius: 0.6rem;
+      font-weight: 500;
+      transition: all 250ms ease;
+      color: white;
     }
 
-    button:hover, button.active {
-      background: white;
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+      border-color: rgba(2, 255, 207, 0.6);
+      transform: scale(1.05);
+    }
+
+    button.active {
+      background: #02FFCF;
+      border-color: #02FFCF;
+      color: #001a15;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(2, 255, 207, 0.4);
     }
   }
 

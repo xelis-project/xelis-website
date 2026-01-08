@@ -15,16 +15,18 @@
 }
 
 html {
-  background: #000;
-//   background: rgba(5, 124, 132, 0.70);
-  font-size: 62.5%; // = 10px
+    background: radial-gradient(circle at 20% 20%, rgba(2, 255, 207, 0.12), transparent 30%),
+                            radial-gradient(circle at 80% 0%, rgba(0, 52, 42, 0.25), transparent 35%),
+                            var.$bg-primary;
+    font-size: 62.5%; // = 10px
 }
 
 body {
-  font-family: "Jura", sans-serif;
-  font-size: 1.8rem;
-  color: var.$white;
-  margin: 0;
+    font-family: "Jura", sans-serif;
+    font-size: 1.8rem;
+    color: var.$white;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(10, 17, 20, 0.85) 0%, rgba(2, 7, 8, 1) 100%);
 }
 
 html, body { // For safari
@@ -37,18 +39,20 @@ html, body { // For safari
 #app {
     padding: 2rem var.$spacing-body 0 var.$spacing-body;
     overflow: hidden;
+    position: relative;
 }
 
 // ======== GLOBAL STYLES ========
 
 a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.2s ease-in-out;
-    &:hover {
-      color: var.$ascent-color;
-      cursor: pointer;
-    }
+        text-decoration: none;
+        color: white;
+        transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+        &:hover {
+            color: var.$ascent-color;
+            text-shadow: 0 0 18px rgba(2, 255, 207, 0.4);
+            cursor: pointer;
+        }
 }
 
 ul {
@@ -85,17 +89,17 @@ section {
 .button {
     button {
         cursor: pointer;
-        color: black;
-        transition: all 0.15s ease-in-out;
-        background-color: var.$ascent-color;
-        padding: 1rem 2.5rem;
-        font-size: 1.5rem;
+        color: #041414;
+        transition: all 0.2s ease-in-out;
+        background: linear-gradient(135deg, var.$ascent-color 0%, #7fffe7 100%);
+        padding: 1.1rem 2.6rem;
+        font-size: 1.6rem;
         display: flex;
         align-items: center;
-        border-radius: 0.5rem;
-        border: none;
-        display: flex;
+        border-radius: 0.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
         gap: 1rem;
+        box-shadow: var.$glow;
 
         &.big {
             padding: 1.6rem 3.8rem;
@@ -103,16 +107,17 @@ section {
         span {
             margin-top: 2px;
             font-family: "Helios Bold";
+            letter-spacing: 0.02em;
         }
         svg {
-            color: black;
+            color: #041414;
             margin-right: 0.5rem;
         }
     }
     &:hover {
         button {
-            background-color: var.$white;
-            transform: scale3d(.95, .95, 1);
+            transform: translateY(-2px) scale3d(.99, .99, 1);
+            box-shadow: 0 10px 30px rgba(2, 255, 207, 0.35);
         }
     }
 }
@@ -243,9 +248,12 @@ header {
     }
 
     .bg {
-        z-index: -1;
+        z-index: -2;
+        pointer-events: none;
+        filter: drop-shadow(0 0 50px rgba(2, 255, 207, 0.1));
+
         .logo {
-            color: rgba(0, 0, 0, 0.13);
+            color: rgba(0, 0, 0, 0.18);
             position: absolute;
             $size: 150rem;
             $offset: -50rem;
@@ -253,7 +261,7 @@ header {
             right: $offset;
             height: $size;
             width: $size;
-            z-index: 1;
+            z-index: -1;
             animation: logo-start .75s forwards, logo-floating 5s ease-in-out .7s infinite;
         }
         .bgtr {
@@ -261,33 +269,33 @@ header {
             top: -20rem;
             right: -20rem;
             border-radius: 1752px;
-            background: rgba(0, 170, 150, 0.6);
+            background: rgba(0, 170, 150, 0.35);
             filter: blur(165px);
             width: 40vw;
             height: 72vh;
-            z-index: 0;
+            z-index: -2;
         }
         .bgm {
             position: absolute;
             top: -40%;
             right: 0;
             border-radius: 1146px;
-            background: rgba(0, 170, 129, 0.6);
+            background: rgba(0, 170, 129, 0.45);
             filter: blur(245px);
             width: 75vw;
             height: 75vw;
-            z-index: -1;
+            z-index: -3;
         }
         .bgt {
             position: absolute;
             top: 0;
             left: 0;
             border-radius: 1752px;
-            background: rgba(0, 170, 150, 0.6);
+            background: rgba(0, 170, 150, 0.35);
             filter: blur(165px);
             width: 50vw;
             height: 26vh;
-            z-index: 0;
+            z-index: -2;
         }
         .circuit {
             position: absolute;
@@ -296,8 +304,8 @@ header {
             transform: rotateY(180deg) scale3d(1.7, 1.7, 1);
             width: 167vw;
             height: 151vw;
-            z-index: -1;
-            opacity: .5;
+            z-index: -4;
+            opacity: .35;
         }
     }
 
@@ -565,6 +573,9 @@ main {
                 left: -180vw;
                 width: 300vw;
                 height: 300vw;
+                z-index: -4;
+                pointer-events: none;
+                opacity: 0.2;
             }
         }
     }

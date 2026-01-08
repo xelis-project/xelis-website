@@ -38,7 +38,18 @@
             4.
           </div>
           <div class="text">
-            Stable height is the last height in which the order of the DAG cannot change.
+            <ul class="list">
+              <li>
+                Stable height is the last height in which the order of the DAG cannot change.
+                No more blocks can be added before this height.
+              </li>
+              <li>
+                Best chain is selected by the highest cumulative difficulty.
+              </li>
+              <li>
+                The cumulative difficulty is the sum of the difficulties of all previous blocks in the best chain up to this block.
+              </li>
+            </ul>
           </div>
         </li>
         <li class="item is-animated">
@@ -49,15 +60,15 @@
             Different types of blocks:
             <ul class="list">
               <li>
-                Sync: It is at a stable height and is the only block at its height 
+                <span class="keyword">Sync:</span> It is at a stable height and is the only block at its height 
                 (or the only ordered block at this height and doesn't have a lower cumulative difficulty than previous blocks).
               </li>
               <li>
-                Side: Its height is less than or equal to the height of the past 8 topographical blocks.
+                <span class="keyword">Side:</span> Its height is less than or equal to the height of the past 8 topographical blocks.
                 Its block rewards are reduced to 30%.
               </li>
               <li>
-                Orphaned: This block was not ordered in the DAG and has no topographical height (it's transactions are not executed).
+                <span class="keyword">Orphaned:</span> This block was not ordered in the DAG and has no topographical height (it's transactions are not executed).
               </li>
             </ul>
           </div>
@@ -84,18 +95,23 @@
 
 #blockdag {
   position: relative;
+  z-index: 1;
+  padding: 6rem;
+  border: 1px solid var.$border-soft;
+  border-radius: 2rem;
+  background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
+  box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -50%;
-    z-index: -1;
-    width: calc(1060.003px / 1920px) * 100vw;
-    height: 800px;
-    background: rgba(0, 170, 150, 0.2);
-    filter: blur(150px);
-    border-radius: 100%;
+    inset: 0;
+    background: radial-gradient(circle at 15% 30%, rgba(2, 255, 207, 0.08), transparent 40%),
+                radial-gradient(circle at 80% 10%, rgba(0, 52, 42, 0.18), transparent 40%),
+                linear-gradient(180deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.9) 100%);
+    z-index: 0;
+    border-radius: 2rem;
+    pointer-events: none;
   }
 
   .title {
@@ -103,40 +119,70 @@
     gap: 4rem;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2.5rem;
-    border-bottom: 2px solid var.$white;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var.$border-strong;
+    position: relative;
+    z-index: 1;
+
     span {
       font-size: 2rem;
-      font-weight: bold;
+      font-weight: 500;
+      color: rgba(245, 247, 251, 0.85);
+      line-height: 3rem;
     }
   }
   h2 {
     margin: 0;
+    position: relative;
+    z-index: 1;
   }
   ul.content {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 4rem;
-    column-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+
     li.item {
       display: flex;
-      margin-bottom: 3rem;
-      padding-bottom: 3rem;
-      width: calc(50% - 2rem);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      &:nth-last-child(1), &:nth-last-child(2) {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: 0;
+      gap: 1.5rem;
+      padding: 2rem;
+      border: 1px solid var.$border-soft;
+      border-radius: 1.6rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.02), rgba(2, 255, 207, 0.05));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      transition: transform 0.2s ease, border 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border: 1px solid var.$border-strong;
+        box-shadow: var.$glow, inset 0 1px 0 rgba(255, 255, 255, 0.04);
       }
     }
     .number {
-      margin-right: 1rem;
-      width: 3rem;
-      color: var.$ascent-color;
+      flex-shrink: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #041414;
+      background: var.$ascent-color;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.4rem;
     }
     .text {
-      max-width: calc(100% - 4rem);
+      flex: 1;
+      font-size: 1.6rem;
+      color: rgba(245, 247, 251, 0.82);
+      line-height: 2.4rem;
+    }
+
+    .keyword {
+      color: var.$ascent-color;
+      font-weight: 600;
     }
   }
 }
@@ -145,44 +191,29 @@
 
 @media screen and (max-width: 748px) {
   #blockdag {
+    padding: 3rem;
+
     .title {
-      gap: 1rem;
+      gap: 1.5rem;
       flex-direction: column;
       align-items: flex-start;
-      position: relative;
+      padding-bottom: 2rem;
+
       span {
-        font-size: 1.6rem;
-      }
-
-      &:before {
-        top: -100%;
-        left: -50%;
-        width: 80vh;
-        height: 200%;
-        content: "";
-        position: absolute;
-        background: rgba(2, 255, 207, 0.25);
-        transform: rotate(-110deg);
-        filter: blur(165px);
+        font-size: 1.5rem;
+        line-height: 2.4rem;
       }
     }
-    ul.content li.item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      width: 100%;
-      &:nth-last-child(2) {
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    ul.content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+
+      li.item {
+        padding: 1.5rem;
       }
     }
-  }
-
-  .safari #blockdag .title::before {
-    top: -200%;
-    left: -50%;
-    filter: blur(100px);
-    height: 100vh;
   }
 }
 </style>
