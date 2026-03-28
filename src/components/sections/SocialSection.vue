@@ -5,7 +5,7 @@
       </h2>
       <div>
         <div>
-          <a href="https://discord.gg/xelis" target="_blank">
+          <a href="https://discord.xelis.io/" target="_blank">
             <img src="@/assets/images/discord.svg" alt="Github logo" />
             Discord
           </a>
