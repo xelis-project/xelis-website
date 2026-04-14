@@ -15,13 +15,13 @@
         <h2>Network</h2>
         <ul>
           <li>Coin Name: <span>XELIS (XEL)</span></li>
-          <li>Average Block Time: <span>15 seconds</span></li>
+          <li>Average Block Time: <span>5 seconds</span></li>
           <li>Maximum Block Size: <span>1.25 MB</span></li>
           <li>Block Reward: <span>up to ~ 1.46 XEL</span></li>
           <li>Maximum Supply: <span>18.4 million</span></li>
           <li>Minimum Transaction Fees: <span>0.0001 XEL per kB</span></li>
           <li>Atomic Units: <span>8</span></li>
-          <li>Block Dev Fee: <span>10%</span></li>
+          <li>Block Dev Fee: <span>5%</span></li>
         </ul>
       </div>
     </section>
