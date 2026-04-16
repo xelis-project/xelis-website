@@ -490,3 +490,4 @@ export default [
     home: true
   }
 ]
+

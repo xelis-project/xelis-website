@@ -4,7 +4,7 @@
             <div class="hero-copy">
                 <p class="eyebrow">Privacy-first Layer 1 · Rust BlockDAG</p>
                 <p id="resume">
-                    The world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span> and <span>Smart Contracts</span>.
+                    The world's first BlockDAG with <span>Privacy</span>, <span>Speed</span>, <span>Scalability</span>, and <span>Smart Contracts</span>.
                 </p>
 
                 <div class="hero-tags">
