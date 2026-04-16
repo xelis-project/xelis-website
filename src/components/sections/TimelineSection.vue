@@ -1,8 +1,8 @@
 <template>
     <section id="timeline">
         <h2>Timeline</h2>
-        <div id="timeline-container" class="scroll-bar is-animated" :class="{'fade-childs': !preRendered,}">
-            <div v-for="(task, index) in tasks" v-bind:key="index" class="is-animated" :class="{ 'done': task.status === 'Completed'}">
+        <div ref="timelineContainer" id="timeline-container" class="scroll-bar">
+            <div v-for="(task, index) in tasks" v-bind:key="index" :class="{ 'done': task.status === 'Completed'}">
                 <div class="top">
                     <template v-if="index % 2 === 0">
                         <div>{{ task.year }} {{ task.quarter }}</div>
@@ -50,6 +50,18 @@ export default {
         }
 
         return { tasks };
+    },
+    mounted() {
+        const scrollToEnd = () => {
+            const container = this.$refs.timelineContainer;
+            // Keep polling each animation frame until items are rendered and have real width
+            if (!container || container.scrollWidth <= container.clientWidth) {
+                requestAnimationFrame(scrollToEnd);
+                return;
+            }
+            container.scrollLeft = container.scrollWidth;
+        };
+        requestAnimationFrame(scrollToEnd);
     }
 }
 </script>

@@ -9,7 +9,7 @@
             <div>XELIS</div>
           </div>
           <p class="footer-description">
-            The world's first BlockDAG with Privacy, Speed, Scalability and Smart Contracts.
+            The world's first BlockDAG with Privacy, Speed, Scalability, and Smart Contracts.
           </p>
         </div>
 
