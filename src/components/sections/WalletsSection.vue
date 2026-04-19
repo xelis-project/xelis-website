@@ -94,6 +94,25 @@
                   </div>
                 </div>
               </div>
+              <div class="item">
+                <img src="@/assets/images/stackwallet.png" alt="Stack Wallet" />
+                <div class="right-content">
+                  <p>
+                    Stack Wallet
+                  </p>
+                  <p>
+                    An open-source multi-coin wallet available on mobile and desktop platforms.
+                  </p>
+                  <div class="buttons">
+                    <a class="button" target="_blank" href="https://stackwallet.com/">
+                      <button>
+                        <img src="@/assets/images/browser.svg" alt="Browser logo" />
+                        <span>Open</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
