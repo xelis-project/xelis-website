@@ -52,16 +52,13 @@ export default {
         return { tasks };
     },
     mounted() {
-        const scrollToEnd = () => {
-            const container = this.$refs.timelineContainer;
-            // Keep polling each animation frame until items are rendered and have real width
-            if (!container || container.scrollWidth <= container.clientWidth) {
-                requestAnimationFrame(scrollToEnd);
-                return;
-            }
-            container.scrollLeft = container.scrollWidth;
-        };
-        requestAnimationFrame(scrollToEnd);
+        const container = this.$refs.timelineContainer;
+        container.scrollLeft = container.scrollWidth;
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
     }
 }
 </script>
