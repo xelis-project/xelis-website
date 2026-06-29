@@ -17,11 +17,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "merch" */ '../views/MerchView.vue')
   },
   {
-    path: '/roadmap',
-    name: 'roadmap',
-    component: () => import(/* webpackChunkName: "roadmap" */ '../views/RoadmapView.vue')
-  },
-  {
     path: '/exchanges',
     name: 'exchanges',
     component: () => import(/* webpackChunkName: "exchanges" */ '../views/ExchangesView.vue')

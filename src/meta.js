@@ -14,11 +14,6 @@ const meta = {
     description: `Official XELIS premium merchandise products.`,
     keywords: `XELIS hoodies, XELIS t-shirts, XELIS mugs, XELIS accessories`,
   },
-  '/roadmap': {
-    title: `XELIS - Roadmap`,
-    description: `Past & ongoing development tasks of the XELIS project.`,
-    keywords: ``,
-  },
   '/exchanges': {
     title: `XELIS - Exchanges`,
     description: `List of exchanges where you can trade XELIS.`,

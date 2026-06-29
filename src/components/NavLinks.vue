@@ -4,11 +4,6 @@
       Home
     </router-link>
   </li>
-  <li v-if="$route.name !== 'roadmap'">
-    <router-link :to="{name: 'roadmap'}">
-      Roadmap
-    </router-link>
-  </li>
   <li v-if="$route.name !== 'resources'">
     <router-link :to="{name: 'resources'}">
       Resources

@@ -85,7 +85,7 @@ export default {
       if (priority) query[`priority`] = priority;
       if (tag) query[`tag`] = tag;
 
-      this.$router.push({ path: '/roadmap', query });
+      this.$router.push({ path: '/', query });
     },  
     setStatus(status) {
       this.pushQuery(this.search, status, this.year, this.priority, this.tag);

@@ -61,19 +61,6 @@
           </li>
           <li>/</li>
         </template>
-        <template v-if="$route.name === 'roadmap'">
-          <li>
-            <router-link :to="{name: 'roadmap', hash: '#tasks'}">
-              Tasks
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'roadmap', hash: '#timeline'}">
-              Timeline
-            </router-link>
-          </li>
-          <li>/</li>
-        </template>
         <NavLinks />
         <li id="burger_menu">
           <button>
@@ -126,19 +113,6 @@
             <li>
               <router-link :to="{name: 'resources', hash: '#links'}">
                 Links
-              </router-link>
-            </li>
-            <li>-</li>
-          </template>
-          <template v-if="$route.name === 'roadmap'">
-            <li>
-              <router-link :to="{name: 'roadmap', hash: '#tasks'}">
-                Tasks
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{name: 'roadmap', hash: '#timeline'}">
-                Timeline
               </router-link>
             </li>
             <li>-</li>
