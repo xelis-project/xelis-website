@@ -154,8 +154,11 @@
     position: relative;
     z-index: 10;
     overflow: hidden;
-    padding: 3rem 8rem 10rem 8rem;
-    background: black;
+    padding: clamp(3rem, 5vw, 6rem);
+    border: 1px solid var.$border-soft;
+    border-radius: 0.8rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.58), rgba(6, 12, 15, 0.82));
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.36);
     &::before {
       content: "";
       position: absolute;
@@ -187,7 +190,7 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      border: 1px solid var.$ascent-color;
+      border: 1px solid rgba(2, 255, 207, 0.45);
       &.tl {
         top: 0;
         left: 0;
@@ -219,6 +222,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 10rem;
+    margin-bottom: 3rem;
+
+    h2 {
+      margin: 0;
+      text-align: left;
+    }
+
+    p {
+      max-width: 46rem;
+      color: rgba(245, 247, 251, 0.74);
+      line-height: 1.55;
+    }
   }
   .wallets-content {
     display: flex;
@@ -231,13 +246,15 @@
       display: flex;
       gap: 2rem;
       flex: 1;
-      background: rgba(255, 255, 255, 0.08);
+      background: linear-gradient(145deg, rgba(6, 12, 15, 0.74), rgba(10, 17, 20, 0.44));
+      border: 1px solid var.$border-soft;
       padding: 2rem;
-      border-radius: 1rem;
+      border-radius: 0.8rem;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 14px 34px rgba(0, 0, 0, 0.22);
       img {
         max-width: 65%;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
         width: 100%;
       }
       p:first-of-type {
@@ -245,7 +262,8 @@
         font-weight: bold;
       }
       p:last-of-type {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(245, 247, 251, 0.68);
+        line-height: 1.45;
       }
     }
 

@@ -2,8 +2,9 @@
     <section id="socials" class="is-animated">
       <div class="socials-shell">
         <div class="socials-header">
-          <h2>Connect with Us</h2>
-          <p>Join the XELIS community across all platforms</p>
+          <p class="section-kicker">Community</p>
+          <h2>Build and follow XELIS</h2>
+          <p>Join the community, follow development, or inspect the code directly.</p>
         </div>
 
         <div class="socials-grid">
@@ -60,22 +61,22 @@
 #socials {
   position: relative;
   z-index: 1;
-  padding: 6rem;
+  padding: clamp(3rem, 5vw, 6rem);
   border: 1px solid var.$border-soft;
-  border-radius: 2rem;
-  background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
-  box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
+  border-radius: 0.8rem;
+  background: linear-gradient(150deg, rgba(10, 17, 20, 0.58), rgba(6, 12, 15, 0.82));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.36);
   overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 15% 30%, rgba(2, 255, 207, 0.08), transparent 40%),
-                radial-gradient(circle at 80% 10%, rgba(0, 52, 42, 0.18), transparent 40%),
-                linear-gradient(180deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.9) 100%);
+    background:
+                linear-gradient(90deg, rgba(2, 255, 207, 0.4), transparent 35%, rgba(245, 217, 95, 0.14) 100%) top left / 100% 1px no-repeat,
+                linear-gradient(180deg, rgba(2, 255, 207, 0.045), transparent 42%);
     z-index: 0;
-    border-radius: 2rem;
+    border-radius: inherit;
     pointer-events: none;
   }
 
@@ -93,15 +94,19 @@
   }
 
   .socials-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
     text-align: center;
 
     h2 {
-      margin: 0 0 1rem 0;
+      margin: 0;
       font-size: 4.8rem;
       letter-spacing: -0.01em;
     }
 
-    p {
+    p:not(.section-kicker) {
       font-size: 1.8rem;
       color: rgba(245, 247, 251, 0.75);
     }
@@ -122,9 +127,9 @@
     gap: 1.2rem;
     padding: 2.4rem;
     border: 1px solid var.$border-soft;
-    border-radius: 1.8rem;
+    border-radius: 0.8rem;
     background: linear-gradient(165deg, rgba(255, 255, 255, 0.02), rgba(2, 255, 207, 0.05));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 12px 30px rgba(0, 0, 0, 0.22);
     transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
     color: var.$white;
@@ -132,7 +137,7 @@
     &:hover {
       transform: translateY(-4px);
       border: 1px solid var.$border-strong;
-      box-shadow: var.$glow, 0 15px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.36), 0 0 24px rgba(2, 255, 207, 0.12);
 
       .social-icon {
         transform: scale(1.1);
@@ -157,7 +162,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1.2rem;
+    border-radius: 0.8rem;
     background: rgba(2, 255, 207, 0.1);
     transition: transform 0.2s ease;
 

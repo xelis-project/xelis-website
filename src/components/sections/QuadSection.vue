@@ -43,23 +43,48 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 5rem;
+  padding: clamp(3rem, 5vw, 6rem);
+  border: 1px solid var.$border-soft;
+  border-radius: 0.8rem;
+  background: linear-gradient(150deg, rgba(10, 17, 20, 0.42), rgba(6, 12, 15, 0.72));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(2, 255, 207, 0.4), transparent 35%, rgba(245, 217, 95, 0.14) 100%) top left / 100% 1px no-repeat,
+      linear-gradient(180deg, rgba(2, 255, 207, 0.045), transparent 42%);
+    pointer-events: none;
+  }
 
   @media screen and (min-width: 1024px) {
     flex-direction: row;
   }
 
   svg {
-    padding: 5rem;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: min(48rem, 100%);
+    height: auto;
   }
 
   h2 {
+    position: relative;
+    z-index: 1;
     max-width: 80rem;
+    margin: 0;
 
     >div{
-      margin-top: 1rem;
-      font-weight: lighter;
+      margin-top: 1.4rem;
+      font-family: "Jura", sans-serif;
+      font-weight: 400;
       font-size: 2rem;
-      opacity: .7;
+      line-height: 1.55;
+      color: rgba(245, 247, 251, 0.74);
     }
   }
 

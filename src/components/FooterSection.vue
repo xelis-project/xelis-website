@@ -71,7 +71,7 @@ footer {
   background: linear-gradient(160deg, rgba(10, 17, 20, 0.9), rgba(6, 12, 15, 0.92));
   backdrop-filter: blur(4px);
   overflow: hidden;
-  box-shadow: var.$glow, 0 -20px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 -18px 48px rgba(0, 0, 0, 0.34);
 
   .circuit {
     z-index: -1;
@@ -154,7 +154,7 @@ footer {
   .footer-disclaimer {
     padding: 2rem;
     border: 1px solid var.$border-soft;
-    border-radius: 1.2rem;
+    border-radius: 0.8rem;
     background: rgba(255, 255, 255, 0.02);
 
     p {

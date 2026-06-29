@@ -42,9 +42,14 @@ export default {
 
 #mining {
     display: flex;
-    gap: 11rem;
+    gap: clamp(3rem, 7vw, 11rem);
     position: relative;
     z-index: 1;
+    padding: clamp(3rem, 5vw, 5rem);
+    border: 1px solid var.$border-soft;
+    border-radius: 0.8rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.48), rgba(6, 12, 15, 0.76));
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 
     > div {
         flex: 1;
@@ -53,6 +58,11 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        p {
+            color: rgba(245, 247, 251, 0.78);
+            line-height: 1.6;
+        }
     }
 
     .circuit {

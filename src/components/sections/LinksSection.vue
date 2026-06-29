@@ -41,6 +41,11 @@ export default {
 #links {
     position: relative;
     z-index: 1;
+    padding: clamp(3rem, 5vw, 5rem);
+    border: 1px solid var.$border-soft;
+    border-radius: 0.8rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.48), rgba(6, 12, 15, 0.76));
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 
     .content {
         display: flex;
@@ -58,12 +63,15 @@ export default {
         flex-wrap: wrap;
 
         a {
-            border: thin solid rgb(255 255 255 / 70%);
-            padding: .5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 0.6rem;
+            padding: 0.85rem 1.2rem;
+            background: rgba(255, 255, 255, 0.025);
             white-space: nowrap;
 
             &:hover {
-                border: thin solid #02FFCF;
+                border: 1px solid #02FFCF;
+                background: rgba(2, 255, 207, 0.06);
             }
         }
     }

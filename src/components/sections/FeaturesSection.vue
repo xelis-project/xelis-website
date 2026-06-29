@@ -1,29 +1,35 @@
 <template>
     <section id="features">
-        <h2>Key Features</h2>
+        <div class="features-header">
+            <p class="section-kicker">Capabilities</p>
+            <h2>What the network brings together</h2>
+            <p class="section-subtitle">
+                Privacy, parallel block flow, programmable execution, and wallet tooling are designed as one stack instead of separate add-ons.
+            </p>
+        </div>
         <div id="features-container" class="is-animated" :class="{'fade-childs': !preRendered,}">
-            <div class="feature-item">
+            <div class="feature-item primary">
                 <svg width="40" height="40" fill="currentColor" viewBox="0 0 96.666 96.666">
                     <rect x="36" y="6" width="24.666" height="24.666"></rect><rect x="36" y="66" width="24.666" height="24.666"></rect><rect y="66" width="24.666" height="24.666"></rect><rect x="72" y="66" width="24.666" height="24.666"></rect><polygon points="15.31,51.333 45.833,51.333 45.833,62.666 50.833,62.666 50.833,51.333 82.105,51.333 82.105,63.066  86.561,63.066 86.561,46.4 84.334,46.4 84.334,46.333 50.833,46.333 50.833,35 45.833,35 45.833,46.333 12.334,46.333 12.334,46.4  10.856,46.4 10.856,63.066 15.31,63.066  "></polygon>
                 </svg>
                 <div class="title">BlockDAG</div>
-                <div class="description">Mutliple blocks at the same height to improve scalability and security of the network.</div>
+                <div class="description">Multiple blocks at the same height to improve scalability and security of the network.</div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item primary">
                 <svg width="40" height="40" viewBox="0 0 16 16">
                     <path d="m 8 1 c -2.199219 0 -4 1.800781 -4 4 v 2 c -1.109375 0 -2 0.890625 -2 2 v 5 c 0 0.554688 0.445312 1 1 1 h 10 c 0.554688 0 1 -0.445312 1 -1 v -5 c 0 -1.109375 -0.890625 -2 -2 -2 v -2 c 0 -2.199219 -1.800781 -4 -4 -4 z m 0 2 c 1.125 0 2 0.875 2 2 v 2 h -4 v -2 c 0 -1.125 0.875 -2 2 -2 z m 0 0" fill="currentColor"></path>
                 </svg>
                 <div class="title">Homomorphic Encryption</div>
                 <div class="description">Enabled using ElGamal to provide privacy on transferred amounts and balances.</div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item primary">
                 <svg width="35" height="35" viewBox="0 0 16 16" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 1H1V15H15V1ZM6 5L7.41421 6.41421L5.82843 8L7.41421 9.58579L6 11L3 8L6 5ZM10 5L8.58579 6.41421L10.1716 8L8.58579 9.58579L10 11L13 8L10 5Z" fill="currentColor"></path>
                 </svg>
                 <div class="title">Smart Contracts</div>
                 <div class="description">Easily code and create decentralized programs.</div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item primary">
                 <svg width="30" height="30" viewBox="-2 0 32 32" fill="currentColor">
                     <path id="Path_62" data-name="Path 62" d="M28,0H6A4,4,0,0,0,2,4V28a4,4,0,0,0,4,4H28a2,2,0,0,0,2-2V2A2,2,0,0,0,28,0ZM26,27a1,1,0,0,1-1,1H7.98A1.979,1.979,0,0,1,6,26.02v-.04A1.979,1.979,0,0,1,7.98,24H25a1,1,0,0,1,1,1Zm0-7.937a1,1,0,0,1-1,1H11a1,1,0,0,1-1-1V5a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1Z"/>
                     <rect id="Rectangle_19" data-name="Rectangle 19" width="8" height="4" rx="1" transform="translate(14 8)"/>
@@ -100,31 +106,41 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 6rem;
+    align-items: stretch;
+    padding: clamp(3rem, 5vw, 6rem);
     border: 1px solid var.$border-soft;
-    border-radius: 2rem;
-    background: linear-gradient(150deg, rgba(10, 17, 20, 0.82), rgba(6, 12, 15, 0.9));
-    box-shadow: var.$glow, 0 20px 60px rgba(0, 0, 0, 0.55);
+    border-radius: 0.8rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.58), rgba(6, 12, 15, 0.82));
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.36);
+    overflow: hidden;
 
     &::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 15% 30%, rgba(2, 255, 207, 0.08), transparent 40%),
-                    radial-gradient(circle at 80% 10%, rgba(0, 52, 42, 0.18), transparent 40%),
-                    linear-gradient(180deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.9) 100%);
+        background:
+                    linear-gradient(90deg, rgba(2, 255, 207, 0.4), transparent 32%, rgba(245, 217, 95, 0.16) 100%) top left / 100% 1px no-repeat,
+                    linear-gradient(180deg, rgba(2, 255, 207, 0.045), transparent 42%);
         z-index: 0;
-        border-radius: 2.4rem;
+        border-radius: inherit;
         pointer-events: none;
     }
 
-    h2 {
-        margin-bottom: 7rem;
+    .features-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 4rem;
         position: relative;
         z-index: 1;
-        align-self: flex-start;
         text-align: left;
+
+        h2 {
+            max-width: 86rem;
+            margin: 0;
+        }
     }
 
     #features-container {
@@ -141,16 +157,26 @@
             flex-direction: column;
             gap: 1rem;
             backdrop-filter: blur(10px);
-            background: linear-gradient(145deg, rgba(6, 12, 15, 0.85), rgba(10, 17, 20, 0.55));
+            background: linear-gradient(145deg, rgba(6, 12, 15, 0.74), rgba(10, 17, 20, 0.44));
             border: 1px solid var.$border-soft;
-            border-radius: 1.8rem;
-            padding: 3rem;
+            border-radius: 0.8rem;
+            padding: 2.4rem;
             overflow: hidden;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 20px 60px rgba(0, 0, 0, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 14px 34px rgba(0, 0, 0, 0.28);
             transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
 
+            &.primary {
+                border-color: rgba(2, 255, 207, 0.18);
+                background: linear-gradient(145deg, rgba(2, 255, 207, 0.075), rgba(10, 17, 20, 0.48));
+
+                .title {
+                    color: var.$ascent-color;
+                }
+            }
+
             .title {
-                font-size: 3rem;
+                font-size: 2.4rem;
+                line-height: 1.1;
                 margin-bottom: 1rem;
                 font-weight: bold;
                 margin-right: 4rem;
@@ -177,7 +203,7 @@
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: radial-gradient(circle at 20% 20%, rgba(2, 255, 207, 0.08), transparent 40%);
+                background: linear-gradient(120deg, rgba(2, 255, 207, 0.07), transparent 42%);
                 z-index: -2;
             }
 
@@ -194,7 +220,7 @@
             &:hover {
                 transform: translateY(-4px);
                 border: 1px solid var.$border-strong;
-                box-shadow: var.$glow, 0 25px 70px rgba(0, 0, 0, 0.6);
+                box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42), 0 0 26px rgba(2, 255, 207, 0.12);
 
                 &:after {
                     opacity: 1;
@@ -215,8 +241,9 @@
     #features {
         padding: 3rem 2rem;
         
-        h2 {
+        .features-header {
             align-self: center;
+            align-items: center;
             text-align: center;
             margin-bottom: 4rem;
         }

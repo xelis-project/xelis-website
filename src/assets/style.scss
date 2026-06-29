@@ -15,9 +15,7 @@
 }
 
 html {
-    background: radial-gradient(circle at 20% 20%, rgba(2, 255, 207, 0.12), transparent 30%),
-                            radial-gradient(circle at 80% 0%, rgba(0, 52, 42, 0.25), transparent 35%),
-                            var.$bg-primary;
+    background: var.$bg-primary;
     font-size: 62.5%; // = 10px
 }
 
@@ -26,7 +24,10 @@ body {
     font-size: 1.8rem;
     color: var.$white;
     margin: 0;
-    background: linear-gradient(180deg, rgba(10, 17, 20, 0.85) 0%, rgba(2, 7, 8, 1) 100%);
+    background:
+        radial-gradient(circle at 72% 8%, rgba(2, 255, 207, 0.12), transparent 32rem),
+        radial-gradient(circle at 12% 20%, rgba(245, 217, 95, 0.055), transparent 34rem),
+        linear-gradient(180deg, rgba(2, 7, 8, 1) 0%, rgba(5, 14, 15, 1) 42%, rgba(2, 7, 8, 1) 100%);
 }
 
 html, body { // For safari
@@ -84,6 +85,23 @@ h3 {
 
 section {
     margin-bottom: var.$spacing-body;
+}
+
+.section-kicker {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var.$ascent-color;
+}
+
+.section-subtitle {
+    margin: 0;
+    max-width: 72rem;
+    color: rgba(245, 247, 251, 0.72);
+    font-size: 1.8rem;
+    line-height: 1.55;
 }
 
 .button {
@@ -167,75 +185,61 @@ section {
   opacity: 0;
 }
 
-// ========= NOISE EFFECT =========
-#noise_effect {
-    position: fixed;
-    top: -50%;
-    right: -50%;
-    bottom: -50%;
-    left: -50%;
-    z-index: 2;
-    opacity: 3%;
-    width: 200%;
-    height: 200vh;
-    background: black;
-    background-image: url("@/assets/Noise.webp");
-    animation: bg-animation 0.2s infinite;
-    pointer-events: none;
-  }
-@keyframes bg-animation {
-    0% {
-        transform: translate(0,0)
-    }
-
-    10% {
-        transform: translate(-5%,-5%)
-    }
-
-    20% {
-        transform: translate(-10%,5%)
-    }
-
-    30% {
-        transform: translate(5%,-10%)
-    }
-
-    40% {
-        transform: translate(-5%,15%)
-    }
-
-    50% {
-        transform: translate(-10%,5%)
-    }
-
-    60% {
-        transform: translate(15%,0)
-    }
-
-    70% {
-        transform: translate(0,10%)
-    }
-
-    80% {
-        transform: translate(-15%,0)
-    }
-
-    90% {
-        transform: translate(10%,5%)
-    }
-
-    100% {
-        transform: translate(5%,0)
-    }
-}
-
 // ========= HEADER =========
 
 header {
     z-index: 1;
+    position: relative;
+    margin-bottom: 6rem;
+
+    .bg {
+        z-index: -2;
+        pointer-events: none;
+
+        .bgtr {
+            position: absolute;
+            top: -20rem;
+            right: -20rem;
+            border-radius: 1752px;
+            background: rgba(0, 170, 150, 0.35);
+            filter: blur(165px);
+            width: 40vw;
+            height: 72vh;
+            z-index: -2;
+        }
+
+        .bgm {
+            position: absolute;
+            top: -40%;
+            right: 0;
+            border-radius: 1146px;
+            background: rgba(0, 170, 129, 0.45);
+            filter: blur(245px);
+            width: 75vw;
+            height: 75vw;
+            z-index: -3;
+        }
+
+        .bgt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 1752px;
+            background: rgba(0, 170, 150, 0.35);
+            filter: blur(165px);
+            width: 50vw;
+            height: 26vh;
+            z-index: -2;
+        }
+    }
+}
+
+.home-header {
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10rem;
+    min-height: calc(100svh - 2rem);
+    margin-bottom: 8rem;
     position: relative;
 
     .header-content {
@@ -244,13 +248,13 @@ header {
         flex-direction: column;
         justify-content: center;
         animation: logo-start .75s forwards;
-        margin-top: 10rem;
+        margin-top: 4rem;
     }
 
     .bg {
         z-index: -2;
         pointer-events: none;
-        filter: drop-shadow(0 0 50px rgba(2, 255, 207, 0.1));
+        filter: drop-shadow(0 0 38px rgba(2, 255, 207, 0.08));
 
         .logo {
             color: rgba(0, 0, 0, 0.18);
@@ -264,61 +268,16 @@ header {
             z-index: -1;
             animation: logo-start .75s forwards, logo-floating 5s ease-in-out .7s infinite;
         }
-        .bgtr {
-            position: absolute;
-            top: -20rem;
-            right: -20rem;
-            border-radius: 1752px;
-            background: rgba(0, 170, 150, 0.35);
-            filter: blur(165px);
-            width: 40vw;
-            height: 72vh;
-            z-index: -2;
-        }
-        .bgm {
-            position: absolute;
-            top: -40%;
-            right: 0;
-            border-radius: 1146px;
-            background: rgba(0, 170, 129, 0.45);
-            filter: blur(245px);
-            width: 75vw;
-            height: 75vw;
-            z-index: -3;
-        }
-        .bgt {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 1752px;
-            background: rgba(0, 170, 150, 0.35);
-            filter: blur(165px);
-            width: 50vw;
-            height: 26vh;
-            z-index: -2;
-        }
+
         .circuit {
             position: absolute;
-            top: 0%;
-            left: -100%;
-            transform: rotateY(180deg) scale3d(1.7, 1.7, 1);
-            width: 167vw;
-            height: 151vw;
+            top: -18rem;
+            left: -82vw;
+            transform: rotateY(180deg) rotateZ(-8deg) scale3d(1.45, 1.45, 1);
+            width: 160vw;
+            height: 140vw;
             z-index: -4;
-            opacity: .35;
-        }
-    }
-
-    &.safari {
-        .bgtr {
-            top: 0rem;
-            right: 0rem;
-            filter: blur(100px);
-        }
-        .bgm {
-            top: 0%;
-            right: 0;
-            filter: blur(150px);
+            opacity: .22;
         }
     }
 }
@@ -470,16 +429,6 @@ main {
 
 // ======== RESPONSIVE ========
 
-// Blurs are strange on retina screen
-// Numbers are "random" but the result is pretty great on my macbook pro 2023
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  #noise_effect {
-    opacity: 8% !important;
-  }
-}
-
 @media screen and (min-width: 3400px) {
     $spacing-body: calc(var.$spacing-body * 4);
     #app { padding: 2rem $spacing-body 0 $spacing-body; }
@@ -519,7 +468,7 @@ main {
     $spacing-body: calc(var.$spacing-body * 0.3);
     #app { padding: 2rem $spacing-body 0 $spacing-body; }
 
-    header {
+    .home-header {
         .bg {
             .logo {
                 color: rgba(0, 0, 0, 0.3);
@@ -543,10 +492,6 @@ main {
 
     #app { padding: $spacing-body $spacing-body 0 $spacing-body; }
 
-    #noise_effect {
-        display: none;
-    }
-
     h2 {
         font-size: 3.5rem;
         text-align: center;
@@ -556,7 +501,14 @@ main {
         font-size: 1.5rem;
     }
 
-    header {
+    .home-header {
+        min-height: auto;
+        margin-bottom: 6rem;
+
+        .header-content {
+            margin-top: 2rem;
+        }
+
         .bg {
             .logo {
                 color: rgba(0, 0, 0, 0.3);

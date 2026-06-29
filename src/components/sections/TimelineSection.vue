@@ -1,6 +1,12 @@
 <template>
     <section id="timeline">
-        <h2>Timeline</h2>
+        <div class="timeline-header">
+            <p class="section-kicker">Roadmap</p>
+            <h2>Timeline</h2>
+            <p class="section-subtitle">
+                Major protocol and application milestones, revealed as the roadmap enters the viewport.
+            </p>
+        </div>
         <div id="timeline-container">
             <div
                 v-for="(task, index) in tasks"
@@ -98,19 +104,40 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: clamp(3rem, 5vw, 6rem) 2rem;
+    border: 1px solid var.$border-soft;
+    border-radius: 0.8rem;
+    background: linear-gradient(150deg, rgba(10, 17, 20, 0.48), rgba(6, 12, 15, 0.78));
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+    overflow: hidden;
 
-    h2 {
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(90deg, rgba(2, 255, 207, 0.4), transparent 35%, rgba(245, 217, 95, 0.14) 100%) top left / 100% 1px no-repeat,
+            linear-gradient(180deg, rgba(2, 255, 207, 0.045), transparent 42%);
+        pointer-events: none;
+    }
+
+    .timeline-header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
         text-align: center;
         margin-bottom: 3rem;
-        font-size: 3.5rem;
-        background: linear-gradient(135deg, #02FFCF 0%, #00AA96 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+
+        h2 {
+            margin: 0;
+        }
     }
 
     #timeline-container {
+        z-index: 1;
         font-size: 1.8rem;
         position: relative;
         display: flex;
@@ -176,7 +203,7 @@ export default {
         .timeline-content {
             grid-column: 3;
             padding: 1.8rem 2rem;
-            background: rgba(0, 0, 0, 0.18);
+            background: rgba(6, 12, 15, 0.56);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 0.8rem;
             backdrop-filter: blur(10px);

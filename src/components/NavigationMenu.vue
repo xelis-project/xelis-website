@@ -163,11 +163,11 @@ export default {
 header nav {
   overflow-x: auto;
   padding: 1.4rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.8rem;
   backdrop-filter: blur(12px);
-  background: linear-gradient(120deg, rgba(10, 17, 20, 0.7) 0%, rgba(6, 12, 15, 0.4) 100%);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(120deg, rgba(10, 17, 20, 0.78) 0%, rgba(6, 12, 15, 0.48) 100%);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
 }
 
 #burger_menu {

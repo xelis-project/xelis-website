@@ -1,5 +1,4 @@
 <template>
-  <div v-if="!isSafari" id="noise_effect"></div>
   <router-view v-slot="{ Component }">
     <transition name="fade-router" mode="out-in" :css="!preRendered">
       <component :is="Component" />

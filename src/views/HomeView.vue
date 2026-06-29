@@ -1,15 +1,12 @@
 <template>
   <div>
-    <header :class="{ safari: isSafari }">
+    <header class="home-header" :class="{ safari: isSafari }">
       <NavigationMenu />
       <div class="header-content">
         <HeroSection />
       </div>
       <div class="bg">
         <XelisLogo />
-        <div class="bgtr"></div>
-        <div class="bgm"></div>
-        <div class="bgt"></div>
         <CircuitImg />
       </div>
     </header>
@@ -17,10 +14,12 @@
       <QuadSection />
       <FeaturesSection />
       <ObjectivesSection />
-      <NetworkSection />
-      <SupplySection />
-      <TimelineSection />
+      <div class="network-supply-row">
+        <NetworkSection />
+        <SupplySection />
+      </div>
       <BlockDAGSection />
+      <TimelineSection />
       <SocialSection />
     </main>
   </div>
@@ -66,3 +65,22 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@use "@/assets/variables.scss" as var;
+
+@media screen and (min-width: 1180px) {
+  .network-supply-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var.$spacing-body;
+    align-items: stretch;
+    margin-bottom: var.$spacing-body;
+
+    > section {
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+</style>
