@@ -36,7 +36,7 @@
               </div>
             </div>
               <div class="item">
-                <img src="@/assets/images/paperwallet.png" alt="Paper Wallet" />
+                <img src="@/assets/images/paperwallet.png" alt="Paper Wallet" class="paper-wallet-img" />
                 <div class="left-content">
                   <p>
                     Paper Wallet
@@ -254,6 +254,7 @@
       img {
         max-width: 65%;
         object-fit: cover;
+        object-position: top left;
         border-radius: 0.8rem;
         width: 100%;
       }
@@ -264,6 +265,10 @@
       p:last-of-type {
         color: rgba(245, 247, 251, 0.68);
         line-height: 1.45;
+      }
+
+      .paper-wallet-img {
+        object-position: center;
       }
     }
 
