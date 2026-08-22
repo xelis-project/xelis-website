@@ -178,5 +178,23 @@ export default [
     "tag": "Blockchain",
     "priority": "High",
     "quarter": ""
+  },
+  {
+    "name": "Confidential Transfers on Contracts",
+    "description": "Enable confidential value transfers within smart contracts while preserving transaction privacy.",
+    "status": "Planned",
+    "year": "",
+    "tag": "Blockchain",
+    "priority": "High",
+    "quarter": ""
+  },
+  {
+    "name": "Smart Contract Tools & Features",
+    "description": "Expand the smart contract ecosystem with developer tools and additional features for building decentralized applications.",
+    "status": "Planned",
+    "year": "",
+    "tag": "Blockchain",
+    "priority": "Mid",
+    "quarter": ""
   }
 ]
