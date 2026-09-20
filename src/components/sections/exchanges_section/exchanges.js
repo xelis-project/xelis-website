@@ -3,13 +3,6 @@
 
 export default [
   {
-    "name": "Exbitron",
-    "link": "https://exbitron.com/trade?market=XEL-USDT",
-    "logo_img": "https://docs.xelis.io/exchanges/exbitron_logo.webp",
-    "market_img": "https://docs.xelis.io/exchanges/exbitron.webp",
-    "sort_volume": 8
-  },
-  {
     "name": "NonKYC",
     "link": "https://nonkyc.io/market/XEL_USDT",
     "logo_img": "https://docs.xelis.io/exchanges/nonkyc_logo.webp",
@@ -32,14 +25,14 @@ export default [
   },
   {
     "name": "SafeTrade",
-    "link": "https://safe.trade/exchange/XEL-USDT",
+    "link": "https://safetrade.com/exchange/XEL-USDT",
     "logo_img": "https://docs.xelis.io/exchanges/safetrade_logo.webp",
     "market_img": "https://docs.xelis.io/exchanges/safetrade.webp",
     "sort_volume": 7
   },
   {
     "name": "Trocador",
-    "link": "https://trocador.app/en/?ref=1JXff8w6Gx&ticker_to=xel",
+    "link": "https://trocador.app/en/?ticker_to=xel",
     "logo_img": "https://docs.xelis.io/exchanges/trocador_logo.webp",
     "market_img": "https://docs.xelis.io/exchanges/trocador.webp",
     "sort_volume": 2
