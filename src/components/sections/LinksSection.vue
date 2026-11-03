@@ -12,7 +12,7 @@
                 <a href="https://explorer.xelis.io/dag" target="_blank">DAG Viewer</a>
                 <a href="https://github.com/xelis-project" target="_blank">Project Repository</a>
                 <a href="https://docs.xelis.io/links/pools" target="_blank">Mining Pools</a>
-                <a href="https://docs.xelis.io/links/seed_nodes" target="_blank">Seed Nodes</a>
+                <a href="https://docs.xelis.io/links/seed-nodes" target="_blank">Seed Nodes</a>
                 <a href="https://docs.xelis.io/developers-sdk" target="_blank">SDKs</a>
                 <a href="https://docs.xelis.io/getting-started/bootstrap" target="_blank">Bootstrap</a>
                 <a href="https://paperwallet.xelis.io/" target="_blank">Paper Wallet</a>
